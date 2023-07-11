@@ -1,0 +1,288 @@
+INFO - 2023-05-18 08:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 08:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 08:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 08:14:33 --> Undefined array key "tgl_awal"
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 51.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl_awal"', 'APPPATH/Views/mitra/penguatan_fungsi.php', 51)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(36): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 15:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 15:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 15:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 15:07:31 --> Undefined array key "tgl_awal"
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 51.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl_awal"', 'APPPATH/Views/mitra/penguatan_fungsi.php', 51)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(36): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 17:13:38 --> Too few arguments to function App\Models\M_mitra::penguatan_fungsi(), 0 passed in /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php on line 30 and exactly 1 expected
+in APPPATH/Models/M_mitra.php on line 26.
+ 1 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 17:15:11 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::paginate()
+in APPPATH/Models/M_mitra.php on line 28.
+ 1 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 17:15:30 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::paginate()
+in APPPATH/Models/M_mitra.php on line 28.
+ 1 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 17:15:46 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::paginate()
+in APPPATH/Models/M_mitra.php on line 28.
+ 1 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-18 17:29:37 --> mysqli_sql_exception: Duplicate column name 'id_mitra' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/system/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 /Applications/MAMP/htdocs/siperkasa/system/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 /Applications/MAMP/htdocs/siperkasa/app/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+#7 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungs...')
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+#9 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#10 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-18 17:29:37 --> Duplicate column name 'id_mitra'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT *
+FROM `penguatan_fungsi_skw` `pfs`
+JOIN `mitra` ON `mitra`.`id_mitra` = `pfs`.`id_mitra`
+JOIN `rkt_penguatan_fungsi` `rps` ON `rps`.`id`=`pfs`.`id_rkt`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rps`.`id_penguatan_fungsi`
+WHERE `pfs`.`id_mitra` = :pfs.id_mitra:
+GROUP BY `pfs`.`id`
+) CI_count_all_results', [...], false)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+ 5 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungsi')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-18 17:30:23 --> mysqli_sql_exception: Duplicate column name 'id_mitra' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/system/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 /Applications/MAMP/htdocs/siperkasa/system/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 /Applications/MAMP/htdocs/siperkasa/app/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+#7 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungs...')
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+#9 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#10 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-18 17:30:23 --> Duplicate column name 'id_mitra'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT *, `pfs`.`id_mitra` AS `id_mitra`
+FROM `penguatan_fungsi_skw` `pfs`
+JOIN `mitra` ON `mitra`.`id_mitra` = `pfs`.`id_mitra`
+JOIN `rkt_penguatan_fungsi` `rps` ON `rps`.`id`=`pfs`.`id_rkt`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rps`.`id_penguatan_fungsi`
+WHERE `pfs`.`id_mitra` = :pfs.id_mitra:
+GROUP BY `pfs`.`id`
+) CI_count_all_results', [...], false)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+ 5 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungsi')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-18 17:30:26 --> mysqli_sql_exception: Duplicate column name 'id_mitra' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/system/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 /Applications/MAMP/htdocs/siperkasa/system/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 /Applications/MAMP/htdocs/siperkasa/app/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+#7 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungs...')
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+#9 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#10 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-18 17:30:26 --> Duplicate column name 'id_mitra'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT *, `pfs`.`id_mitra` AS `id_mitra`
+FROM `penguatan_fungsi_skw` `pfs`
+JOIN `mitra` ON `mitra`.`id_mitra` = `pfs`.`id_mitra`
+JOIN `rkt_penguatan_fungsi` `rps` ON `rps`.`id`=`pfs`.`id_rkt`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rps`.`id_penguatan_fungsi`
+WHERE `pfs`.`id_mitra` = :pfs.id_mitra:
+GROUP BY `pfs`.`id`
+) CI_count_all_results', [...], false)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+ 5 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungsi')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-18 17:34:27 --> mysqli_sql_exception: Column 'lokasi' in field list is ambiguous in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/system/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 /Applications/MAMP/htdocs/siperkasa/system/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 /Applications/MAMP/htdocs/siperkasa/app/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+#7 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungs...')
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+#9 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#10 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-18 17:34:27 --> Column 'lokasi' in field list is ambiguous
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1686): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `pfs`.`id`, `file_pks`, `tgl_awal`, `tgl_akhir`, `judul_laporan`, `nama_mitra`, `lokasi`
+FROM `penguatan_fungsi_skw` `pfs`
+JOIN `mitra` ON `mitra`.`id_mitra` = `pfs`.`id_mitra`
+JOIN `rkt_penguatan_fungsi` `rps` ON `rps`.`id`=`pfs`.`id_rkt`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rps`.`id_penguatan_fungsi`
+WHERE `pfs`.`id_mitra` = :pfs.id_mitra:
+GROUP BY `pfs`.`id`
+) CI_count_all_results', [...], false)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Models/M_mitra.php(34): CodeIgniter\BaseModel->paginate(3)
+ 5 APPPATH/Controllers/Mitra.php(30): App\Models\M_mitra->penguatan_fungsi(3, 'penguatan_fungsi')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 17:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 17:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 18:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 18:05:25 --> Cannot use object of type stdClass as array
+in APPPATH/Views/mitra/pembangunan_strategis.php on line 44.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/pembangunan_strategis', [], true)
+ 4 APPPATH/Controllers/Mitra.php(53): view('mitra/pembangunan_strategis', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->pembangunan_strategis()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 18:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 18:06:22 --> Call to undefined method App\Models\M_penguatan_fungsi_skw::penmbangunan_strategis
+in SYSTEMPATH/Model.php on line 841.
+ 1 APPPATH/Controllers/Mitra.php(49): CodeIgniter\Model->__call('penmbangunan_strategis', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->pembangunan_strategis()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 18:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 18:06:35 --> Call to undefined method App\Models\M_penguatan_fungsi_skw::pembangunan_strategis
+in SYSTEMPATH/Model.php on line 841.
+ 1 APPPATH/Controllers/Mitra.php(49): CodeIgniter\Model->__call('pembangunan_strategis', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->pembangunan_strategis()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 18:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-18 18:06:38 --> Call to undefined method App\Models\M_penguatan_fungsi_skw::pembangunan_strategis
+in SYSTEMPATH/Model.php on line 841.
+ 1 APPPATH/Controllers/Mitra.php(49): CodeIgniter\Model->__call('pembangunan_strategis', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->pembangunan_strategis()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-18 18:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 18:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 18:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-18 18:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-18 18:14:22 --> mysqli_sql_exception: Table 'siperkasa.dokumentasi_penguatan_fungsi' doesn't exist in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(62): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi_info('1')
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-18 18:14:22 --> Table 'siperkasa.dokumentasi_penguatan_fungsi' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dokumentasi_penguatan_fungsi`
+WHERE `id_penguatan_fungsi` = :id_penguatan_fungsi:', [...], false)
+ 2 APPPATH/Controllers/Mitra.php(62): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi_info('1')
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

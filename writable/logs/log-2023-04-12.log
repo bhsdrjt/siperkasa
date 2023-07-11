@@ -1,0 +1,29 @@
+INFO - 2023-04-12 21:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 21:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 21:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 21:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-12 21:19:49 --> mysqli_sql_exception: Unknown column 'penguatan_fungsi.mitra' in 'on clause' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Models/M_kerja_sama.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Kerja_sama.php(22): App\Models\M_kerja_sama->penguatan_fungsi()
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Kerja_sama->penguatan_fungsi()
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-12 21:19:49 --> Unknown column 'penguatan_fungsi.mitra' in 'on clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penguatan_fungsi`
+JOIN `mitra` ON `mitra`.`id_mitra`=`penguatan_fungsi`.`mitra`', [], false)
+ 2 APPPATH/Models/M_kerja_sama.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Kerja_sama.php(22): App\Models\M_kerja_sama->penguatan_fungsi()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Kerja_sama->penguatan_fungsi()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-12 21:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,371 @@
+INFO - 2023-05-15 00:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-15 00:44:32 --> mysqli_sql_exception: Unknown column 'rps.id_rkt' in 'on clause' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Models/M_mitra.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(31): App\Models\M_mitra->penguatan_fungsi(NULL, NULL)
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-15 00:44:32 --> Unknown column 'rps.id_rkt' in 'on clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penguatan_fungsi_skw` `pfs`
+JOIN `mitra` ON `mitra`.`id_mitra`=`pfs`.`id_mitra`
+JOIN `rkt_penguatan_fungsi` `rps` ON `rps`.`id_rkt`=`pfs`.`id_rkt`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rps`.`id_penguatan_fungsi`
+WHERE `pfs`.`id_mitra` = :pfs.id_mitra:', [...], false)
+ 2 APPPATH/Models/M_mitra.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Mitra.php(31): App\Models\M_mitra->penguatan_fungsi(null, null)
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 00:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 00:45:10 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 00:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 00:47:28 --> Call to a member function paginate() on string
+in APPPATH/Controllers/Mitra.php on line 34.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 00:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 00:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 01:06:33 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 01:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 01:07:04 --> Call to a member function paginate() on string
+in APPPATH/Controllers/Mitra.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 01:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 01:08:46 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 01:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 01:09:04 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 01:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 01:09:06 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 01:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 01:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 01:12:59 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 01:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 01:13:33 --> json_decode(): Argument #1 ($json) must be of type string, array given
+in APPPATH/Controllers/Mitra.php on line 55.
+ 1 APPPATH/Controllers/Mitra.php(55): json_decode([...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:34:40 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 09:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:36:05 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 58.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:36:37 --> Call to a member function paginate() on array
+in APPPATH/Controllers/Mitra.php on line 61.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:37:18 --> Call to undefined method stdClass::paginate()
+in APPPATH/Controllers/Mitra.php on line 61.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:43:54 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Controllers/Mitra.php(59): CodeIgniter\BaseModel->paginate(3, 'penguatan_fungsi')
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:45:40 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Controllers/Mitra.php(59): CodeIgniter\BaseModel->paginate(3, 'penguatan_fungsi')
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:46:18 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Controllers/Mitra.php(59): CodeIgniter\BaseModel->paginate(3, 'penguatan_fungsi_skw')
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:47:05 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Controllers/Mitra.php(59): CodeIgniter\BaseModel->paginate(3)
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:51:14 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Controllers/Mitra.php(59): CodeIgniter\BaseModel->paginate(3)
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:51:33 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(605): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH/Controllers/Mitra.php(59): CodeIgniter\BaseModel->paginate(3)
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:52:57 --> Attempt to read property "gambar_cover" on array
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 45.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "gambar_cover" on array', 'APPPATH/Views/mitra/penguatan_fungsi.php', 45)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(64): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:53:52 --> Attempt to read property "gambar_cover" on array
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 45.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "gambar_cover" on array', 'APPPATH/Views/mitra/penguatan_fungsi.php', 45)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(63): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-15 09:57:47 --> mysqli_sql_exception: Unknown column 'pfs.id_mitra' in 'on clause' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Models/M_mitra.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(54): App\Models\M_mitra->penguatan_fungsi()
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-15 09:57:47 --> Unknown column 'pfs.id_mitra' in 'on clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penguatan_fungsi_skw`
+JOIN `mitra` ON `mitra`.`id_mitra`=`pfs`.`id_mitra`
+JOIN `rkt_penguatan_fungsi` `rps` ON `rps`.`id`=`pfs`.`id_rkt`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rps`.`id_penguatan_fungsi`
+WHERE `penguatan_fungsi_skw`.`id_mitra` = :penguatan_fungsi_skw.id_mitra:', [...], false)
+ 2 APPPATH/Models/M_mitra.php(31): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH/Controllers/Mitra.php(54): App\Models\M_mitra->penguatan_fungsi()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-15 09:58:03 --> mysqli_sql_exception: Unknown column 'penguatan_fungsi_skw.id_mitra' in 'where clause' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Models/M_mitra.php(31): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Mitra.php(54): App\Models\M_mitra->penguatan_fungsi()
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-15 09:58:03 --> Unknown column 'penguatan_fungsi_skw.id_mitra' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penguatan_fungsi_skw` `pfs`
+JOIN `mitra` ON `mitra`.`id_mitra`=`pfs`.`id_mitra`
+JOIN `rkt_penguatan_fungsi` `rps` ON `rps`.`id`=`pfs`.`id_rkt`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rps`.`id_penguatan_fungsi`
+WHERE `penguatan_fungsi_skw`.`id_mitra` = :penguatan_fungsi_skw.id_mitra:', [...], false)
+ 2 APPPATH/Models/M_mitra.php(31): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH/Controllers/Mitra.php(54): App\Models\M_mitra->penguatan_fungsi()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 09:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 09:58:17 --> Attempt to read property "gambar_cover" on array
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 45.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "gambar_cover" on array', 'APPPATH/Views/mitra/penguatan_fungsi.php', 45)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(63): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 10:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 10:00:38 --> Attempt to read property "tgl_awal" on array
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 51.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tgl_awal" on array', 'APPPATH/Views/mitra/penguatan_fungsi.php', 51)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(36): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 10:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 10:01:37 --> Attempt to read property "judul_laporan" on array
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 51.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "judul_laporan" on array', 'APPPATH/Views/mitra/penguatan_fungsi.php', 51)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(36): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 10:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 10:02:32 --> Attempt to read property "id" on array
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 52.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'APPPATH/Views/mitra/penguatan_fungsi.php', 52)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(36): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 10:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-15 10:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 10:04:03 --> Undefined array key "tgl_awal"
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 51.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl_awal"', 'APPPATH/Views/mitra/penguatan_fungsi.php', 51)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(36): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-15 10:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-15 10:04:33 --> Undefined array key "tgl_awal"
+in APPPATH/Views/mitra/penguatan_fungsi.php on line 51.
+ 1 APPPATH/Views/mitra/penguatan_fungsi.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl_awal"', 'APPPATH/Views/mitra/penguatan_fungsi.php', 51)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/mitra/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('mitra/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Mitra.php(36): view('mitra/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Mitra->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mitra))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,199 @@
+INFO - 2023-04-30 15:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 15:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 15:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 15:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 15:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 15:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 15:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 16:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 16:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 16:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 16:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 16:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 16:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 16:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 17:25:11 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/Dashboard.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 17:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 17:26:13 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/Dashboard.php on line 57.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 17:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:32:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 17:40:43 --> Too few arguments to function PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::setCellValue(), 1 passed in /Applications/MAMP/htdocs/siperkasa/app/Controllers/Dashboard.php on line 44 and at least 2 expected
+in VENDORPATH/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Worksheet/Worksheet.php on line 1167.
+ 1 APPPATH/Controllers/Dashboard.php(44): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A1Tanggal 2023-03-01 sampai 2023-04-03')
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 17:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 17:41:58 --> Cell coordinate string can not be a range of cells.
+in VENDORPATH/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Worksheet/Worksheet.php on line 1328.
+ 1 VENDORPATH/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Worksheet/Worksheet.php(1277): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->getWorksheetAndCoordinate('A1:C1')
+ 2 VENDORPATH/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Worksheet/Worksheet.php(1170): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->getCell('A1:C1')
+ 3 APPPATH/Controllers/Dashboard.php(44): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A1:C1', 'Tanggal 2023-03-01 sampai 2023-04-03')
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 17:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 17:53:48 --> Array to string conversion
+in APPPATH/Controllers/Auth.php on line 61.
+ 1 APPPATH/Controllers/Auth.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH/Controllers/Auth.php', 61)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->login_validation()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 17:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 17:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 19:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 19:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 19:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 21:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 21:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 21:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-30 21:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 21:58:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Dashboard.php(145): CodeIgniter\Model->__call('penguatan_fungsi_skw', [])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 22:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-30 22:38:02 --> mysqli_sql_exception: Unknown column 'pf.id_penguatan_fungsi' in 'on clause' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Models/M_kerja_sama.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Dashboard.php(145): App\Models\M_kerja_sama->penguatan_fungsi_skw()
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-30 22:38:02 --> Unknown column 'pf.id_penguatan_fungsi' in 'on clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `rkt_penguatan_fungsi` `rpf`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id_penguatan_fungsi`=`rpf`.`id_penguatan_fungsi`
+LEFT JOIN `mitra` ON `mitra`.`id_mitra`=`penguatan_fungsi`.`mitra`
+WHERE `pf`.`lokasi` = :pf.lokasi:
+GROUP BY `rpf`.`id`', [...], false)
+ 2 APPPATH/Models/M_kerja_sama.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Dashboard.php(145): App\Models\M_kerja_sama->penguatan_fungsi_skw()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 22:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-30 22:38:20 --> mysqli_sql_exception: Unknown column 'penguatan_fungsi.mitra' in 'on clause' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Models/M_kerja_sama.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Dashboard.php(145): App\Models\M_kerja_sama->penguatan_fungsi_skw()
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-30 22:38:20 --> Unknown column 'penguatan_fungsi.mitra' in 'on clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `rkt_penguatan_fungsi` `rpf`
+JOIN `penguatan_fungsi` `pf` ON `pf`.`id`=`rpf`.`id_penguatan_fungsi`
+LEFT JOIN `mitra` ON `mitra`.`id_mitra`=`penguatan_fungsi`.`mitra`
+WHERE `pf`.`lokasi` = :pf.lokasi:
+GROUP BY `rpf`.`id`', [...], false)
+ 2 APPPATH/Models/M_kerja_sama.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Dashboard.php(145): App\Models\M_kerja_sama->penguatan_fungsi_skw()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 22:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 22:39:27 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Dashboard.php(146): CodeIgniter\Model->__call('pembangunan_strategis_skw', [])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 22:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-04-30 22:41:54 --> mysqli_sql_exception: Table 'siperkasa.rkt_pembangunan_strategi' doesn't exist in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Models/M_kerja_sama.php(62): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Dashboard.php(146): App\Models\M_kerja_sama->pembangunan_strategis_skw()
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-30 22:41:54 --> Table 'siperkasa.rkt_pembangunan_strategi' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `rkt_pembangunan_strategi` `rps`
+JOIN `pembangunan_strategi` `ps` ON `ps`.`id`=`rps`.`id_pembangunan_strategi`
+LEFT JOIN `mitra` ON `mitra`.`id_mitra`=`ps`.`mitra`
+WHERE `ps`.`lokasi` = :ps.lokasi:
+GROUP BY `rps`.`id`', [...], false)
+ 2 APPPATH/Models/M_kerja_sama.php(62): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH/Controllers/Dashboard.php(146): App\Models\M_kerja_sama->pembangunan_strategis_skw()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-30 22:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-30 22:42:07 --> Invalid file: "dashboard_skw/dashboard.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard_skw/dashboard.php')
+ 2 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('dashboard_skw/dashboard', [], true)
+ 3 APPPATH/Controllers/Dashboard.php(150): view('dashboard_skw/dashboard', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Dashboard->dahsboard_skw()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

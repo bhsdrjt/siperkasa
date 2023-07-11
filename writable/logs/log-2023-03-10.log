@@ -1,0 +1,247 @@
+CRITICAL - 2023-03-10 14:14:32 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:15:09 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:15:15 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:16:00 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:16:28 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:16:29 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:17:03 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:17:38 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:17:39 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:18:19 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:18:20 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-10 14:18:53 --> Class "Kint\Renderer\AbstractRenderer" not found
+in SYSTEMPATH/Config/Factories.php on line 129.
+ 1 SYSTEMPATH/Common.php(206): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH/CodeIgniter.php(272): config('Config\\Kint')
+ 3 SYSTEMPATH/CodeIgniter.php(237): CodeIgniter\CodeIgniter->configureKint()
+ 4 SYSTEMPATH/CodeIgniter.php(199): CodeIgniter\CodeIgniter->initializeKint()
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->initialize()
+INFO - 2023-03-10 14:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-10 14:22:11 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH/Views/Auth/login.php on line 48.
+ 1 APPPATH/Views/Auth/login.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH/Views/Auth/login.php', 48)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/Auth/login.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('Auth/login', [], true)
+ 5 APPPATH/Controllers/Auth.php(16): view('Auth/login')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 14:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-10 14:29:32 --> Undefined array key "id_user"
+in APPPATH/Controllers/Auth.php on line 49.
+ 1 APPPATH/Controllers/Auth.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_user"', 'APPPATH/Controllers/Auth.php', 49)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Auth->login_validation()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 14:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-10 14:36:01 --> Undefined property: CodeIgniter\View\View::$load
+in APPPATH/Views/data_master/user.php on line 1.
+ 1 APPPATH/Views/data_master/user.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$load', 'APPPATH/Views/data_master/user.php', 1)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/data_master/user.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('data_master/user', [], true)
+ 5 APPPATH/Controllers/Data_master.php(21): view('data_master/user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Data_master->user()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_master))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 14:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-10 14:44:11 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH/Views/data_master/user.php on line 24.
+ 1 APPPATH/Views/data_master/user.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH/Views/data_master/user.php', 24)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/data_master/user.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('data_master/user', [], true)
+ 5 APPPATH/Controllers/Data_master.php(21): view('data_master/user', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Data_master->user()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_master))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 14:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 14:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-03-10 15:52:12 --> mysqli_sql_exception: Unknown column 'id_user' in 'where clause' in /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Applications/MAMP/htdocs/siperkasa/system/Database/MySQLi/Connection.php(295): mysqli->query('UPDATE `user` S...', 0)
+#1 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `user` S...')
+#2 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `user` S...')
+#3 /Applications/MAMP/htdocs/siperkasa/system/Database/BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `user` S...', Array, false)
+#4 /Applications/MAMP/htdocs/siperkasa/app/Controllers/Data_master.php(65): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(934): App\Controllers\Data_master->userEdit_proccess()
+#6 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_master))
+#7 /Applications/MAMP/htdocs/siperkasa/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/siperkasa/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-03-10 15:52:12 --> Unknown column 'id_user' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `user` SET `username` = :username:, `level` = :level:, `modified_at` = :modified_at:
+WHERE `id_user` = :id_user:', [...], false)
+ 2 APPPATH/Controllers/Data_master.php(65): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Data_master->userEdit_proccess()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_master))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 15:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-10 15:52:45 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Data_master.php(76): CodeIgniter\Model->__call('deleteData', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Data_master->userDelete_proccess()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_master))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 15:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 15:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 18:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 18:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 18:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 18:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 18:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 18:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-10 19:41:23 --> Undefined property: CodeIgniter\View\View::$load
+in APPPATH/Views/data_master/mitra.php on line 1.
+ 1 APPPATH/Views/data_master/mitra.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$load', 'APPPATH/Views/data_master/mitra.php', 1)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/data_master/mitra.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('data_master/mitra', [], true)
+ 5 APPPATH/Controllers/Data_master.php(91): view('data_master/mitra', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Data_master->mitra()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data_master))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 19:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 19:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-03-10 19:57:46 --> Undefined property: CodeIgniter\View\View::$load
+in APPPATH/Views/kerja_sama/penguatan_fungsi.php on line 1.
+ 1 APPPATH/Views/kerja_sama/penguatan_fungsi.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$load', 'APPPATH/Views/kerja_sama/penguatan_fungsi.php', 1)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/kerja_sama/penguatan_fungsi.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('kerja_sama/penguatan_fungsi', [], true)
+ 5 APPPATH/Controllers/Kerja_sama.php(21): view('kerja_sama/penguatan_fungsi', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Kerja_sama->penguatan_fungsi()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-03-10 20:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 21:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 21:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 21:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-03-10 21:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

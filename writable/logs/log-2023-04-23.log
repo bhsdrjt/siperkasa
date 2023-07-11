@@ -1,0 +1,198 @@
+INFO - 2023-04-23 12:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 12:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 12:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 12:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 12:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 12:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-23 12:15:22 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed after headers have already been sent', 'SYSTEMPATH/Session/Handlers/FileHandler.php', 72)
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set('session.save_path', 'ROOTPATH/writable/session')
+ 3 SYSTEMPATH/Config/Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH/Filters/auth_filter.php(14): session()
+10 SYSTEMPATH/Filters/Filters.php(173): App\Filters\auth_filter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('kerja_sama/penguatan_fungsi/process/add', 'before')
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-23 12:17:05 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed after headers have already been sent', 'SYSTEMPATH/Session/Handlers/FileHandler.php', 72)
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set('session.save_path', 'ROOTPATH/writable/session')
+ 3 SYSTEMPATH/Config/Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH/Filters/auth_filter.php(14): session()
+10 SYSTEMPATH/Filters/Filters.php(173): App\Filters\auth_filter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('kerja_sama/penguatan_fungsi/process/add', 'before')
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-23 12:17:08 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed after headers have already been sent', 'SYSTEMPATH/Session/Handlers/FileHandler.php', 72)
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set('session.save_path', 'ROOTPATH/writable/session')
+ 3 SYSTEMPATH/Config/Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH/Filters/auth_filter.php(14): session()
+10 SYSTEMPATH/Filters/Filters.php(173): App\Filters\auth_filter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('kerja_sama/penguatan_fungsi/process/add', 'before')
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-23 12:18:32 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed after headers have already been sent', 'SYSTEMPATH/Session/Handlers/FileHandler.php', 72)
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set('session.save_path', 'ROOTPATH/writable/session')
+ 3 SYSTEMPATH/Config/Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH/Filters/auth_filter.php(14): session()
+10 SYSTEMPATH/Filters/Filters.php(173): App\Filters\auth_filter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('kerja_sama/penguatan_fungsi/process/add', 'before')
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-23 12:31:07 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed after headers have already been sent', 'SYSTEMPATH/Session/Handlers/FileHandler.php', 72)
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set('session.save_path', 'ROOTPATH/writable/session')
+ 3 SYSTEMPATH/Config/Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH/Filters/auth_filter.php(14): session()
+10 SYSTEMPATH/Filters/Filters.php(173): App\Filters\auth_filter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('kerja_sama/penguatan_fungsi/process/add', 'before')
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-23 12:31:09 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed after headers have already been sent', 'SYSTEMPATH/Session/Handlers/FileHandler.php', 72)
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set('session.save_path', 'ROOTPATH/writable/session')
+ 3 SYSTEMPATH/Config/Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH/Filters/auth_filter.php(14): session()
+10 SYSTEMPATH/Filters/Filters.php(173): App\Filters\auth_filter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('kerja_sama/penguatan_fungsi/process/add', 'before')
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-23 12:35:48 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed after headers have already been sent', 'SYSTEMPATH/Session/Handlers/FileHandler.php', 72)
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(72): ini_set('session.save_path', 'ROOTPATH/writable/session')
+ 3 SYSTEMPATH/Config/Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH/Filters/auth_filter.php(14): session()
+10 SYSTEMPATH/Filters/Filters.php(173): App\Filters\auth_filter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+11 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('kerja_sama/penguatan_fungsi/process/add', 'before')
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-23 12:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 12:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 12:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 13:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 13:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-23 13:17:43 --> An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\Parser\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpRhTObe
+in VENDORPATH/kint-php/kint/src/Parser/Parser.php on line 636.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(512, 'An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpRhTObe', 'VENDORPATH/kint-php/kint/src/Parser/Parser.php', 636)
+ 2 VENDORPATH/kint-php/kint/src/Parser/Parser.php(636): trigger_error('An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpRhTObe', 512)
+ 3 VENDORPATH/kint-php/kint/src/Parser/Parser.php(571): Kint\Parser\Parser->applyPlugins(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\InstanceValue), 2)
+ 4 VENDORPATH/kint-php/kint/src/Parser/Parser.php(138): Kint\Parser\Parser->parseObject(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 5 VENDORPATH/kint-php/kint/src/Kint.php(285): Kint\Parser\Parser->parse(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 6 VENDORPATH/kint-php/kint/src/Kint.php(268): Kint\Kint->dumpVar(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 7 VENDORPATH/kint-php/kint/src/Kint.php(575): Kint\Kint->dumpAll([...], [...])
+ 8 SYSTEMPATH/Helpers/kint_helper.php(27): Kint\Kint::dump(Object(CodeIgniter\HTTP\Files\UploadedFile))
+ 9 APPPATH/Controllers/Kerja_sama.php(103): dd(Object(CodeIgniter\HTTP\Files\UploadedFile))
+10 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Kerja_sama->penguatan_fungsi_process_add()
+11 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-23 13:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 14:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-23 14:40:15 --> An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\Parser\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpAc2vqX
+in VENDORPATH/kint-php/kint/src/Parser/Parser.php on line 636.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(512, 'An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpAc2vqX', 'VENDORPATH/kint-php/kint/src/Parser/Parser.php', 636)
+ 2 VENDORPATH/kint-php/kint/src/Parser/Parser.php(636): trigger_error('An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpAc2vqX', 512)
+ 3 VENDORPATH/kint-php/kint/src/Parser/Parser.php(571): Kint\Parser\Parser->applyPlugins(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\InstanceValue), 2)
+ 4 VENDORPATH/kint-php/kint/src/Parser/Parser.php(138): Kint\Parser\Parser->parseObject(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 5 VENDORPATH/kint-php/kint/src/Kint.php(285): Kint\Parser\Parser->parse(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 6 VENDORPATH/kint-php/kint/src/Kint.php(268): Kint\Kint->dumpVar(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 7 VENDORPATH/kint-php/kint/src/Kint.php(575): Kint\Kint->dumpAll([...], [...])
+ 8 SYSTEMPATH/Helpers/kint_helper.php(27): Kint\Kint::dump(Object(CodeIgniter\HTTP\Files\UploadedFile))
+ 9 APPPATH/Controllers/Kerja_sama.php(104): dd(Object(CodeIgniter\HTTP\Files\UploadedFile))
+10 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Kerja_sama->penguatan_fungsi_process_add()
+11 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-23 14:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-23 14:41:36 --> An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\Parser\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpAQo0kw
+in VENDORPATH/kint-php/kint/src/Parser/Parser.php on line 636.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(512, 'An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpAQo0kw', 'VENDORPATH/kint-php/kint/src/Parser/Parser.php', 636)
+ 2 VENDORPATH/kint-php/kint/src/Parser/Parser.php(636): trigger_error('An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpAQo0kw', 512)
+ 3 VENDORPATH/kint-php/kint/src/Parser/Parser.php(571): Kint\Parser\Parser->applyPlugins(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\InstanceValue), 2)
+ 4 VENDORPATH/kint-php/kint/src/Parser/Parser.php(138): Kint\Parser\Parser->parseObject(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 5 VENDORPATH/kint-php/kint/src/Kint.php(285): Kint\Parser\Parser->parse(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 6 VENDORPATH/kint-php/kint/src/Kint.php(268): Kint\Kint->dumpVar(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 7 VENDORPATH/kint-php/kint/src/Kint.php(575): Kint\Kint->dumpAll([...], [...])
+ 8 SYSTEMPATH/Helpers/kint_helper.php(27): Kint\Kint::dump(Object(CodeIgniter\HTTP\Files\UploadedFile))
+ 9 APPPATH/Controllers/Kerja_sama.php(104): dd(Object(CodeIgniter\HTTP\Files\UploadedFile))
+10 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Kerja_sama->penguatan_fungsi_process_add()
+11 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-23 18:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-23 18:57:34 --> An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\Parser\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpqcir1H
+in VENDORPATH/kint-php/kint/src/Parser/Parser.php on line 636.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(512, 'An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpqcir1H', 'VENDORPATH/kint-php/kint/src/Parser/Parser.php', 636)
+ 2 VENDORPATH/kint-php/kint/src/Parser/Parser.php(636): trigger_error('An exception (RuntimeException) was thrown in /Applications/MAMP/htdocs/siperkasa/vendor/kint-php/kint/src/Zval/Representation/SplFileInfoRepresentation.php on line 61 while executing Kint Parser Plugin "Kint\\Parser\\SplFileInfoPlugin". Error message: SplFileInfo::getPerms(): stat failed for /Applications/MAMP/tmp/php/phpqcir1H', 512)
+ 3 VENDORPATH/kint-php/kint/src/Parser/Parser.php(571): Kint\Parser\Parser->applyPlugins(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\InstanceValue), 2)
+ 4 VENDORPATH/kint-php/kint/src/Parser/Parser.php(138): Kint\Parser\Parser->parseObject(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 5 VENDORPATH/kint-php/kint/src/Kint.php(285): Kint\Parser\Parser->parse(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 6 VENDORPATH/kint-php/kint/src/Kint.php(268): Kint\Kint->dumpVar(Object(CodeIgniter\HTTP\Files\UploadedFile), Object(Kint\Zval\Value))
+ 7 VENDORPATH/kint-php/kint/src/Kint.php(575): Kint\Kint->dumpAll([...], [...])
+ 8 SYSTEMPATH/Helpers/kint_helper.php(27): Kint\Kint::dump(Object(CodeIgniter\HTTP\Files\UploadedFile))
+ 9 APPPATH/Controllers/Kerja_sama.php(104): dd(Object(CodeIgniter\HTTP\Files\UploadedFile))
+10 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Kerja_sama->penguatan_fungsi_process_add()
+11 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+12 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-04-23 18:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 18:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 19:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-23 20:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

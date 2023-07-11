@@ -1,0 +1,507 @@
+INFO - 2023-07-10 09:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 09:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 09:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 09:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 09:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 09:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 09:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 09:43:46 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Kerja_sama.php(557): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads\\pembangunan_strategis\\file', '1688953426_6b7931deda617ce4ddf7')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_process_add()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 09:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 10:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 10:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 10:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 15:41:40 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Kerja_sama.php(1153): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads\\pembangunan_strategis_skw\\dokumentasi', '1688974900_08dd876b4f1d47a76fb1')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_process_add()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 15:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 15:52:06 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Kerja_sama.php(1154): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads\\pembangunan_strategis_skw\\dokumentasi', '1688975526_59968231093360a6433d')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_process_add()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 15:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-10 15:55:06 --> mysqli_sql_exception: Unknown column 'id_pembangunan_strategis' in 'where clause' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1178): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_edit('7')
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-07-10 15:55:06 --> Unknown column 'id_pembangunan_strategis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1735): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dokumentasi_pembangunan_strategis_skw`
+WHERE `id_pembangunan_strategis` = :id_pembangunan_strategis:', [...], false)
+ 2 APPPATH\Controllers\Kerja_sama.php(1178): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_edit('7')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 15:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 15:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:01:08 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Kerja_sama.php(1251): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads\\pembangunan_strategis_skw\\dokumentasi', '1688976068_aaaaf9828fa49e32a149')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_process_edit()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:05:30 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\Kerja_sama.php(1251): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\uploads\\pembangunan_strategis_skw\\dokumentasi', '1688976330_43b474c6920fa8a18bec')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_process_edit()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-10 16:33:56 --> mysqli_sql_exception: Unknown column 'pss.id_rkt' in 'on clause' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `pss`...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `pss`...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `pss`...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *, `pss`...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Models\M_kerja_sama.php(97): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1099): App\Models\M_kerja_sama->pembangunan_strategis_skw()
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw()
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-10 16:33:56 --> Unknown column 'pss.id_rkt' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *, `pss`.`id` AS `id`
+FROM `pembangunan_strategis` `pss`
+LEFT JOIN `mitra` ON `mitra`.`id_mitra`=`pss`.`mitra`
+JOIN `rkt_pembangunan_strategis` `rps` ON `rps`.`id`=`pss`.`id_rkt`
+WHERE `pss`.`lokasi` = :pss.lokasi:', [...], false)
+ 2 APPPATH\Models\M_kerja_sama.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kerja_sama.php(1099): App\Models\M_kerja_sama->pembangunan_strategis_skw()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:35:42 --> Undefined property: stdClass::$nama_rkt
+in APPPATH\Views\kerja_sama_skw\pembangunan_strategis.php on line 58.
+ 1 APPPATH\Views\kerja_sama_skw\pembangunan_strategis.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_rkt', 'APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis.php', 58)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('kerja_sama_skw/pembangunan_strategis', [], true)
+ 5 APPPATH\Controllers\Kerja_sama.php(1101): view('kerja_sama_skw/pembangunan_strategis', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-10 16:35:59 --> mysqli_sql_exception: Unknown column 'pss.mitra' in 'on clause' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, `pss`...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `pss`...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `pss`...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *, `pss`...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Models\M_kerja_sama.php(97): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1099): App\Models\M_kerja_sama->pembangunan_strategis_skw()
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw()
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-10 16:35:59 --> Unknown column 'pss.mitra' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *, `pss`.`id` AS `id`
+FROM `pembangunan_strategis_skw` `pss`
+LEFT JOIN `mitra` ON `mitra`.`id_mitra`=`pss`.`mitra`
+JOIN `rkt_pembangunan_strategis` `rps` ON `rps`.`id`=`pss`.`id_rkt`
+WHERE `pss`.`lokasi` = :pss.lokasi:', [...], false)
+ 2 APPPATH\Models\M_kerja_sama.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kerja_sama.php(1099): App\Models\M_kerja_sama->pembangunan_strategis_skw()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:36:08 --> Undefined property: stdClass::$judul
+in APPPATH\Views\kerja_sama_skw\pembangunan_strategis.php on line 60.
+ 1 APPPATH\Views\kerja_sama_skw\pembangunan_strategis.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$judul', 'APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis.php', 60)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('kerja_sama_skw/pembangunan_strategis', [], true)
+ 5 APPPATH\Controllers\Kerja_sama.php(1101): view('kerja_sama_skw/pembangunan_strategis', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:36:54 --> Undefined property: stdClass::$id_rkt
+in APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php on line 57.
+ 1 APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_rkt', 'APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('kerja_sama_skw/pembangunan_strategis_edit', [], true)
+ 5 APPPATH\Controllers\Kerja_sama.php(1186): view('kerja_sama_skw/pembangunan_strategis_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:45:11 --> Undefined property: stdClass::$id_rkt
+in APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php on line 57.
+ 1 APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_rkt', 'APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('kerja_sama_skw/pembangunan_strategis_edit', [], true)
+ 5 APPPATH\Controllers\Kerja_sama.php(1186): view('kerja_sama_skw/pembangunan_strategis_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:56:20 --> Undefined property: stdClass::$mitra
+in APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php on line 44.
+ 1 APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$mitra', 'APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('kerja_sama_skw/pembangunan_strategis_edit', [], true)
+ 5 APPPATH\Controllers\Kerja_sama.php(1186): view('kerja_sama_skw/pembangunan_strategis_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 16:59:10 --> Undefined property: stdClass::$judul
+in APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php on line 65.
+ 1 APPPATH\Views\kerja_sama_skw\pembangunan_strategis_edit.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$judul', 'APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kerja_sama_skw\\pembangunan_strategis_edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('kerja_sama_skw/pembangunan_strategis_edit', [], true)
+ 5 APPPATH\Controllers\Kerja_sama.php(1186): view('kerja_sama_skw/pembangunan_strategis_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->pembangunan_strategis_skw_edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 16:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 16:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 21:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 22:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 22:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 22:31:44 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 882.
+ 1 SYSTEMPATH\Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Kerja_sama.php(1116): CodeIgniter\Model->__call('getRKTData', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 22:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-10 22:32:24 --> mysqli_sql_exception: Unknown column 'm.id_mitra' in 'field list' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `m`.`id_...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `m`.`id_...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `m`.`id_...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `m`.`id_...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(NULL)
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-10 22:32:24 --> Unknown column 'm.id_mitra' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `m`.`id_mitra`, `m`.`nama_mitra`, `m`.`jenis_lokasi`, `rps`.`nama_rkt`
+FROM `mitra`
+JOIN `pembangunan_strategis` `ps` ON `ps`.`mitra` = `m`.`id_mitra`
+JOIN `rkt_pembangunan_strategis` `rps` ON `rps`.`id_pembangunan_strategis` = `ps`.`id`
+WHERE `m`.`id_mitra` IS NULL', [], false)
+ 2 APPPATH\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-10 22:32:56 --> mysqli_sql_exception: Unknown column 'm.id_mitra' in 'where clause' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `rps`.`i...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rps`.`i...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rps`.`i...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `rps`.`i...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(NULL)
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-10 22:32:56 --> Unknown column 'm.id_mitra' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `rps`.`id`, `rps`.`nama_rkt`
+FROM `mitra`
+JOIN `pembangunan_strategis` `ps` ON `ps`.`mitra` = `m`.`id_mitra`
+JOIN `rkt_pembangunan_strategis` `rps` ON `rps`.`id_pembangunan_strategis` = `ps`.`id`
+WHERE `m`.`id_mitra` IS NULL', [], false)
+ 2 APPPATH\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-10 22:33:19 --> mysqli_sql_exception: Unknown column 'm.id_mitra' in 'field list' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `m`.`id_...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `m`.`id_...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `m`.`id_...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `m`.`id_...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(NULL)
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-10 22:33:19 --> Unknown column 'm.id_mitra' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `m`.`id_mitra`, `rps`.`id`, `rps`.`nama_rkt`
+FROM `mitra`
+JOIN `pembangunan_strategis` `ps` ON `ps`.`mitra` = `m`.`id_mitra`
+JOIN `rkt_pembangunan_strategis` `rps` ON `rps`.`id_pembangunan_strategis` = `ps`.`id`
+WHERE `m`.`id_mitra` IS NULL', [], false)
+ 2 APPPATH\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-10 22:34:08 --> mysqli_sql_exception: Unknown column 'm.id_mitra' in 'field list' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `m`.`id_...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `m`.`id_...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `m`.`id_...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `m`.`id_...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(NULL)
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-10 22:34:08 --> Unknown column 'm.id_mitra' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `m`.`id_mitra`, `rps`.`id`, `rps`.`nama_rkt`
+FROM `mitra`
+JOIN `pembangunan_strategis` `ps` ON `ps`.`mitra` = `m`.`id_mitra`
+JOIN `rkt_pembangunan_strategis` `rps` ON `rps`.`id_pembangunan_strategis` = `ps`.`id`', [], false)
+ 2 APPPATH\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-07-10 22:34:19 --> mysqli_sql_exception: Unknown column 'm.id_mitra' in 'on clause' in C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\siperkasa\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `rps`.`i...', 0)
+#1 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rps`.`i...')
+#2 C:\xampp\htdocs\siperkasa\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rps`.`i...')
+#3 C:\xampp\htdocs\siperkasa\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `rps`.`i...', Array, false)
+#4 C:\xampp\htdocs\siperkasa\app\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\siperkasa\app\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(NULL)
+#6 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+#7 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+#8 C:\xampp\htdocs\siperkasa\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\siperkasa\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\siperkasa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-07-10 22:34:19 --> Unknown column 'm.id_mitra' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `rps`.`id`, `rps`.`nama_rkt`
+FROM `mitra`
+JOIN `pembangunan_strategis` `ps` ON `ps`.`mitra` = `m`.`id_mitra`
+JOIN `rkt_pembangunan_strategis` `rps` ON `rps`.`id_pembangunan_strategis` = `ps`.`id`', [], false)
+ 2 APPPATH\Models\M_kerja_sama.php(107): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Kerja_sama.php(1116): App\Models\M_kerja_sama->getrkt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Kerja_sama->getrkt()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerja_sama))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-07-10 22:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 22:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 22:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 22:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 22:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 22:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 23:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
