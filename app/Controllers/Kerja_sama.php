@@ -41,18 +41,21 @@ class Kerja_sama extends BaseController
         $no_surat_pks = $this->request->getPost('no_surat_pks');
         $ruang_lingkup = $this->request->getPost('ruang_lingkup');
 
-        $komitmen_pks = $this->request->getPost('komitmen_pks');
-        $realisasi_pks = $this->request->getPost('realisasi_pks');
-        $komitmen_rpp = $this->request->getPost('komitmen_rpp');
-        $realisasi_rpp = $this->request->getPost('realisasi_rpp');
-        $komitmen_rkl_1 = $this->request->getPost('komitmen_rkl_1');
-        $realisasi_rkl_1 = $this->request->getPost('realisasi_rkl_1');
-        $komitmen_rkl_2 = $this->request->getPost('komitmen_rkl_2');
-        $realisasi_rkl_2 = $this->request->getPost('realisasi_rkl_2');
-        $lokasi_kerjasama = $this->request->getPost('lokasi_kerjasama');
+        $komitmen_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_pks')));
+        $realisasi_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_pks')));
+        $komitmen_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rpp')));
+        $realisasi_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rpp')));
+        $komitmen_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_1')));
+        $realisasi_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_1')));
+        $komitmen_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_2')));
+        $realisasi_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_2')));
 
+        $lokasi_kerjasama = $this->request->getPost('lokasi_kerjasama');
+        $mitra = intval($this->request->getPost('mitra'));
+        
         $data = [
             'judul' => $judul,
+            'mitra' => $mitra,
             'tgl_awal' => $tgl_awal,
             'tgl_akhir' => $tgl_akhir,
             'no_pks' => $no_surat_pks,
@@ -214,7 +217,6 @@ class Kerja_sama extends BaseController
     {
         $data['surat'] = $this->db->table('penguatan_fungsi')->getWhere(['id' => $id])->getRow();
         $data['mitra'] = $this->db->table('mitra')->get()->getResult();
-        // $data['foto_dokumentasi'] = $this->db->table('dokumentasi_penguatan_fungsi')->getWhere(['id_penguatan_fungsi' => $id])->getResult();
         $data['fileRKT'] = $this->db->table('rkt_penguatan_fungsi')->getWhere(['id_penguatan_fungsi' => $id])->getResult();
         return view('kerja_sama/penguatan_fungsi_edit', $data);
     }
@@ -229,14 +231,15 @@ class Kerja_sama extends BaseController
         $no_surat_pks = $this->request->getPost('no_surat_pks');
         $ruang_lingkup = $this->request->getPost('ruang_lingkup');
 
-        $komitmen_pks = $this->request->getPost('komitmen_pks');
-        $realisasi_pks = $this->request->getPost('realisasi_pks');
-        $komitmen_rpp = $this->request->getPost('komitmen_rpp');
-        $realisasi_rpp = $this->request->getPost('realisasi_rpp');
-        $komitmen_rkl_1 = $this->request->getPost('komitmen_rkl_1');
-        $realisasi_rkl_1 = $this->request->getPost('realisasi_rkl_1');
-        $komitmen_rkl_2 = $this->request->getPost('komitmen_rkl_2');
-        $realisasi_rkl_2 = $this->request->getPost('realisasi_rkl_2');
+        $komitmen_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_pks')));
+        $realisasi_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_pks')));
+        $komitmen_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rpp')));
+        $realisasi_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rpp')));
+        $komitmen_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_1')));
+        $realisasi_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_1')));
+        $komitmen_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_2')));
+        $realisasi_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_2')));
+
         $lokasi_kerjasama = $this->request->getPost('lokasi_kerjasama');
 
         $data = [
@@ -458,14 +461,15 @@ class Kerja_sama extends BaseController
         $no_surat_pks = $this->request->getPost('no_surat_pks');
         $ruang_lingkup = $this->request->getPost('ruang_lingkup');
 
-        $komitmen_pks = $this->request->getPost('komitmen_pks');
-        $realisasi_pks = $this->request->getPost('realisasi_pks');
-        $komitmen_rpp = $this->request->getPost('komitmen_rpp');
-        $realisasi_rpp = $this->request->getPost('realisasi_rpp');
-        $komitmen_rkl_1 = $this->request->getPost('komitmen_rkl_1');
-        $realisasi_rkl_1 = $this->request->getPost('realisasi_rkl_1');
-        $komitmen_rkl_2 = $this->request->getPost('komitmen_rkl_2');
-        $realisasi_rkl_2 = $this->request->getPost('realisasi_rkl_2');
+        $komitmen_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_pks')));
+        $realisasi_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_pks')));
+        $komitmen_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rpp')));
+        $realisasi_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rpp')));
+        $komitmen_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_1')));
+        $realisasi_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_1')));
+        $komitmen_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_2')));
+        $realisasi_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_2')));
+
         $lokasi_kerjasama = $this->request->getPost('lokasi_kerjasama');
         $mitra = intval($this->request->getPost('mitra'));
 
@@ -649,14 +653,15 @@ class Kerja_sama extends BaseController
         $no_surat_pks = $this->request->getPost('no_surat_pks');
         $ruang_lingkup = $this->request->getPost('ruang_lingkup');
 
-        $komitmen_pks = $this->request->getPost('komitmen_pks');
-        $realisasi_pks = $this->request->getPost('realisasi_pks');
-        $komitmen_rpp = $this->request->getPost('komitmen_rpp');
-        $realisasi_rpp = $this->request->getPost('realisasi_rpp');
-        $komitmen_rkl_1 = $this->request->getPost('komitmen_rkl_1');
-        $realisasi_rkl_1 = $this->request->getPost('realisasi_rkl_1');
-        $komitmen_rkl_2 = $this->request->getPost('komitmen_rkl_2');
-        $realisasi_rkl_2 = $this->request->getPost('realisasi_rkl_2');
+        $komitmen_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_pks')));
+        $realisasi_pks = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_pks')));
+        $komitmen_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rpp')));
+        $realisasi_rpp = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rpp')));
+        $komitmen_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_1')));
+        $realisasi_rkl_1 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_1')));
+        $komitmen_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('komitmen_rkl_2')));
+        $realisasi_rkl_2 = intval(str_replace(['Rp', '.'], '', $this->request->getPost('realisasi_rkl_2')));
+
         $lokasi_kerjasama = $this->request->getPost('lokasi_kerjasama');
         $mitra = intval($this->request->getPost('mitra'));
 

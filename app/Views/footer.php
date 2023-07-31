@@ -52,3 +52,28 @@
 <!-- others plugins -->
 <script src="<?= base_url() ?>/assets/js/plugins.js"></script>
 <script src="<?= base_url() ?>/assets/js/scripts.js"></script>
+
+<script>
+function formatCurrency(input) {
+  // Get the input value without non-numeric characters
+  let value = input.value.replace(/[^\d]/g, '');
+
+  // Convert the value to a number
+  let num = parseFloat(value);
+
+  // Check if the value is a valid number
+  if (!isNaN(num)) {
+    // Format the number with comma separators for thousands
+    let formattedValue = num.toLocaleString('id-ID');
+
+    // Add the IDR currency symbol
+    formattedValue = "Rp " + formattedValue;
+
+    // Update the input value with the formatted currency
+    input.value = formattedValue;
+  } else {
+    // If the input is not a valid number, set it to "Rp " (with a space) to keep 'Rp' visible
+    input.value = "Rp ";
+  }
+}
+</script>

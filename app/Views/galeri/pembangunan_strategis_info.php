@@ -103,7 +103,7 @@
                     <?= isset($pembangunanStrategis->no_pks) ? $pembangunanStrategis->no_pks : 'No Surat Persetujuan belum ada' ?> &nbsp; / &nbsp;
                     <?= isset($pembangunanStrategis->surat_pks) ? $pembangunanStrategis->surat_pks : 'Surat Persetujuan belum ada' ?>
                 </i>
-                <h4><?= isset($pembangunanStrategis->judul) ?  str_replace("p>", "span>", $pembangunanStrategis->judul) : 'Belum ada judul' ?></h4>
+                <h4><?= isset($pembangunanStrategis->judul) ?  str_replace("p>", "span>", $pembangunanStrategis->nama_mitra) : 'Belum ada judul' ?></h4>
                 <br />
                 <b>Ruang Lingkup : <?= isset($pembangunanStrategis->ruang_lingkup) ?  str_replace("div>", "span>", $pembangunanStrategis->ruang_lingkup) : 'Belum ada ruang lingkup' ?></b>
 

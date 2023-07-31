@@ -107,8 +107,8 @@ if ((!empty($_SERVER['REQUEST_SCHEME']) && $_SERVER['REQUEST_SCHEME'] == 'https'
     $protocole = 'http://';
 }
 
-$host = $_SERVER['HTTP_HOST'] . '/';
-$project = explode('/', $_SERVER['REQUEST_URI']);
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] . '/' : '';
+$project = isset($_SERVER['REQUEST_URI']) ? explode('/', $_SERVER['REQUEST_URI']) : [];
 $baseurl = $protocole . $host;
 $myappBaseUrl = $baseurl . '/';
 defined('BASE') || define('BASE', $myappBaseUrl);

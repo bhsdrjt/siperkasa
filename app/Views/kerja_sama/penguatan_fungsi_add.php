@@ -32,6 +32,17 @@
 
             <?= form_open('kerja_sama/penguatan_fungsi/process/add', 'enctype="multipart/form-data"') ?>
             <div class="row">
+              <div class="form-group col-4">
+                <label for="judul" class="col-form-label"><b>Mitra</b></label>
+                <select class="js-example-basic-single" name="mitra" id="mitra">
+                  <option value="" disabled selected>Pilih Mitra</option>
+                </select>
+              </div>
+
+              <div class="form-group col-4">
+                <label for="lokasi" class="col-form-label "><b>Lokasi</b></label>
+                <input class="form-control " readonly type="text" name="lokasi_kerjasama" id="lokasi_kerjasama">
+              </div>
               <div class="form-group col-12">
                 <label for="judul" class="col-form-label"><b>Judul</b></label>
                 <input class="form-control" type="text" name="judul" id="judul" placeholder="Judul">
@@ -53,7 +64,7 @@
               <div class="form-group col-4">
                 <label for="file_surat_pks" class="col-form-label"><b> File Surat Persetujuan PKS</b> <sup style="color: darkblue;">(Pdf)</sup></label>
                 <div class="input-group mb-3">
-                  <input type="file" class="form-control" name="file_surat_pks" id="file_surat_pks" value="">
+                  <input type="file" class="form-control" name="file_surat_pks" id="file_surat_pks" value="" accept=".pdf">
                 </div>
               </div>
               <div class="form-group col-4">
@@ -72,61 +83,61 @@
               <div class="form-group col-4">
                 <label for="cover" class="col-form-label"><b>Dokumen PKS</b> <sup style="color: darkblue;">(Pdf)</sup></label>
                 <div class="input-group">
-                  <input type="file" class="form-control" name="file_pks" id="file_pks" value="">
+                  <input type="file" class="form-control" name="file_pks" id="file_pks" value="" accept=".pdf">
                 </div>
               </div>
               <div class="form-group col-4">
                 <label for="komitmen_pks" class="col-form-label"><b>Komitmen PKS</b></label>
-                <input class="form-control" type="text" name="komitmen_pks" id="komitmen_pks" placeholder="Komitmen PKS">
+                <input class="form-control" type="text" name="komitmen_pks" id="komitmen_pks" placeholder="Komitmen PKS" oninput="formatCurrency(this)">
               </div>
               <div class="form-group col-4">
                 <label for="realisasi_pks" class="col-form-label"><b>Realisasi PKS</b></label>
-                <input class="form-control" type="text" name="realisasi_pks" id="realisasi_pks" placeholder="Realisasi PKS">
+                <input class="form-control" type="text" name="realisasi_pks" id="realisasi_pks" placeholder="Realisasi PKS" oninput="formatCurrency(this)">
               </div>
 
               <div class="form-group col-4">
                 <label for="cover" class="col-form-label"><b>Dokumen RPP</b> <sup style="color: darkblue;">(Pdf)</sup></label>
                 <div class="input-group">
-                  <input type="file" class="form-control" name="file_rpp" id="file_rpp" value="">
+                  <input type="file" class="form-control" name="file_rpp" id="file_rpp" value="" accept=".pdf">
                 </div>
               </div>
               <div class="form-group col-4">
                 <label for="komitmen_rpp" class="col-form-label"><b>Komitmen RPP</b></label>
-                <input class="form-control" type="text" name="komitmen_rpp" id="komitmen_rpp" placeholder="Komitmen RPP">
+                <input class="form-control" type="text" name="komitmen_rpp" id="komitmen_rpp" placeholder="Komitmen RPP" oninput="formatCurrency(this)">
               </div>
               <div class="form-group col-4">
                 <label for="realisasi_rpp" class="col-form-label"><b>Realisasi RPP</b></label>
-                <input class="form-control" type="text" name="realisasi_rpp" id="realisasi_rpp" placeholder="Realisasi RPP">
+                <input class="form-control" type="text" name="realisasi_rpp" id="realisasi_rpp" placeholder="Realisasi RPP" oninput="formatCurrency(this)">
               </div>
 
               <div class="form-group col-4">
                 <label for="cover" class="col-form-label"><b>Dokumen RKL 1</b> <sup style="color: darkblue;">(Pdf)</sup></label>
                 <div class="input-group">
-                  <input type="file" class="form-control" name="file_rkl_1" id="file_rkl_1" value="">
+                  <input type="file" class="form-control" name="file_rkl_1" id="file_rkl_1" value="" accept=".pdf">
                 </div>
               </div>
               <div class="form-group col-4">
                 <label for="komitmen_rkl_1" class="col-form-label"><b>Komitmen RKL 1</b></label>
-                <input class="form-control" type="text" name="komitmen_rkl_1" id="komitmen_rkl_1" placeholder="Komitmen RKL 1">
+                <input class="form-control" type="text" name="komitmen_rkl_1" id="komitmen_rkl_1" placeholder="Komitmen RKL 1" oninput="formatCurrency(this)">
               </div>
               <div class="form-group col-4">
                 <label for="realisasi_rkl_1" class="col-form-label"><b>Realisasi RKL 1</b></label>
-                <input class="form-control" type="text" name="realisasi_rkl_1" id="realisasi_rkl_1" placeholder="Realisasi RKL 1">
+                <input class="form-control" type="text" name="realisasi_rkl_1" id="realisasi_rkl_1" placeholder="Realisasi RKL 1" oninput="formatCurrency(this)">
               </div>
 
               <div class="form-group col-4">
                 <label for="cover" class="col-form-label"><b>Dokumen RKL 2</b> <sup style="color: darkblue;">(Pdf)</sup></label>
                 <div class="input-group">
-                  <input type="file" class="form-control" name="file_rkl_2" id="file_rkl_2" value="">
+                  <input type="file" class="form-control" name="file_rkl_2" id="file_rkl_2" value="" accept=".pdf">
                 </div>
               </div>
               <div class="form-group col-4">
                 <label for="komitmen_rkl_2" class="col-form-label"><b>Komitmen RKL 2</b></label>
-                <input class="form-control" type="text" name="komitmen_rkl_2" id="komitmen_rkl_2" placeholder="Komitmen RKL 2">
+                <input class="form-control" type="text" name="komitmen_rkl_2" id="komitmen_rkl_2" placeholder="Komitmen RKL 2" oninput="formatCurrency(this)">
               </div>
               <div class="form-group col-4">
                 <label for="realisasi_rkl_2" class="col-form-label"><b>Realisasi RKL 2</b></label>
-                <input class="form-control" type="text" name="realisasi_rkl_2" id="realisasi_rkl_2" placeholder="Realisasi RKL 2">
+                <input class="form-control" type="text" name="realisasi_rkl_2" id="realisasi_rkl_2" placeholder="Realisasi RKL 2" oninput="formatCurrency(this)">
               </div>
 
               <div class="form-group mt-3 col-12">
@@ -137,7 +148,7 @@
                 <table class="table table-borderless mt-2 dokumenRKT" style="width: 100%;">
                   <thead>
                     <th>No</th>
-                    <th>Nama RKT</th>
+                    <th>Periode RKT</th>
                     <th>File Upload RKT <sup style="color: darkblue;">(pdf)</sup></th>
                     <th>Komitmen RKT</th>
                     <th>Realisasi RKT</th>
@@ -147,22 +158,22 @@
                       <td>1.</td>
                       <td>
                         <div class="form-group">
-                          <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt0" placeholder="Nama RKT">
+                          <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt0" placeholder="Periode RKT">
                         </div>
                       </td>
                       <td style="padding-left: 0px;">
                         <div class="input-group mb-3">
-                          <input type="file" class="form-control" name="file_rkt[]" id="file_rkt0" value="">
+                          <input type="file" class="form-control" name="file_rkt[]" id="file_rkt0" value="" accept=".pdf">
                         </div>
                       </td>
                       <td>
                         <div class="form-group">
-                          <input class="form-control" type="text" name="komitmen_rkt[]" id="komitmen_rkt0" placeholder="Komitmen RKT">
+                          <input class="form-control" type="text" name="komitmen_rkt[]" id="komitmen_rkt0" placeholder="Komitmen RKT" oninput="formatCurrency(this)">
                         </div>
                       </td>
                       <td>
                         <div class="form-group">
-                          <input class="form-control" type="text" name="realisasi_rkt[]" id="realisasi_rkt0" placeholder="Realisasi RKT">
+                          <input class="form-control" type="text" name="realisasi_rkt[]" id="realisasi_rkt0" placeholder="Realisasi RKT" oninput="formatCurrency(this)">
                         </div>
                       </td>
                       <td></td>
@@ -176,14 +187,6 @@
                 <div class="input-group mb-3">
                   <input type="file" class="form-control" name="file_lokasi" id="file_lokasi" accept=".kml" value="">
                 </div>
-              </div>
-              <div class="form-group col-4">
-                <label for="lokasi_kerjasama" class="col-form-label"><b>Lokasi Kerja Sama</b></label>
-                <select class="form-control" name="lokasi_kerjasama">
-                  <option value="SKW 1" selected>SKW 1</option>
-                  <option value="SKW 2">SKW 2</option>
-                  <option value="SKW 3">SKW 3</option>
-                </select>
               </div>
               <div class="form-group col-4"></div>
 
@@ -210,7 +213,49 @@
 <script type="text/javascript">
   $(document).ready(function() {
     tinymce.init({
-      selector: '#judul,#ruang_lingkup'
+      selector: '#judul,#ruang_lingkup',
+      menubar: false,
+      toolbar: 'bold italic',
+      statusbar: false,
+    });
+    $('#mitra').select2({
+      width: '100%',
+      templateResult: function(data) {
+        if (data.id) {
+          var mitraText = '<div class="mitra-text">' + data.text + '</div>';
+          var jenisLokasiText = '<div class="jenis-lokasi"> Lokasi : ' + data.additional.jenis_lokasi + '</div>';
+          return $('<span>').append(mitraText, jenisLokasiText);
+        }
+        return data.text;
+      },
+      ajax: {
+        url: '<?php echo base_url("Kerja_sama/getmitra"); ?>',
+        dataType: 'json',
+        delay: 250,
+        processResults: function(data) {
+          var mitraArray = data.map(function(item) {
+            return {
+              id: item.id_mitra,
+              text: item.nama_mitra,
+              additional: {
+                jenis_lokasi: item.jenis_lokasi
+              }
+            };
+          });
+  
+          return {
+            results: mitraArray
+          };
+        },
+        cache: true
+      }
+    }).on('change', function() {
+      var selectedMitra = $(this).select2('data')[0];
+      if (selectedMitra && selectedMitra.additional) {
+        $('#lokasi_kerjasama').val(selectedMitra.additional.jenis_lokasi);
+      } else {
+        $('#lokasi_kerjasama').val('');
+      }
     });
 
     // $("#mitra").select2({
@@ -225,7 +270,7 @@
       cols += `<td>` + no + `.</td>
               <td>
                 <div class="form-group">
-                  <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt` + index + `" placeholder="Nama RKT">
+                  <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt` + index + `" placeholder="Periode RKT">
                  </div>
               </td>
               <td style="padding-left: 0px;">

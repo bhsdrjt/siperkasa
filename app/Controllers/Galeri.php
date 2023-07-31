@@ -79,7 +79,7 @@ class Galeri extends BaseController
     public function pembangunan_strategis_info($id)
     {
         helper(['tanggal']);
-        $data['pembangunanStrategis'] = $this->db->table('pembangunan_strategis')->getWhere(['id' => $id])->getRow();
+        $data['pembangunanStrategis'] = $this->db->table('pembangunan_strategis')->join('mitra', 'pembangunan_strategis.mitra = mitra.id_mitra', 'left')->getWhere(['pembangunan_strategis.id' => $id])->getRow();
         $data['fileRKT'] = $this->db->table('rkt_pembangunan_strategis')->getWhere(['id_pembangunan_strategis' => $id])->getResult();
         $dok_pembangunanStrategisSKW = [];
         if (!empty($data['fileRKT'])) {
