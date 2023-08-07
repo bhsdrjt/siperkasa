@@ -2,41 +2,54 @@
 <?= $this->section('content') ?>
 
 <style>
-  .center-table {
+.center-table {
     width: 100%;
     text-align: center;
+    height: 300px;
+    /* Atur tinggi wadah tabel */
+    overflow-y: auto;
+    /* Tampilkan scrollbar vertikal jika kontennya lebih panjang daripada wadahnya */
+}
+
+.scrollable-table {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
-  }
-  .center-table thead tr td {
+}
+
+.center-table td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    /* Tambahkan garis dengan ketebalan 1px dan warna abu-abu (#ccc) */
+}
+
+.center-table thead tr td {
     vertical-align: middle;
-  }
+}
 </style>
 
 <!-- page title area end -->
 <div class="main-content-inner">
-  <div class="container">
-    <div class="row">
-      <!-- Primary table start -->
-      <div class="col-12 mt-3">
-        <div class="card">
-          <div class="card-header bg-dark text-white">
-            <div class="row">
-              <div class="col-7">
-                <h4>Kerja Sama Pembangunan Strategis</h4>
-              </div>
-              <div class="col-5">
-                <span class="float-right">
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
+    <div class="container">
+        <div class="row">
+            <!-- Primary table start -->
+            <div class="col-12 mt-3">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <div class="row">
+                            <div class="col-7">
+                                <h4>Kerja Sama Pembangunan Strategis</h4>
+                            </div>
+                            <div class="col-5">
+                                <span class="float-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
 
-            <?php if (session()->getFlashdata('error')) {
+                        <?php if (session()->getFlashdata('error')) {
               echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                   ' . session()->getFlashdata('error') . '
                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -45,264 +58,309 @@
                </div>';
             } ?>
 
-            <?= form_open('kerja_sama/pembangunan_strategis/process/add', 'enctype="multipart/form-data"') ?>
-            <div class="row">
-              <div class="form-group col-4">
-                <label for="judul" class="col-form-label"><b>Mitra</b></label>
-                <select class="js-example-basic-single" name="mitra" id="mitra">
-                  <option value="" disabled selected>Pilih Mitra</option>
-                </select>
-              </div>
+                        <?= form_open('kerja_sama/pembangunan_strategis/process/add', 'enctype="multipart/form-data"') ?>
+                        <div class="row">
+                            <div class="form-group col-4">
+                                <label for="judul" class="col-form-label"><b>Mitra</b></label>
+                                <select class="js-example-basic-single" name="mitra" id="mitra">
+                                    <option value="" disabled selected>Pilih Mitra</option>
+                                </select>
+                            </div>
 
-              <div class="form-group col-4">
-                <label for="lokasi" class="col-form-label "><b>Lokasi</b></label>
-                <input class="form-control " readonly type="text" name="lokasi_kerjasama" id="lokasi_kerjasama">
-              </div>
-              <div class="form-group col-12">
-                <label for="judul" class="col-form-label"><b>Judul</b></label>
-                <input class="form-control" type="text" name="judul" id="judul" placeholder="Judul">
-              </div>
-              <div class="form-group col-4">
-                <label for="tgl_awal" class="col-form-label"><b>Tgl PKS Awal</b></label>
-                <input class="form-control" type="date" name="tgl_awal" id="tgl_awal" value="<?= date('Y-m-d') ?>">
-              </div>
-              <div class="form-group col-4">
-                <label for="tgl_akhir" class="col-form-label"><b>Tgl PKS Akhir</b></label>
-                <input class="form-control" type="date" name="tgl_akhir" id="tgl_akhir" value="<?= date('Y-m-d') ?>">
-              </div>
-              <div class="col-4"></div>
+                            <div class="form-group col-4">
+                                <label for="lokasi" class="col-form-label "><b>Lokasi</b></label>
+                                <input class="form-control " readonly type="text" name="lokasi_kerjasama"
+                                    id="lokasi_kerjasama">
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="judul" class="col-form-label"><b>Judul</b></label>
+                                <input class="form-control" type="text" name="judul" id="judul" placeholder="Judul">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="tgl_awal" class="col-form-label"><b>Tgl PKS Awal</b></label>
+                                <input class="form-control" type="date" name="tgl_awal" id="tgl_awal"
+                                    value="<?= date('Y-m-d') ?>">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="tgl_akhir" class="col-form-label"><b>Tgl PKS Akhir</b></label>
+                                <input class="form-control" type="date" name="tgl_akhir" id="tgl_akhir"
+                                    value="<?= date('Y-m-d') ?>">
+                            </div>
+                            <div class="col-4"></div>
 
-              <div class="form-group col-4">
-                <label for="surat_pks" class="col-form-label"><b>Surat Persetujuan PKS</b></label>
-                <input class="form-control" type="text" name="surat_pks" id="surat_pks" placeholder="Surat Persetujuan PKS">
-              </div>
-              <div class="form-group col-4">
-                <label for="file_surat_pks" class="col-form-label"><b> File Surat Persetujuan PKS</b> <sup style="color: darkblue;">(Pdf)</sup></label>
-                <div class="input-group mb-3">
-                  <input type="file" class="form-control" name="file_surat_pks" id="file_surat_pks" value="" accept=".pdf">
-                </div>
-              </div>
-              <div class="form-group col-4">
-                <label for="no_surat_pks" class="col-form-label"><b>No. Persetujuan PKS</b></label>
-                <input class="form-control" type="text" name="no_surat_pks" id="no_surat_pks" placeholder="No Persetujuan PKS">
-              </div>
-              <div class="form-group col-12 d-flex align-items-center">
-                <?php $tahun_sekarang = date('Y'); ?>
-                <label for="ruang_lingkup" class="col-form-label"><b>Ruang Lingkup</b></label>
-                <a class="btn btn-primary ml-2" id="btnTambahKolom">Tambah Periode RKT</a>
-              </div>
+                            <div class="form-group col-4">
+                                <label for="surat_pks" class="col-form-label"><b>Surat Persetujuan PKS</b></label>
+                                <input class="form-control" type="text" name="surat_pks" id="surat_pks"
+                                    placeholder="Surat Persetujuan PKS">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="file_surat_pks" class="col-form-label"><b> File Surat Persetujuan PKS</b>
+                                    <sup style="color: darkblue;">(Pdf)</sup></label>
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" name="file_surat_pks" id="file_surat_pks"
+                                        value="" accept=".pdf">
+                                </div>
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="no_surat_pks" class="col-form-label"><b>No. Persetujuan PKS</b></label>
+                                <input class="form-control" type="text" name="no_surat_pks" id="no_surat_pks"
+                                    placeholder="No Persetujuan PKS">
+                            </div>
+                            <div class="form-group col-12 d-flex align-items-center">
+                                <?php $tahun_sekarang = date('Y'); ?>
+                                <label for="ruang_lingkup" class="col-form-label"><b>Ruang Lingkup</b></label>
+                                <a class="btn btn-primary ml-2" id="btnTambahKolom">Tambah Periode RKT</a>
+                                <a class="btn btn-primary ml-2" id="btnTambahRow">Tambah Baris</a>
+                            </div>
 
-              <div class="center-table">
-                <table class="table" id="tbl_ruanglingkup">
-                  <thead>
-                    <tr>
-                      <td rowspan=3 width="4%">No</td>
-                      <td rowspan=3 width="10%">Program/Kegiatan</td>
-                      <td id="jadwalHeader" colspan=2>Jadwal Tahun Berjalan</td>
-                    </tr>
-                    <tr>
-                      <!-- Default colspan is 2 -->
-                      <td colspan=2><?php echo ($tahun_sekarang - 1) . '-' . $tahun_sekarang ?></td>
-                    </tr>
-                    <tr>
-                      <td>Anggaran</td>
-                      <td>Realisasi</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Program 1</td>
-                      <td>Anggaran 1</td>
-                      <td>Realisasi 1</td>
-                    </tr>
-                    <!-- More rows here... -->
-                  </tbody>
-                </table>
-              </div>
+                            <div class="center-table">
+                                <table class="table" id="tbl_ruanglingkup">
+                                    <thead>
+                                        <tr>
+                                            <td rowspan=3 width="4%">No</td>
+                                            <td rowspan=3 width="10%">Program/Kegiatan</td>
+                                            <td id="jadwalHeader" colspan=2>Jadwal Tahun Berjalan</td>
+                                            <td rowspan=3 width="6%">Vol</td>
+                                            <td rowspan=3 width="6%">Sat</td>
+                                            <td rowspan=3 width="10%">Jumlah Biaya (Anggaran)</td>
+                                            <td rowspan=3 width="10%">Jumlah Biaya (Realisasi)</td>
+                                        </tr>
+                                        <tr>
+                                            <!-- Default colspan is 2 -->
+                                            <td colspan=2><?php echo ($tahun_sekarang - 1) . '-' . $tahun_sekarang ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anggaran</td>
+                                            <td>Realisasi</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td contenteditable="true">Program 1</td>
+                                            <td contenteditable="true">Anggaran 1</td>
+                                            <td contenteditable="true">Realisasi 1</td>
+                                            <td contenteditable="true">Vol 1</td>
+                                            <td contenteditable="true">Sat 1</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <!-- More rows here... -->
+                                    </tbody>
+                                </table>
+                            </div>
 
-              <div class="form-group col-12">
-                <h5>Dokumen Pendukung</h5>
-              </div>
 
-              <div class="form-group col-4">
-                <label for="cover" class="col-form-label"><b>Dokumen PKS</b> <sup style="color: darkblue;">(Pdf)</sup></label>
-                <div class="input-group">
-                  <input type="file" class="form-control" name="file_pks" id="file_pks" value="" accept=".pdf">
-                </div>
-              </div>
-              <div class="form-group col-4">
-                <label for="komitmen_pks" class="col-form-label"><b>Komitmen PKS</b></label>
-                <input class="form-control" type="text" name="komitmen_pks" id="komitmen_pks" placeholder="Komitmen PKS" oninput="formatCurrency(this)">
-              </div>
-              <div class="form-group col-4">
-                <label for="realisasi_pks" class="col-form-label"><b>Realisasi PKS</b></label>
-                <input class="form-control" type="text" name="realisasi_pks" id="realisasi_pks" placeholder="Realisasi PKS" oninput="formatCurrency(this)">
-              </div>
+                            <div class="form-group col-12">
+                                <h5>Dokumen Pendukung</h5>
+                            </div>
 
-              <div class="form-group col-4">
-                <label for="cover" class="col-form-label"><b>Dokumen RPP</b> <sup style="color: darkblue;">(Pdf)</sup></label>
-                <div class="input-group">
-                  <input type="file" class="form-control" name="file_rpp" id="file_rpp" value="" accept=".pdf">
-                </div>
-              </div>
-              <div class="form-group col-4">
-                <label for="komitmen_rpp" class="col-form-label"><b>Komitmen RPP</b></label>
-                <input class="form-control" type="text" name="komitmen_rpp" id="komitmen_rpp" placeholder="Komitmen RPP"oninput="formatCurrency(this)">
-              </div>
-              <div class="form-group col-4">
-                <label for="realisasi_rpp" class="col-form-label"><b>Realisasi RPP</b></label>
-                <input class="form-control" type="text" name="realisasi_rpp" id="realisasi_rpp" placeholder="Realisasi RPP" oninput="formatCurrency(this)">
-              </div>
+                            <div class="form-group col-4">
+                                <label for="cover" class="col-form-label"><b>Dokumen PKS</b> <sup
+                                        style="color: darkblue;">(Pdf)</sup></label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" name="file_pks" id="file_pks" value=""
+                                        accept=".pdf">
+                                </div>
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="komitmen_pks" class="col-form-label"><b>Komitmen PKS</b></label>
+                                <input class="form-control" type="text" name="komitmen_pks" id="komitmen_pks"
+                                    placeholder="Komitmen PKS" oninput="formatCurrency(this)">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="realisasi_pks" class="col-form-label"><b>Realisasi PKS</b></label>
+                                <input class="form-control" type="text" name="realisasi_pks" id="realisasi_pks"
+                                    placeholder="Realisasi PKS" oninput="formatCurrency(this)">
+                            </div>
 
-              <div class="form-group col-4">
-                <label for="cover" class="col-form-label"><b>Dokumen RKL 1</b> <sup style="color: darkblue;">(Pdf)</sup></label>
-                <div class="input-group">
-                  <input type="file" class="form-control" name="file_rkl_1" id="file_rkl_1" value="" accept=".pdf">
-                </div>
-              </div>
-              <div class="form-group col-4">
-                <label for="komitmen_rkl_1" class="col-form-label"><b>Komitmen RKL 1</b></label>
-                <input class="form-control" type="text" name="komitmen_rkl_1" id="komitmen_rkl_1" placeholder="Komitmen RKL 1" oninput="formatCurrency(this)">
-              </div>
-              <div class="form-group col-4">
-                <label for="realisasi_rkl_1" class="col-form-label"><b>Realisasi RKL 1</b></label>
-                <input class="form-control" type="text" name="realisasi_rkl_1" id="realisasi_rkl_1" placeholder="Realisasi RKL 1" oninput="formatCurrency(this)">
-              </div>
+                            <div class="form-group col-4">
+                                <label for="cover" class="col-form-label"><b>Dokumen RPP</b> <sup
+                                        style="color: darkblue;">(Pdf)</sup></label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" name="file_rpp" id="file_rpp" value=""
+                                        accept=".pdf">
+                                </div>
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="komitmen_rpp" class="col-form-label"><b>Komitmen RPP</b></label>
+                                <input class="form-control" type="text" name="komitmen_rpp" id="komitmen_rpp"
+                                    placeholder="Komitmen RPP" oninput="formatCurrency(this)">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="realisasi_rpp" class="col-form-label"><b>Realisasi RPP</b></label>
+                                <input class="form-control" type="text" name="realisasi_rpp" id="realisasi_rpp"
+                                    placeholder="Realisasi RPP" oninput="formatCurrency(this)">
+                            </div>
 
-              <div class="form-group col-4">
-                <label for="cover" class="col-form-label"><b>Dokumen RKL 2</b> <sup style="color: darkblue;">(Pdf)</sup></label>
-                <div class="input-group">
-                  <input type="file" class="form-control" name="file_rkl_2" id="file_rkl_2" value="" accept=".pdf">
-                </div>
-              </div>
-              <div class="form-group col-4">
-                <label for="komitmen_rkl_2" class="col-form-label"><b>Komitmen RKL 2</b></label>
-                <input class="form-control" type="text" name="komitmen_rkl_2" id="komitmen_rkl_2" placeholder="Komitmen RKL 2" oninput="formatCurrency(this)">
-              </div>
-              <div class="form-group col-4">
-                <label for="realisasi_rkl_2" class="col-form-label"><b>Realisasi RKL 2</b></label>
-                <input class="form-control" type="text" name="realisasi_rkl_2" id="realisasi_rkl_2" placeholder="Realisasi RKL 2" oninput="formatCurrency(this)">
-              </div>
+                            <div class="form-group col-4">
+                                <label for="cover" class="col-form-label"><b>Dokumen RKL 1</b> <sup
+                                        style="color: darkblue;">(Pdf)</sup></label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" name="file_rkl_1" id="file_rkl_1" value=""
+                                        accept=".pdf">
+                                </div>
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="komitmen_rkl_1" class="col-form-label"><b>Komitmen RKL 1</b></label>
+                                <input class="form-control" type="text" name="komitmen_rkl_1" id="komitmen_rkl_1"
+                                    placeholder="Komitmen RKL 1" oninput="formatCurrency(this)">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="realisasi_rkl_1" class="col-form-label"><b>Realisasi RKL 1</b></label>
+                                <input class="form-control" type="text" name="realisasi_rkl_1" id="realisasi_rkl_1"
+                                    placeholder="Realisasi RKL 1" oninput="formatCurrency(this)">
+                            </div>
 
-              <div class="form-group mt-3 col-12">
-                <b style="font-size: large;">Dokumen RKT</b>
-                &nbsp; &nbsp; &nbsp; &nbsp;
-                <button type="button" class="btn btn-xs btn-info" id="addDokumenRKT"><i class="fa fa-plus"></i> Add</button>
+                            <div class="form-group col-4">
+                                <label for="cover" class="col-form-label"><b>Dokumen RKL 2</b> <sup
+                                        style="color: darkblue;">(Pdf)</sup></label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" name="file_rkl_2" id="file_rkl_2" value=""
+                                        accept=".pdf">
+                                </div>
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="komitmen_rkl_2" class="col-form-label"><b>Komitmen RKL 2</b></label>
+                                <input class="form-control" type="text" name="komitmen_rkl_2" id="komitmen_rkl_2"
+                                    placeholder="Komitmen RKL 2" oninput="formatCurrency(this)">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="realisasi_rkl_2" class="col-form-label"><b>Realisasi RKL 2</b></label>
+                                <input class="form-control" type="text" name="realisasi_rkl_2" id="realisasi_rkl_2"
+                                    placeholder="Realisasi RKL 2" oninput="formatCurrency(this)">
+                            </div>
 
-                <table class="table table-borderless mt-2 dokumenRKT" style="width: 100%;">
-                  <thead>
-                    <th>No</th>
-                    <th>Periode</th>
-                    <th>File Upload RKT <sup style="color: darkblue;">(pdf)</sup></th>
-                    <th>Komitmen RKT</th>
-                    <th>Realisasi RKT</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td>
-                        <div class="form-group">
-                          <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt0" placeholder="Periode RKT">
+                            <div class="form-group mt-3 col-12">
+                                <b style="font-size: large;">Dokumen RKT</b>
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                <button type="button" class="btn btn-xs btn-info" id="addDokumenRKT"><i
+                                        class="fa fa-plus"></i> Add</button>
+
+                                <table class="table table-borderless mt-2 dokumenRKT" style="width: 100%;">
+                                    <thead>
+                                        <th>No</th>
+                                        <th>Periode</th>
+                                        <th>File Upload RKT <sup style="color: darkblue;">(pdf)</sup></th>
+                                        <th>Komitmen RKT</th>
+                                        <th>Realisasi RKT</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1.</td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="nama_rkt[]"
+                                                        id="nama_rkt0" placeholder="Periode RKT">
+                                                </div>
+                                            </td>
+                                            <td style="padding-left: 0px;">
+                                                <div class="input-group mb-3">
+                                                    <input type="file" class="form-control" name="file_rkt[]"
+                                                        id="file_rkt0" value="" accept=".pdf">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="komitmen_rkt[]"
+                                                        id="komitmen_rkt0" placeholder="Komitmen RKT"
+                                                        oninput="formatCurrency(this)">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="realisasi_rkt[]"
+                                                        id="realisasi_rkt0" placeholder="Realisasi RKT"
+                                                        oninput="formatCurrency(this)">
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="form-group col-4">
+                                <label for="file_lokasi" class="col-form-label"><b>File Lokasi</b> <sup
+                                        style="color: darkblue;">(.KML)</sup></label>
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" name="file_lokasi" id="file_lokasi"
+                                        accept=".kml" value="">
+                                </div>
+                            </div>
+                            <div class="form-group col-4"></div>
+
+
+
+                            <div class="form-group col-12 text-center">
+                                <button type="submit" class="btn btn-primary" name="simpan"
+                                    style="width: 200px;">Simpan</button>
+                            </div>
                         </div>
-                      </td>
-                      <td style="padding-left: 0px;">
-                        <div class="input-group mb-3">
-                          <input type="file" class="form-control" name="file_rkt[]" id="file_rkt0" value="" accept=".pdf">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-group">
-                          <input class="form-control" type="text" name="komitmen_rkt[]" id="komitmen_rkt0" placeholder="Komitmen RKT" oninput="formatCurrency(this)">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-group">
-                          <input class="form-control" type="text" name="realisasi_rkt[]" id="realisasi_rkt0" placeholder="Realisasi RKT" oninput="formatCurrency(this)">
-                        </div>
-                      </td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                        <?= form_close() ?>
 
-              <div class="form-group col-4">
-                <label for="file_lokasi" class="col-form-label"><b>File Lokasi</b> <sup style="color: darkblue;">(.KML)</sup></label>
-                <div class="input-group mb-3">
-                  <input type="file" class="form-control" name="file_lokasi" id="file_lokasi" accept=".kml" value="">
+
+                    </div>
                 </div>
-              </div>
-              <div class="form-group col-4"></div>
-
-
-
-              <div class="form-group col-12 text-center">
-                <button type="submit" class="btn btn-primary" name="simpan" style="width: 200px;">Simpan</button>
-              </div>
             </div>
-            <?= form_close() ?>
-
-
-          </div>
+            <!-- Primary table end -->
         </div>
-      </div>
-      <!-- Primary table end -->
     </div>
-  </div>
 </div>
 <!-- main content area end -->
 
 <?= $this->include('footer') ?>
 
 <script type="text/javascript">
-  $(document).ready(function() {
+$(document).ready(function() {
     tinymce.init({
-      selector: '#judul',
-      menubar: false,
-      toolbar: 'bold italic',
-      statusbar: false,
+        selector: '#judul',
+        menubar: false,
+        toolbar: 'bold italic',
+        statusbar: false,
     });
     $('#mitra').select2({
-      width: '100%',
-      templateResult: function(data) {
-        if (data.id) {
-          var mitraText = '<div class="mitra-text">' + data.text + '</div>';
-          var jenisLokasiText = '<div class="jenis-lokasi"> Lokasi : ' + data.additional.jenis_lokasi + '</div>';
-          return $('<span>').append(mitraText, jenisLokasiText);
-        }
-        return data.text;
-      },
-      ajax: {
-        url: '<?php echo base_url("Kerja_sama/getmitra"); ?>',
-        dataType: 'json',
-        delay: 250,
-        processResults: function(data) {
-          var mitraArray = data.map(function(item) {
-            return {
-              id: item.id_mitra,
-              text: item.nama_mitra,
-              additional: {
-                jenis_lokasi: item.jenis_lokasi
-              }
-            };
-          });
-  
-          return {
-            results: mitraArray
-          };
+        width: '100%',
+        templateResult: function(data) {
+            if (data.id) {
+                var mitraText = '<div class="mitra-text">' + data.text + '</div>';
+                var jenisLokasiText = '<div class="jenis-lokasi"> Lokasi : ' + data.additional
+                    .jenis_lokasi + '</div>';
+                return $('<span>').append(mitraText, jenisLokasiText);
+            }
+            return data.text;
         },
-        cache: true
-      }
+        ajax: {
+            url: '<?php echo base_url("Kerja_sama/getmitra"); ?>',
+            dataType: 'json',
+            delay: 250,
+            processResults: function(data) {
+                var mitraArray = data.map(function(item) {
+                    return {
+                        id: item.id_mitra,
+                        text: item.nama_mitra,
+                        additional: {
+                            jenis_lokasi: item.jenis_lokasi
+                        }
+                    };
+                });
+
+                return {
+                    results: mitraArray
+                };
+            },
+            cache: true
+        }
     }).on('change', function() {
-      var selectedMitra = $(this).select2('data')[0];
-      if (selectedMitra && selectedMitra.additional) {
-        $('#lokasi_kerjasama').val(selectedMitra.additional.jenis_lokasi);
-      } else {
-        $('#lokasi_kerjasama').val('');
-      }
+        var selectedMitra = $(this).select2('data')[0];
+        if (selectedMitra && selectedMitra.additional) {
+            $('#lokasi_kerjasama').val(selectedMitra.additional.jenis_lokasi);
+        } else {
+            $('#lokasi_kerjasama').val('');
+        }
     });
-    
+
 
 
 
@@ -318,9 +376,9 @@
     var index = 1;
     var no = 2;
     $("#addDokumenRKT").click(function(event) {
-      var newRow = $("<tr>");
-      var cols = "";
-      cols += `<td>` + no + `.</td>
+        var newRow = $("<tr>");
+        var cols = "";
+        cols += `<td>` + no + `.</td>
               <td>
                 <div class="form-group">
                   <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt` + index + `" placeholder="Periode RKT">
@@ -341,74 +399,135 @@
                   <input class="form-control" type="text" name="realisasi_rkt[]" id="realisasi_rkt` + index + `" placeholder="Realisasi RKT">
                 </div>
               </td>`;
-      cols += `<td>
+        cols += `<td>
                   <button type="button" class="btn btn-sm btn-danger" id="delDokumen"><i class="fa fa-trash"></i></button>
               </td>`;
-      console.log(cols);
-      newRow.append(cols);
-      $("table.dokumenRKT").append(newRow);
-      index++;
-      no++;
+        console.log(cols);
+        newRow.append(cols);
+        $("table.dokumenRKT").append(newRow);
+        index++;
+        no++;
     });
     $("table.dokumenRKT").on("click", "#delDokumen", function(event) {
-      $(this).closest("tr").remove();
-      no--;
+        $(this).closest("tr").remove();
+        no--;
     });
-  });
+});
 </script>
 
 
 <script>
-  document.getElementById('btnTambahKolom').addEventListener('click', function() {
+function addNewRow() {
+    // Get the table element
+    const table = document.getElementById('tbl_ruanglingkup');
+
+    // Get the number of existing rows in the table
+    const numRows = table.rows.length;
+
+    // Create a new row and add cells to it
+    const newRow = table.insertRow(numRows);
+    for (let i = 0; i < table.rows[3].cells.length; i++) {
+        const newCell = newRow.insertCell();
+        newCell.contentEditable = true; // Set the contenteditable attribute
+        newCell.textContent = 'New'; // You can set an initial value for the new cell
+    }
+}
+
+document.getElementById('btnTambahRow').addEventListener('click', function() {
+    addNewRow();
+});
+
+document.getElementById('btnTambahKolom').addEventListener('click', function() {
     // Get the table element
     const table = document.getElementById('tbl_ruanglingkup');
 
     // Get the current colspan of the "Jadwal Tahun Berjalan" header cell
     const currentColspan = table.rows[0].cells[2].colSpan;
 
+//     console.log(table.rows[0].cells[2]);
+//     console.log(table.rows[0].cells[2].colSpan);
+// console.log(currentColspan);
     // Increase the colspan by 1
     table.rows[0].cells[2].colSpan = currentColspan + 2;
     let iter = 0;
 
+    // console.log(table.rows.length);
+
     for (let i = 1; i < table.rows.length; i++) {
-      // Check if the new data cell already exists
-      const currentDate = new Date();
-      const currentYear = currentDate.getFullYear();
-      if (table.rows[i].cells.length === currentColspan + 3) {
-        // If the new data cell already exists, update its content
-        if (i === 1) {
-          // Increment iter only when adding the new header cell
-          iter++;
-          table.rows[i].cells[currentColspan + 2].textContent = currentYear + iter - 1 + '-' + (currentYear + iter);
-        } else {
-          const newBudgetCell = document.createElement('td');
-          newBudgetCell.textContent = 'Anggaran ' + i;
-          table.rows[i].appendChild(newBudgetCell);
+      // console.log(table.rows[i].cells.length);
+      // console.log(currentColspan + 2);
+        // Check if the new data cell already exists
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        if (table.rows[i].cells.length === currentColspan + 6) {
+            // If the new data cell already exists, update its content
+            if (i === 1) {
+                // Increment iter only when adding the new header cell
+                // iter++;
+                // table.rows[i].cells[currentColspan + 2].textContent = currentYear + iter - 1 + '-' + (
+                //     currentYear + iter);
+            } else {
+              console.log(i);
+                const newBudgetCell = document.createElement('td');
+                newBudgetCell.textContent = 'Anggaran 1';
+                newBudgetCell.contentEditable = true; // Set the contenteditable attribute
+                table.rows[i].insertBefore(newBudgetCell, table.rows[i].cells[currentColspan + 2]);
 
-          const newRealisasiCell = document.createElement('td');
-          newRealisasiCell.textContent = 'Realisasi ' + i;
-          table.rows[i].appendChild(newRealisasiCell);
-        }
-      } else {
-        // If the new data cell does not exist, create and add it
-        const newDataCell = document.createElement('td');
-        if (i === 1) {
-          // Increment iter only when adding the new header cell
-          iter++;
-          newDataCell.setAttribute('colspan', '2');
-          newDataCell.textContent = currentYear + (iter - 1) + '-' + (currentYear + iter);
-        } else {
-          const newBudgetCell = document.createElement('td');
-          newBudgetCell.textContent = 'Anggaran ' + i;
-          table.rows[i].appendChild(newBudgetCell);
+                const newRealisasiCell = document.createElement('td');
+                newRealisasiCell.textContent = 'Realisasi 1';
+                newRealisasiCell.contentEditable = true; // Set the contenteditable attribute
+                table.rows[i].insertBefore(newRealisasiCell, table.rows[i].cells[currentColspan + 3]);
 
-          const newRealisasiCell = document.createElement('td');
-          newRealisasiCell.textContent = 'Realisasi ' + i;
-          table.rows[i].appendChild(newRealisasiCell);
+                // const newVolCell = document.createElement('td');
+                // newVolCell.textContent = 'Vol 1';
+                // newVolCell.contentEditable = true; // Set the contenteditable attribute
+                // table.rows[i].appendChild(newVolCell);
+
+                // const newSatCell = document.createElement('td');
+                // newSatCell.textContent = 'Sat 1';
+                // newSatCell.contentEditable = true; // Set the contenteditable attribute
+                // table.rows[i].appendChild(newSatCell);
+
+            }
+        } else {
+            // If the new data cell does not exist, create and add it
+            const newDataCell = document.createElement('td');
+            
+            if (i === 1) {
+            //     // Increment iter only when adding the new header cell
+                iter++;
+                newDataCell.setAttribute('colspan', '2');
+                newDataCell.textContent = currentYear + (iter - 1) + '-' + (currentYear + iter);
+                table.rows[i].appendChild(newDataCell);
+            } else if(i === 2) {
+                const newBudgetCell = document.createElement('td');
+                newBudgetCell.textContent = 'Anggaran';
+                newBudgetCell.contentEditable = true; // Set the contenteditable attribute
+                table.rows[i].appendChild(newBudgetCell);
+
+                const newRealisasiCell = document.createElement('td');
+                newRealisasiCell.textContent = 'Realisasi';
+                newRealisasiCell.contentEditable = true; // Set the contenteditable attribute
+                table.rows[i].appendChild(newRealisasiCell);
+
+                // const newVolCell = document.createElement('td');
+                // newVolCell.textContent = 'Vol';
+                // newVolCell.contentEditable = true; // Set the contenteditable attribute
+                // table.rows[i].appendChild(newVolCell);
+
+                // const newSatCell = document.createElement('td');
+                // newSatCell.textContent = 'Sat';
+                // newSatCell.contentEditable = true; // Set the contenteditable attribute
+                // table.rows[i].appendChild(newSatCell);
+                
+                
+            }
+
+
+
         }
-        table.rows[i].appendChild(newDataCell);
-      }
     }
-  });
+});
 </script>
+
 <<?= $this->endSection() ?>
