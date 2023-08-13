@@ -454,7 +454,22 @@ class Kerja_sama extends BaseController
 
     public function pembangunan_strategis_process_add()
     {
+        $tableDataJSON = $this->request->getPost('table_data');
+        var_dump($tableDataJSON); // Tampilkan data JSON sebelum dekode
+    
+        $tableDataArray = json_decode($tableDataJSON, true);
+    
+        var_dump($tableDataArray); // Tampilkan array hasil dekode
+     // Ini akan menampilkan array dari data tabel yang dikirim
+    
+
+    // Decode the JSON data
+        $tableData = json_decode($tableDataJSON);
+
         $judul = $this->request->getPost('judul');
+
+        var_dump($judul);exit;
+
         $tgl_awal = $this->request->getPost('tgl_awal');
         $tgl_akhir = $this->request->getPost('tgl_akhir');
         $surat_pks = $this->request->getPost('surat_pks');
