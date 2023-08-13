@@ -455,13 +455,84 @@ class Kerja_sama extends BaseController
     public function pembangunan_strategis_process_add()
     {
         $tableDataJSON = $this->request->getPost('table_data');
-        var_dump($tableDataJSON); // Tampilkan data JSON sebelum dekode
+        // var_dump($tableDataJSON); // Tampilkan data JSON sebelum dekode
     
         $tableDataArray = json_decode($tableDataJSON, true);
     
-        var_dump($tableDataArray); // Tampilkan array hasil dekode
+        // var_dump($tableDataArray); // Tampilkan array hasil dekode
      // Ini akan menampilkan array dari data tabel yang dikirim
-    
+     $newData = [];
+     $currentValue = "";
+     
+     foreach ($tableDataArray as $row) {
+         if (!empty($row[0])) {
+             $currentValue = $row[1];
+         }
+         
+         $newRow = [$currentValue];
+         for ($i = 1; $i < count($row); $i++) {
+             $newRow[] = $row[$i];
+         }
+         
+         $newData[] = $newRow;
+     }
+    //  $ruangLingkup = ""; // Inisialisasi nilai awal
+
+    // var_dump($newData);exit;
+
+        foreach ($newData as $row) {
+            if (count($row) === 6) {
+                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+                
+                $program = $row[1]; // Ambil nilai program dari baris saat ini
+                $anggaran = $row[2];
+                $realisasi = $row[3];
+                $jlhanggaran = $row[4];
+                $jlhrealisasi = $row[5];
+
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+                // Contoh:
+                $dataRuangLingkupDetail = [
+                    'ruang_lingkup' => $ruangLingkup,
+                    'program' => $program,
+                    'anggaran' => $anggaran,
+                    'realisasi' => $realisasi,
+                    'jlhanggaran' => $jlhanggaran,
+                    'jlhrealisasi' => $jlhrealisasi
+                ];
+                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+            }
+        }
+     
+        // var_dump($newData);
+
+            // Di dalam controller CodeIgniter
+            $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+            $ruangLingkup = ""; // Inisialisasi nilai awal
+            
+            foreach ($newData as $row) {
+                if (count($row) === 3) {
+                    $ruangLingkup = $row[1]; // Ambil nilai dari kolom kedua
+                    $ruangLingkupIdSama = $idSamaValue;
+                    $tahun = 2023; // Ganti dengan tahun yang sesuai
+            
+                    // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+                    // Contoh:
+                    $dataRuangLingkup = [
+                        'id_sama' => $ruangLingkupIdSama,
+                        'ruang_lingkup' => $ruangLingkup,
+                        'tahun' => $tahun
+                    ];
+                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                }
+            }
+            
+
+
+        // Di dalam controller CodeIgniter
+        
+
+
 
     // Decode the JSON data
         $tableData = json_decode($tableDataJSON);
