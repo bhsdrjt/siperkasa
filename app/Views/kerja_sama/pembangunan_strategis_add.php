@@ -75,6 +75,7 @@
                             <div class="form-group col-12">
                                 <label for="judul" class="col-form-label"><b>Judul</b></label>
                                 <input class="form-control" type="text" name="judul" id="judul" placeholder="Judul">
+                                <input type="hidden" name="table_data" id="table_data">
                             </div>
                             <div class="form-group col-4">
                                 <label for="tgl_awal" class="col-form-label"><b>Tgl PKS Awal</b></label>
@@ -110,18 +111,34 @@
                                 <?php $tahun_sekarang = date('Y'); ?>
                                 <label for="ruang_lingkup" class="col-form-label"><b>Ruang Lingkup</b></label>
                                 <a class="btn btn-primary ml-2" id="btnTambahKolom">Tambah Periode RKT</a>
-                                <a class="btn btn-primary ml-2" id="btnTambahRow">Tambah Baris</a>
+                            </div>
+
+                            <div class="form-group col-8 d-flex align-items-center">
+                                <input class="form-control" type="text" name="ruang_lingkup" id="ruang_lingkup"
+                                    placeholder="Ruang Lingkup">
+                                <a class="btn btn-primary ml-2" id="btnRuangLingkup">Tambah Ruang Lingkup</a>
+                            </div>
+
+                            <div class="form-group col-8 d-flex align-items-center">
+                                <select class="form-control" name="select_lingkup" id="select_lingkup">
+
+                                </select>
+                                <input class="form-control" type="text" name="program" id="program"
+                                    placeholder="Program">
+                                <input class="form-control" type="text" name="anggaran" id="anggaran"
+                                    placeholder="Anggaran">
+                                <input class="form-control" type="text" name="realisasi" id="realisasi"
+                                    placeholder="Realisasi">
+                                <a class="btn btn-primary ml-2" id="btnProgram">Tambah Program</a>
                             </div>
 
                             <div class="center-table">
-                                <table class="table" id="tbl_ruanglingkup">
+                                <table class="table" id="tbl_ruanglingkup" name="tbl_ruanglingkup">
                                     <thead>
                                         <tr>
                                             <td rowspan=3 width="4%">No</td>
                                             <td rowspan=3 width="10%">Program/Kegiatan</td>
                                             <td id="jadwalHeader" colspan=2>Jadwal Tahun Berjalan</td>
-                                            <td rowspan=3 width="6%">Vol</td>
-                                            <td rowspan=3 width="6%">Sat</td>
                                             <td rowspan=3 width="10%">Jumlah Biaya (Anggaran)</td>
                                             <td rowspan=3 width="10%">Jumlah Biaya (Realisasi)</td>
                                         </tr>
@@ -136,17 +153,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td contenteditable="true">Program 1</td>
-                                            <td contenteditable="true">Anggaran 1</td>
-                                            <td contenteditable="true">Realisasi 1</td>
-                                            <td contenteditable="true">Vol 1</td>
-                                            <td contenteditable="true">Sat 1</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <!-- More rows here... -->
                                     </tbody>
                                 </table>
                             </div>
@@ -294,7 +300,7 @@
 
 
                             <div class="form-group col-12 text-center">
-                                <button type="submit" class="btn btn-primary" name="simpan"
+                                <button type="submit" class="btn btn-primary" name="simpan" id="btnSimpan"
                                     style="width: 200px;">Simpan</button>
                             </div>
                         </div>
@@ -313,6 +319,278 @@
 <?= $this->include('footer') ?>
 
 <script type="text/javascript">
+// Ambil elemen tombol dan elemen tabel
+var btnTambahRuangLingkup = document.getElementById("btnRuangLingkup");
+var table = document.querySelector("#tbl_ruanglingkup");
+var tableBody = table.querySelector("tbody");
+var currentProgramIndex = 0;
+var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var ruangLingkupData = []; // Array untuk menyimpan data ruang lingkup
+
+var selectLingkup = document.getElementById("select_lingkup");
+var btnTambahProgram = document.getElementById("btnProgram");
+
+btnTambahRuangLingkup.addEventListener("click", function() {
+    var ruangLingkupInput = document.getElementById("ruang_lingkup");
+    var newKegiatan = ruangLingkupInput.value;
+
+    if (!newKegiatan) {
+        alert("Harap masukkan ruang lingkup kegiatan.");
+        return;
+    }
+
+    var newRow = document.createElement("tr");
+
+    var programCell = document.createElement("td");
+    programCell.textContent = alphabet[currentProgramIndex];
+
+    var kegiatanCell = document.createElement("td");
+    kegiatanCell.textContent = newKegiatan;
+
+    var numCols = table.rows[0].cells.length; // Menghitung jumlah kolom pada baris pertama
+    var additionalTd = document.createElement("td");
+    additionalTd.textContent = "";
+    additionalTd.setAttribute("colspan", numCols.toString()); // Atur atribut colspan
+
+    newRow.appendChild(programCell);
+    newRow.appendChild(kegiatanCell);
+    newRow.appendChild(additionalTd);
+
+    tableBody.appendChild(newRow);
+
+    // Simpan data ruang lingkup dalam array
+    ruangLingkupData.push({
+        program: alphabet[currentProgramIndex],
+        kegiatan: newKegiatan
+    });
+
+    currentProgramIndex++;
+
+    ruangLingkupInput.value = "";
+
+    // Perbarui opsi dalam select_lingkup setelah menambahkan data baru
+    populateSelectOptions();
+
+    updateTotalRow();
+});
+
+// ...
+
+// Setelah Anda menambahkan data ke ruangLingkupData, Anda dapat mengisi pilihan dalam select_lingkup
+function populateSelectOptions() {
+    selectLingkup.innerHTML = ""; // Kosongkan opsi saat ini
+
+    for (var i = 0; i < ruangLingkupData.length; i++) {
+        var option = document.createElement("option");
+        option.value = ruangLingkupData[i].kegiatan; // Gunakan kegiatan sebagai nilai
+        option.textContent = ruangLingkupData[i].kegiatan; // Gunakan kegiatan sebagai teks
+        selectLingkup.appendChild(option);
+    }
+}
+var programCounter = 1; // Menyimpan nomor urut program
+var totalAnggaran = 0;
+var totalRealisasi = 0;
+
+btnTambahProgram.addEventListener("click", function() {
+    var programInput = document.getElementById("program");
+    var anggaranInput = document.getElementById("anggaran");
+    var realisasiInput = document.getElementById("realisasi");
+    var newProgram = programInput.value;
+    var newAnggaran = parseFloat(anggaranInput.value); // Convert to a floating-point number
+    var newRealisasi = parseFloat(realisasiInput.value); // Convert to a floating-point number
+
+    totalAnggaran += newAnggaran;
+    totalRealisasi += newRealisasi;
+    console.log(totalAnggaran);
+    console.log(totalRealisasi);
+
+    if (!newProgram) {
+        alert("Harap masukkan nama program.");
+        return;
+    }
+
+    if (isNaN(newAnggaran)) {
+        alert("Anggaran harus berupa angka.");
+        return;
+    }
+
+    if (isNaN(newRealisasi)) {
+        alert("Realisasi harus berupa angka.");
+        return;
+    }
+
+    programInput.value = "";
+    anggaranInput.value = "";
+    realisasiInput.value = "";
+
+    // Tambahkan baris baru sesuai pilihan ruang lingkup
+    var selectedKegiatan = selectLingkup.value;
+
+    var newRow = document.createElement("tr");
+
+    var programCell = document.createElement("td");
+    programCell.textContent = ''; // Menggunakan nomor urut program
+    // programCounter++; // Tingkatkan nomor urut
+
+    var kegiatanCell = document.createElement("td");
+    kegiatanCell.textContent = newProgram;
+
+    var anggaranCell = document.createElement("td");
+    anggaranCell.textContent = newAnggaran;
+
+    var realisasiCell = document.createElement("td");
+    realisasiCell.textContent = newRealisasi;
+
+    var jlhAnggaranCell = document.createElement("td");
+    jlhAnggaranCell.textContent = newAnggaran;
+
+    var jlhRealisasiCell = document.createElement("td");
+    jlhRealisasiCell.textContent = newRealisasi;
+
+
+    // var numCols = table.rows[0].cells.length;
+    // var additionalTd = document.createElement("td");
+    // additionalTd.textContent = "Data Tambahan";
+    // additionalTd.setAttribute("colspan", numCols.toString());
+
+    newRow.appendChild(programCell);
+    newRow.appendChild(kegiatanCell);
+    newRow.appendChild(anggaranCell);
+    newRow.appendChild(realisasiCell);
+    newRow.appendChild(jlhAnggaranCell);
+    newRow.appendChild(jlhRealisasiCell);
+
+    // Cari indeks baris yang sesuai dengan ruang lingkup yang dipilih
+    var insertRowIndex = -1;
+    for (var i = 0; i < tableBody.rows.length; i++) {
+        var kegiatanCellText = tableBody.rows[i].cells[1].textContent;
+        if (kegiatanCellText === selectedKegiatan) {
+            insertRowIndex = i + 1; // Baris setelah ruang lingkup yang dipilih
+            break;
+        }
+    }
+
+    // Sisipkan baris baru di bawah baris yang sesuai
+    if (insertRowIndex !== -1) {
+        if (insertRowIndex < tableBody.rows.length) {
+            tableBody.insertBefore(newRow, tableBody.rows[insertRowIndex]);
+        } else {
+            // Jika baris terakhir ruang lingkup, tambahkan di akhir tabel
+            tableBody.appendChild(newRow);
+        }
+    } else {
+        // Jika tidak ada baris yang sesuai, cek baris lain dengan ruang lingkup yang lebih besar
+        var insertAfterIndex = -1;
+        for (var i = 0; i < tableBody.rows.length; i++) {
+            var kegiatanCellText = tableBody.rows[i].cells[1].textContent;
+            if (kegiatanCellText > selectedKegiatan) {
+                insertAfterIndex = i - 1;
+                break;
+            }
+        }
+
+        if (insertAfterIndex !== -1) {
+            tableBody.insertBefore(newRow, tableBody.rows[insertAfterIndex].nextSibling);
+        } else {
+            // Jika tidak ada baris dengan ruang lingkup yang lebih besar, tambahkan di akhir tabel
+            tableBody.appendChild(newRow);
+        }
+    }
+    updateTotalRow();
+
+});
+
+// function updateTotalRow() {
+//     var totalRow = document.getElementById("total-row");
+
+//     // Check if the total row exists, if not, create it
+//     if (!totalRow) {
+//         totalRow = document.createElement("tr");
+//         totalRow.id = "total-row";
+
+//         var totalLabelCell = document.createElement("td");
+//         totalLabelCell.textContent = "Total";
+//         totalLabelCell.colSpan = 2;
+
+//         var totalAnggaranCell = document.createElement("td");
+//         totalAnggaranCell.textContent = totalAnggaran;
+
+//         var totalRealisasiCell = document.createElement("td");
+//         totalRealisasiCell.textContent = totalRealisasi;
+
+//         var jlhTotalAnggaranCell = document.createElement("td");
+//         jlhTotalAnggaranCell.textContent = totalAnggaran;
+
+//         var jlhTotalRealisasiCell = document.createElement("td");
+//         jlhTotalRealisasiCell.textContent = totalRealisasi;
+
+//         totalRow.appendChild(totalLabelCell);
+//         totalRow.appendChild(totalAnggaranCell);
+//         totalRow.appendChild(totalRealisasiCell);
+//         totalRow.appendChild(jlhTotalAnggaranCell);
+//         totalRow.appendChild(jlhTotalRealisasiCell);
+
+//         // Append the total row to the table body
+//         tableBody.appendChild(totalRow);
+//     } else {
+//         var totalAnggaranCell = totalRow.querySelector("td:nth-child(2)"); // Select the second cell in the row
+//         var totalRealisasiCell = totalRow.querySelector("td:nth-child(3)"); // Select the third cell in the row
+//         var jlhTotalAnggaranCell = totalRow.querySelector("td:nth-child(4)"); // Select the third cell in the row
+//         var jlhTotalRealisasiCell = totalRow.querySelector("td:nth-child(5)"); // Select the third cell in the row
+
+//         if (totalAnggaranCell && totalRealisasiCell && jlhTotalAnggaranCell && jlhTotalRealisasiCell) {
+//             totalAnggaranCell.textContent = totalAnggaran;
+//             totalRealisasiCell.textContent = totalRealisasi; 
+//             jlhTotalAnggaranCell.textContent = totalAnggaran; 
+//             jlhTotalRealisasiCell.textContent = totalRealisasi; 
+//             // Update the total realisasi cell
+//         } else {
+//             console.error("Total cells not found.");
+//         }
+//     }
+// }
+
+function updateTotalRow() {
+    var totalRow = document.getElementById("total-row");
+
+    // If the total row exists, remove it
+    if (totalRow) {
+        tableBody.removeChild(totalRow);
+    }
+
+    // Create a new total row
+    totalRow = document.createElement("tr");
+    totalRow.id = "total-row";
+
+    var totalLabelCell = document.createElement("td");
+    totalLabelCell.textContent = "Total";
+    totalLabelCell.colSpan = 2;
+
+    var totalAnggaranCell = document.createElement("td");
+    totalAnggaranCell.textContent = totalAnggaran;
+
+    var totalRealisasiCell = document.createElement("td");
+    totalRealisasiCell.textContent = totalRealisasi;
+
+    var jlhTotalAnggaranCell = document.createElement("td");
+    jlhTotalAnggaranCell.textContent = totalAnggaran;
+
+    var jlhTotalRealisasiCell = document.createElement("td");
+    jlhTotalRealisasiCell.textContent = totalRealisasi;
+
+    totalRow.appendChild(totalLabelCell);
+    totalRow.appendChild(totalAnggaranCell);
+    totalRow.appendChild(totalRealisasiCell);
+    totalRow.appendChild(jlhTotalAnggaranCell);
+    totalRow.appendChild(jlhTotalRealisasiCell);
+
+    // Append the new total row to the table body
+    tableBody.appendChild(totalRow);
+}
+
+
+
+
 $(document).ready(function() {
     tinymce.init({
         selector: '#judul',
@@ -412,6 +690,30 @@ $(document).ready(function() {
         $(this).closest("tr").remove();
         no--;
     });
+
+    $("#btnSimpan").click(function() {
+        // Collect table data
+        console.log("Button clicked"); // Log that the button was clicked
+        var tableData = [];
+        var rows = document.querySelectorAll("#tbl_ruanglingkup tbody tr");
+        rows.forEach(function(row) {
+            var rowData = [];
+            row.querySelectorAll("td").forEach(function(cell) {
+                rowData.push(cell.textContent);
+            });
+            tableData.push(rowData);
+        });
+
+        // Set table data in a hidden input
+        $("#table_data").val(JSON.stringify(tableData));
+
+        console.log("Table data:", tableData); // Log the collected table data
+        console.log("Serialized data:", JSON.stringify(tableData));
+        
+
+        // Submit the form
+        $("form").submit();
+    });
 });
 </script>
 
@@ -444,9 +746,9 @@ document.getElementById('btnTambahKolom').addEventListener('click', function() {
     // Get the current colspan of the "Jadwal Tahun Berjalan" header cell
     const currentColspan = table.rows[0].cells[2].colSpan;
 
-//     console.log(table.rows[0].cells[2]);
-//     console.log(table.rows[0].cells[2].colSpan);
-// console.log(currentColspan);
+    //     console.log(table.rows[0].cells[2]);
+    //     console.log(table.rows[0].cells[2].colSpan);
+    // console.log(currentColspan);
     // Increase the colspan by 1
     table.rows[0].cells[2].colSpan = currentColspan + 2;
     let iter = 0;
@@ -454,8 +756,8 @@ document.getElementById('btnTambahKolom').addEventListener('click', function() {
     // console.log(table.rows.length);
 
     for (let i = 1; i < table.rows.length; i++) {
-      // console.log(table.rows[i].cells.length);
-      // console.log(currentColspan + 2);
+        // console.log(table.rows[i].cells.length);
+        // console.log(currentColspan + 2);
         // Check if the new data cell already exists
         const currentDate = new Date();
         const currentYear = currentDate.getFullYear();
@@ -467,7 +769,7 @@ document.getElementById('btnTambahKolom').addEventListener('click', function() {
                 // table.rows[i].cells[currentColspan + 2].textContent = currentYear + iter - 1 + '-' + (
                 //     currentYear + iter);
             } else {
-              console.log(i);
+                console.log(i);
                 const newBudgetCell = document.createElement('td');
                 newBudgetCell.textContent = 'Anggaran 1';
                 newBudgetCell.contentEditable = true; // Set the contenteditable attribute
@@ -492,14 +794,14 @@ document.getElementById('btnTambahKolom').addEventListener('click', function() {
         } else {
             // If the new data cell does not exist, create and add it
             const newDataCell = document.createElement('td');
-            
+
             if (i === 1) {
-            //     // Increment iter only when adding the new header cell
+                //     // Increment iter only when adding the new header cell
                 iter++;
                 newDataCell.setAttribute('colspan', '2');
                 newDataCell.textContent = currentYear + (iter - 1) + '-' + (currentYear + iter);
                 table.rows[i].appendChild(newDataCell);
-            } else if(i === 2) {
+            } else if (i === 2) {
                 const newBudgetCell = document.createElement('td');
                 newBudgetCell.textContent = 'Anggaran';
                 newBudgetCell.contentEditable = true; // Set the contenteditable attribute
@@ -519,14 +821,19 @@ document.getElementById('btnTambahKolom').addEventListener('click', function() {
                 // newSatCell.textContent = 'Sat';
                 // newSatCell.contentEditable = true; // Set the contenteditable attribute
                 // table.rows[i].appendChild(newSatCell);
-                
-                
+
+
             }
 
 
 
         }
     }
+});
+
+document.getElementById("btnTambahRuangLingkup").addEventListener("click", function() {
+    var ruangLingkupContainer = document.getElementById("ruangLingkupContainer");
+    ruangLingkupContainer.style.display = "block";
 });
 </script>
 

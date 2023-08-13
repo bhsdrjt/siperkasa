@@ -21,7 +21,6 @@
 .text-white {
     color: white;
     text-align: center;
-    font-size: 32px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan pada teks */
 }
@@ -51,7 +50,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-3">
-                <h4 class="text-white">
+                <h4 class="text-white" style="font: size 42px;">
                     SIPERKASA<br>
                     <span class="bksda">BKSDA KALIMANTAN SELATAN</span>
                 </h4>
