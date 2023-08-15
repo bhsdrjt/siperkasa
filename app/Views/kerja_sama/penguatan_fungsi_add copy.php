@@ -159,7 +159,7 @@
 </div>
 <!-- main content area end -->
 
-<?= $this->include('footer') ?>
+
 
 <script type="text/javascript">
   $(document).ready(function() {

@@ -26,7 +26,7 @@ class M_penguatan_fungsi_skw extends Model
 
     public function penguatan_fungsi(int $index_page)
     {
-        return $this->select('pfs.id,file_pks,tgl_awal,tgl_akhir,judul_laporan,nama_mitra,pfs.lokasi')
+        return $this->select('pfs.id,file_pks,tgl_awal,tgl_akhir,judul_laporan,nama_mitra,pfs.lokasi ,"Penguatan Fungsi" jenis ')
             ->join('mitra', 'mitra.id_mitra = pfs.id_mitra')
             ->join('rkt_penguatan_fungsi rpf', 'rpf.id=pfs.id_rkt')
             ->join('penguatan_fungsi pf', 'pf.id=rpf.id_penguatan_fungsi')

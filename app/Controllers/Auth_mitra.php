@@ -52,7 +52,7 @@ class Auth_mitra extends BaseController
                 $this->db->table('mitra')->update(['last_login' => date('Y-m-d H:i:s')], ['id_mitra' => $data['id_mitra']]);
 
                 $session->set($ses_data);
-                return redirect()->to('mitra/galeri/penguatan_fungsi');
+                return redirect()->to('mitra/galeri/pembangunan_strategis');
             } else {
                 session()->setFlashdata('error', 'Password yang dimasukkan salah');
                 return redirect()->to('auth_mitra');

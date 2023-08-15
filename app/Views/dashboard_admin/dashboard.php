@@ -2,16 +2,16 @@
 <?= $this->section('content') ?>
 
 <!-- page title area end -->
-<div class="main-content-inner">
-  <div class="container">
-    <div class="row">
+<!-- <div class="main-content-inner">
+  <div class="container"> -->
+    <div class="row"  style="padding-left: 20px;">
       <!-- Primary table start -->
       <div class="col-12 mt-3">
         <div class="card">
           <div class="card-header">
             <div class="row">
               <div class="col-7">
-                <h4>Dashboard</h4>
+                <h1><b>Dashboard</b></h1>
               </div>
             </div>
           </div>
@@ -106,11 +106,11 @@
       </div>
       <!-- Primary table end -->
     </div>
-  </div>
-</div>
+  <!-- </div>
+</div> -->
 <!-- main content area end -->
 
-<?= $this->include('footer') ?>
+
 
 <script>
   $(document).ready(function() {

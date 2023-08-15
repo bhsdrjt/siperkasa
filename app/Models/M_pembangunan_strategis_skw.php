@@ -26,7 +26,7 @@ class M_pembangunan_strategis_skw extends Model
 
     public function pembangunan_strategis(int $index_page)
     {
-        return $this->select('pss.id,file_pks,tgl_awal,tgl_akhir,judul_laporan,nama_mitra,pss.lokasi')
+        return $this->select('pss.id,file_pks,tgl_awal,tgl_akhir,judul_laporan,nama_mitra,pss.lokasi, "Pembangunan Strategis" jenis  ')
             ->join('mitra', 'mitra.id_mitra = pss.id_mitra')
             ->join('rkt_pembangunan_strategis rps', 'rps.id=pss.id_rkt')
             ->join('pembangunan_strategis ps', 'ps.id=rps.id_pembangunan_strategis')
