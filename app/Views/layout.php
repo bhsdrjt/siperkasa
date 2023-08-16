@@ -58,7 +58,7 @@
 </style>
 
 <body class="page-body" style="font-size:12px;color:#666666">
-    <div class="page-container" style="padding-left: 0px important;">
+    <div class="page-container" style="padding-left: 0px !important;">
         <?php if (session('level') !== 'mitra') { ?>
             <!-- Include your navbar content here -->
             <?= $this->include('navbar') ?>
