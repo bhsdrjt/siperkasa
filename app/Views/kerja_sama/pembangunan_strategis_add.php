@@ -133,7 +133,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan=2>
-                                        Tahun Periode
+                                        <?= (date('Y') - 1) . '-' . date('Y'); ?>
                                     </td>
                                 </tr>
                                 <tr>
@@ -577,7 +577,7 @@
                 });
                 $('#mitra').select2({
                     width: '100%',
-                    data: mitraArray 
+                    data: mitraArray
                 });
             },
             cache: true
