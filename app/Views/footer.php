@@ -74,7 +74,7 @@
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/uikit/addons/css/markdownarea.css">
 	<!-- Bottom scripts (common) -->
 	<script src="<?= base_url() ?>/assets/bksda/js/gsap/TweenMax.min.js"></script>
-	<script src="<?= base_url() ?>/assets/bksda/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<!-- <script src="<?= base_url() ?>/assets/bksda/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script> -->
 	<script src="<?= base_url() ?>/assets/bksda/js/bootstrap.js"></script>
 	<script src="<?= base_url() ?>/assets/bksda/js/joinable.js"></script>
 	<script src="<?= base_url() ?>/assets/bksda/js/resizeable.js"></script>
@@ -82,8 +82,8 @@
 	<script src="<?= base_url() ?>/assets/bksda/js/wysihtml5/wysihtml5-0.4.0pre.min.js"></script>
 	<!-- JavaScripts initializations and stuff -->
 	<!-- Imported scripts on this page -->
-	<script src="<?= base_url() ?>/assets/bksda/js/datatables/datatables.js"></script>
-	<script src="<?= base_url() ?>/assets/bksda/js/select2/select2.min.js"></script>
+	<!-- <script src="<?= base_url() ?>/assets/bksda/js/datatables/datatables.js"></script> -->
+	<!-- <script src="<?= base_url() ?>/assets/bksda/js/select2/select2.min.js"></script> -->
 	<!-- <script src="<?= base_url() ?>/assets/bksda/js/bootstrap-tagsinput.min.js"></script> -->
 	<script src="<?= base_url() ?>/assets/bksda/js/typeahead.min.js"></script>
 	<!-- <script src="<?= base_url() ?>/assets/bksda/js/selectboxit/jquery.selectBoxIt.min.js"></script> -->

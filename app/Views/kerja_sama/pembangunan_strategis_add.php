@@ -27,8 +27,6 @@
     .center-table thead tr td {
         vertical-align: middle;
     }
-
-  
 </style>
 
 <!-- page title area end -->
@@ -561,39 +559,32 @@
             toolbar: 'bold italic',
             statusbar: false,
         });
-        $('#mitra').select2({
-            width: '100%',
-            templateResult: function(data) {
-                if (data.id) {
-                    var mitraText = '<div class="mitra-text">' + data.text + '</div>';
-                    var jenisLokasiText = '<div class="jenis-lokasi"> Lokasi : ' + data.additional
-                        .jenis_lokasi + '</div>';
-                    return $('<span>').append(mitraText, jenisLokasiText);
-                }
-                return data.text;
-            },
-            ajax: {
-                url: '<?php echo base_url("Kerja_sama/getmitra"); ?>',
-                dataType: 'json',
-                delay: 250,
-                processResults: function(data) {
-                    var mitraArray = data.map(function(item) {
-                        return {
-                            id: item.id_mitra,
-                            text: item.nama_mitra,
-                            additional: {
-                                jenis_lokasi: item.jenis_lokasi
-                            }
-                        };
-                    });
 
+        // Permintaan AJAX untuk mendapatkan data
+        $.ajax({
+            url: '<?php echo base_url("Kerja_sama/getmitra"); ?>',
+            dataType: 'json',
+            delay: 250,
+            success: function(data) {
+                var mitraArray = data.map(function(item) {
                     return {
-                        results: mitraArray
+                        id: item.id_mitra,
+                        text: item.nama_mitra,
+                        additional: {
+                            jenis_lokasi: item.jenis_lokasi
+                        }
                     };
-                },
-                cache: true
-            }
-        }).on('change', function() {
+                });
+                $('#mitra').select2({
+                    width: '100%',
+                    data: mitraArray 
+                });
+            },
+            cache: true
+        });
+
+        // Menggunakan event 'change' pada Select2
+        $('#mitra').on('change', function() {
             var selectedMitra = $(this).select2('data')[0];
             if (selectedMitra && selectedMitra.additional) {
                 $('#lokasi_kerjasama').val(selectedMitra.additional.jenis_lokasi);
@@ -601,6 +592,8 @@
                 $('#lokasi_kerjasama').val('');
             }
         });
+
+
 
 
 

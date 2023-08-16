@@ -1835,6 +1835,7 @@ function setCurrentProgressTab($rootwizard, $nav, $tab, $progress, index)
 }
 
 
+
 // Replace Checkboxes
 function replaceCheckboxes()
 {

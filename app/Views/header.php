@@ -27,16 +27,11 @@
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/default-css.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/styles.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/responsive.css">
-    <link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
 	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/css/font-icons/entypo/css/entypo.css" media="screen">
 	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/css/font-icons/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
 	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/css/bootstrap.css">
-	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/js/uikit/css/uikit.min.css">
 	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/css/neon-core.css">
-	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/css/neon-theme.css">
-	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/css/neon-forms.css">
-	<link rel="stylesheet" href="<?=  base_url() ?>/assets/bksda/js/confirm/jquery-confirm.min.css">
 
 
 
