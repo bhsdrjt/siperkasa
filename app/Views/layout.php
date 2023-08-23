@@ -55,6 +55,20 @@
             transform: translateY(-5px);
         }
     }
+
+
+
+
+    @media (min-width: 1200px) and (max-width: 1364px) {
+        .sbar_collapsed .sidebar-menu {
+            left: 0%;
+        }
+    }
+
+
+    .sbar_collapsed .sidebar-menu {
+        left: 0px;
+    }
 </style>
 
 <body class="page-body" style="font-size:12px;color:#666666">

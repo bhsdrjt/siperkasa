@@ -33,18 +33,6 @@
         opacity: 0.4s;
     }
 
-
-
-    @media (min-width: 1200px) and (max-width: 1364px) {
-        .sbar_collapsed .sidebar-menu {
-            left: 0%;
-        }
-    }
-
-
-    .sbar_collapsed .sidebar-menu {
-        left: 0px;
-    }
 </style>
 
 <!-- page title area end -->
