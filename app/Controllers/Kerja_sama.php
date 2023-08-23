@@ -515,7 +515,19 @@ class Kerja_sama extends BaseController
                     'ruang_lingkup' => $ruangLingkup,
                     'tahun' => $tahun
                 ];
-                $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+
+                $existingData = $this->db->table('ruang_lingkup')
+                    ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+                    ->getRow();
+
+                if ($existingData) {
+                    // Data already exists, handle accordingly
+                    // ...
+                } else {
+                    // Data doesn't exist, proceed with insertion
+                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                    // ...
+                }
 
 
             } else if(count($row) === 8) {
@@ -558,7 +570,20 @@ class Kerja_sama extends BaseController
                     'tahun' => $tahun,
                     'tahun1' => $tahun1
                 ];
-                $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+
+                $existingData = $this->db->table('ruang_lingkup')
+                ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+                ->getRow();
+
+                if ($existingData) {
+                    // Data already exists, handle accordingly
+                    // ...
+                } else {
+                    // Data doesn't exist, proceed with insertion
+                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                    // ...
+                }
+            
             } else if(count($row) === 10)  {
                 $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
                 
@@ -606,7 +631,19 @@ class Kerja_sama extends BaseController
                     'tahun1' => $tahun1,
                     'tahun2' => $tahun2
                 ];
-                $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                
+                $existingData = $this->db->table('ruang_lingkup')
+                    ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+                    ->getRow();
+
+                if ($existingData) {
+                    // Data already exists, handle accordingly
+                    // ...
+                } else {
+                    // Data doesn't exist, proceed with insertion
+                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                    // ...
+                }
             }
         }
      
