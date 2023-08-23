@@ -2,8 +2,8 @@
 <?= $this->section('content') ?>
 
 <!-- page title area end -->
-<div class="main-content-inner">
-  <div class="container">
+<!-- <div class="main-content-inner">
+  <div class="container"> -->
     <div class="row">
       <div class="col-6 mt-4">
         <h4>Kerja Sama Pembangunan Strategis</h4>
@@ -58,11 +58,11 @@
       } ?>
       <?= isset($pager) ? $pager->links('pembangunan_strategis', 'b_pagination') : '' ?>
 
-    </div>
-  </div>
+    <!-- </div>
+  </div> -->
   <!-- main content area end -->
 
-  <?= $this->include('footer') ?>
+  
 
   <script>
     $(document).ready(function() {

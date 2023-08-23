@@ -1,0 +1,35 @@
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+
+body {
+	
+}
+.habang {
+    color: '#fff';
+}
+
+@media (min-width: 564px) {
+    .login-page .login-content {
+        width:400px;
+    }
+    .halus {
+        width:600px;
+        margin:auto;
+    }
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.tabel{
+    padding: 10px;
+}
+
+

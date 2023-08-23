@@ -2,8 +2,8 @@
 <?= $this->section('content') ?>
 
 <!-- page title area end -->
-<div class="main-content-inner">
-  <div class="container">
+<!-- <div class="main-content-inner">
+  <div class="container"> -->
     <div class="row">
       <!-- Primary table start -->
       <div class="col-12 mt-3">
@@ -11,7 +11,7 @@
           <div class="card-header bg-dark text-white">
             <div class="row">
               <div class="col-7">
-                <h4>Kerja Sama Penguatan Fungsi</h4>
+              <h3 style="color: white;"> <b> Kerja Sama Penguatan Fungsi </b></h3>
               </div>
               <div class="col-5">
                 <span class="float-right">
@@ -204,11 +204,11 @@
       </div>
       <!-- Primary table end -->
     </div>
-  </div>
-</div>
+  <!-- </div>
+</div> -->
 <!-- main content area end -->
 
-<?= $this->include('footer') ?>
+
 
 <script type="text/javascript">
   $(document).ready(function() {

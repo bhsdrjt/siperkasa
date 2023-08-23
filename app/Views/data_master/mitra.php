@@ -2,8 +2,8 @@
 <?= $this->section('content') ?>
 
 <!-- page title area end -->
-<div class="main-content-inner">
-  <div class="container">
+<!-- <div class="main-content-inner">
+  <div class="container"> -->
     <div class="row">
       <!-- Primary table start -->
       <div class="col-12 mt-3">
@@ -74,8 +74,8 @@
       </div>
       <!-- Primary table end -->
     </div>
-  </div>
-</div>
+  <!-- </div>
+</div> -->
 <!-- main content area end -->
 
 <!-- Modal Tambah Mitra -->
@@ -195,7 +195,7 @@
 </div>
 <!-- Modal Delete Mitra End -->
 
-<?= $this->include('footer') ?>
+
 
 <script>
   $(document).ready(function() {

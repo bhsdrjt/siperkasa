@@ -24,6 +24,24 @@
     <script src="<?= base_url() ?>/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
+<style>
+    .back-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        color: #333;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button:hover {
+        background-color: #333;
+        color: #fff;
+}
+</style>
+
 <body>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -35,8 +53,7 @@
     <!-- preloader area end -->
     <!-- login area start -->
     <div class="login-area login-bg">
-                <img src="<?= base_url('assets/images/siperkasa.png') ?>" style="height:80px;position: fixed;top: 20px;right: 20px;z-index: 9999;">
-
+        <img src="<?= base_url('assets/images/siperkasa.png') ?>" style="height:80px;position: fixed;top: 20px;right: 20px;z-index: 9999;">
         <div class="container">
             <div class="login-box ptb--100" style="opacity: 0.9;">
                 <form action="<?= base_url('auth_mitra/login_validation') ?>" method="post">
@@ -64,13 +81,17 @@
                             <div class="text-danger"></div>
                         </div>
                         <div class="submit-btn-area">
-                            <button id="form_submit" type="submit">Log In <i class=" ti-arrow-right"></i></button>
+                            <button id="form_submit" type="submit">Log In <i class="ti-arrow-right"></i></button>
+                        </div>
+                        <div class="back-btn-area">
+                            <a href="<?= base_url('Auth') ?>" class="back-button">Kembali</a>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
     <!-- login area end -->
 
     <!-- jquery latest version -->

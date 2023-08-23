@@ -92,7 +92,7 @@
 </div>
 <!-- main content area end -->
 
-<?= $this->include('footer') ?>
+
 
 <script>
     $(document).ready(function() {

@@ -35,32 +35,32 @@
 </style>
 
 <!-- page title area end -->
-<div class="main-content-inner">
-    <div class="container">
-        <div class="row">
-            <!-- Primary table start -->
-            <div class="col-12 mt-3">
-                <div class="card">
-                    <div class="card-header bg-dark text-white">
-                        <div class="row">
-                            <div class="col-7">
-                                <h4>Kerja Sama Pembangunan Strategis</h4>
-                            </div>
-                            <div class="col-5">
-                                <span class="float-right">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
 
-                        <?php if (session()->getFlashdata('error')) {
-              echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+<div class="row">
+    <!-- Primary table start -->
+    <div class="col-12 ">
+        <div class="card">
+            <div class="card-header bg-dark">
+                <div class="row">
+                    <div class="col-3">
+                        <h3 style="color: white;"> <b> Kerja Sama Pembangunan Strategis </b></h3>
+                    </div>
+                    <div class="col-5">
+                        <span class="float-right">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+
+                <?php if (session()->getFlashdata('error')) {
+                    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                   ' . session()->getFlashdata('error') . '
                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                        <span class="fa fa-times"></span>
                    </button>
                </div>';
+
             } ?>
 
                         <?= form_open('kerja_sama/pembangunan_strategis/process/add', 'enctype="multipart/form-data"') ?>
@@ -309,19 +309,127 @@
                                     style="width: 200px;">Simpan</button>
                             </div>
                         </div>
-                        <?= form_close() ?>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="komitmen_pks" class="col-form-label"><b>Komitmen PKS</b></label>
+                        <input class="form-control" type="text" name="komitmen_pks" id="komitmen_pks" placeholder="Komitmen PKS" oninput="formatCurrency(this)">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="realisasi_pks" class="col-form-label"><b>Realisasi PKS</b></label>
+                        <input class="form-control" type="text" name="realisasi_pks" id="realisasi_pks" placeholder="Realisasi PKS" oninput="formatCurrency(this)">
+                    </div>
+
+                    <div class="form-group col-4">
+                        <label for="cover" class="col-form-label"><b>Dokumen RPP</b> <sup style="color: darkblue;">(Pdf)</sup></label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" name="file_rpp" id="file_rpp" value="" accept=".pdf">
+                        </div>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="komitmen_rpp" class="col-form-label"><b>Komitmen RPP</b></label>
+                        <input class="form-control" type="text" name="komitmen_rpp" id="komitmen_rpp" placeholder="Komitmen RPP" oninput="formatCurrency(this)">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="realisasi_rpp" class="col-form-label"><b>Realisasi RPP</b></label>
+                        <input class="form-control" type="text" name="realisasi_rpp" id="realisasi_rpp" placeholder="Realisasi RPP" oninput="formatCurrency(this)">
+                    </div>
+
+                    <div class="form-group col-4">
+                        <label for="cover" class="col-form-label"><b>Dokumen RKL 1</b> <sup style="color: darkblue;">(Pdf)</sup></label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" name="file_rkl_1" id="file_rkl_1" value="" accept=".pdf">
+                        </div>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="komitmen_rkl_1" class="col-form-label"><b>Komitmen RKL 1</b></label>
+                        <input class="form-control" type="text" name="komitmen_rkl_1" id="komitmen_rkl_1" placeholder="Komitmen RKL 1" oninput="formatCurrency(this)">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="realisasi_rkl_1" class="col-form-label"><b>Realisasi RKL 1</b></label>
+                        <input class="form-control" type="text" name="realisasi_rkl_1" id="realisasi_rkl_1" placeholder="Realisasi RKL 1" oninput="formatCurrency(this)">
+                    </div>
+
+                    <div class="form-group col-4">
+                        <label for="cover" class="col-form-label"><b>Dokumen RKL 2</b> <sup style="color: darkblue;">(Pdf)</sup></label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" name="file_rkl_2" id="file_rkl_2" value="" accept=".pdf">
+                        </div>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="komitmen_rkl_2" class="col-form-label"><b>Komitmen RKL 2</b></label>
+                        <input class="form-control" type="text" name="komitmen_rkl_2" id="komitmen_rkl_2" placeholder="Komitmen RKL 2" oninput="formatCurrency(this)">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="realisasi_rkl_2" class="col-form-label"><b>Realisasi RKL 2</b></label>
+                        <input class="form-control" type="text" name="realisasi_rkl_2" id="realisasi_rkl_2" placeholder="Realisasi RKL 2" oninput="formatCurrency(this)">
+                    </div>
+
+                    <div class="form-group mt-3 col-12">
+                        <b style="font-size: large;">Dokumen RKT</b>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <button type="button" class="btn btn-xs btn-info" id="addDokumenRKT"><i class="fa fa-plus"></i> Add</button>
+
+                        <table class="table table-borderless mt-2 dokumenRKT" style="width: 100%;">
+                            <thead>
+                                <th>No</th>
+                                <th>Periode</th>
+                                <th>File Upload RKT <sup style="color: darkblue;">(pdf)</sup></th>
+                                <th>Komitmen RKT</th>
+                                <th>Realisasi RKT</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt0" placeholder="Periode RKT">
+                                        </div>
+                                    </td>
+                                    <td style="padding-left: 0px;">
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" name="file_rkt[]" id="file_rkt0" value="" accept=".pdf">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="komitmen_rkt[]" id="komitmen_rkt0" placeholder="Komitmen RKT" oninput="formatCurrency(this)">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" name="realisasi_rkt[]" id="realisasi_rkt0" placeholder="Realisasi RKT" oninput="formatCurrency(this)">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="form-group col-4">
+                        <label for="file_lokasi" class="col-form-label"><b>File Lokasi</b> <sup style="color: darkblue;">(.KML)</sup></label>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" name="file_lokasi" id="file_lokasi" accept=".kml" value="">
+                        </div>
+                    </div>
+                    <div class="form-group col-4"></div>
 
 
+
+                    <div class="form-group col-12 text-center">
+                        <button type="submit" class="btn btn-primary" name="simpan" id="btnSimpan" style="width: 200px;">Simpan</button>
                     </div>
                 </div>
+                <?= form_close() ?>
+
+
             </div>
-            <!-- Primary table end -->
         </div>
     </div>
+    <!-- Primary table end -->
 </div>
 <!-- main content area end -->
 
-<?= $this->include('footer') ?>
 
 <script type="text/javascript">
 // Ambil elemen tombol dan elemen tabel
@@ -423,45 +531,46 @@ btnTambahRuangLingkup.addEventListener("click", function() {
 
     var newRow = document.createElement("tr");
 
-    var programCell = document.createElement("td");
-    programCell.textContent = alphabet[currentProgramIndex];
+        var newRow = document.createElement("tr");
 
-    var kegiatanCell = document.createElement("td");
-    kegiatanCell.textContent = newKegiatan;
+        var programCell = document.createElement("td");
+        programCell.textContent = alphabet[currentProgramIndex];
+
 
     var numCols = table.rows[2].cells.length + 2;
     var additionalTd = document.createElement("td");
     additionalTd.textContent = "";
     additionalTd.setAttribute("colspan", numCols.toString()); // Atur atribut colspan
 
-    newRow.appendChild(programCell);
-    newRow.appendChild(kegiatanCell);
-    newRow.appendChild(additionalTd);
+        var numCols = table.rows[0].cells.length; // Menghitung jumlah kolom pada baris pertama
+        console.log(numCols)
+        var additionalTd = document.createElement("td");
+        additionalTd.textContent = "";
+        additionalTd.setAttribute("colspan", numCols.toString()); // Atur atribut colspan
 
-    tableBody.appendChild(newRow);
+        newRow.appendChild(programCell);
+        newRow.appendChild(kegiatanCell);
+        newRow.appendChild(additionalTd);
 
-    // Simpan data ruang lingkup dalam array
-    ruangLingkupData.push({
-        program: alphabet[currentProgramIndex],
-        kegiatan: newKegiatan
+        tableBody.appendChild(newRow);
+
+        // Simpan data ruang lingkup dalam array
+        ruangLingkupData.push({
+            program: alphabet[currentProgramIndex],
+            kegiatan: newKegiatan
+        });
+
+        currentProgramIndex++;
+
+        ruangLingkupInput.value = "";
+
+        // Perbarui opsi dalam select_lingkup setelah menambahkan data baru
+        populateSelectOptions();
+
+        updateTotalRow();
     });
 
-    currentProgramIndex++;
-
-    ruangLingkupInput.value = "";
-
-    // Perbarui opsi dalam select_lingkup setelah menambahkan data baru
-    populateSelectOptions();
-
-    updateTotalRow();
-});
-
-// ...
-
-// Setelah Anda menambahkan data ke ruangLingkupData, Anda dapat mengisi pilihan dalam select_lingkup
-function populateSelectOptions() {
-    selectLingkup.innerHTML = ""; // Kosongkan opsi saat ini
-
+    // ...
     for (var i = 0; i < ruangLingkupData.length; i++) {
         var option = document.createElement("option");
         option.value = ruangLingkupData[i].kegiatan; // Gunakan kegiatan sebagai nilai
@@ -500,46 +609,68 @@ btnTambahProgram.addEventListener("click", function() {
         return;
     }
 
-    if (isNaN(newAnggaran)) {
-        alert("Anggaran harus berupa angka.");
-        return;
+        for (var i = 0; i < ruangLingkupData.length; i++) {
+            var option = document.createElement("option");
+            option.value = ruangLingkupData[i].kegiatan; // Gunakan kegiatan sebagai nilai
+            option.textContent = ruangLingkupData[i].kegiatan; // Gunakan kegiatan sebagai teks
+            selectLingkup.appendChild(option);
+        }
     }
+    var programCounter = 1; // Menyimpan nomor urut program
+    var totalAnggaran = 0;
+    var totalRealisasi = 0;
 
-    if (isNaN(newRealisasi)) {
-        alert("Realisasi harus berupa angka.");
-        return;
-    }
+    btnTambahProgram.addEventListener("click", function() {
+        var programInput = document.getElementById("program");
+        var anggaranInput = document.getElementById("anggaran");
+        var realisasiInput = document.getElementById("realisasi");
+        var newProgram = programInput.value;
+        var newAnggaran = parseFloat(anggaranInput.value); // Convert to a floating-point number
+        var newRealisasi = parseFloat(realisasiInput.value); // Convert to a floating-point number
 
-    programInput.value = "";
-    anggaranInput.value = "";
-    realisasiInput.value = "";
+        totalAnggaran += newAnggaran;
+        totalRealisasi += newRealisasi;
+        console.log(totalAnggaran);
+        console.log(totalRealisasi);
 
-    // Tambahkan baris baru sesuai pilihan ruang lingkup
-    var selectedKegiatan = selectLingkup.value;
+        if (!newProgram) {
+            alert("Harap masukkan nama program.");
+            return;
+        }
 
-    var newRow = document.createElement("tr");
+        if (isNaN(newAnggaran)) {
+            alert("Anggaran harus berupa angka.");
+            return;
+        }
 
-    var programCell = document.createElement("td");
-    programCell.textContent = ''; // Menggunakan nomor urut program
-    // programCounter++; // Tingkatkan nomor urut
+        if (isNaN(newRealisasi)) {
+            alert("Realisasi harus berupa angka.");
+            return;
+        }
 
-    var kegiatanCell = document.createElement("td");
-    kegiatanCell.textContent = newProgram;
+        programInput.value = "";
+        anggaranInput.value = "";
+        realisasiInput.value = "";
 
-    var anggaranCell = document.createElement("td");
-    anggaranCell.textContent = newAnggaran;
+        // Tambahkan baris baru sesuai pilihan ruang lingkup
+        var selectedKegiatan = selectLingkup.value;
 
-    var realisasiCell = document.createElement("td");
-    realisasiCell.textContent = newRealisasi;
+        var newRow = document.createElement("tr");
+
+        var programCell = document.createElement("td");
+        programCell.textContent = ''; // Menggunakan nomor urut program
+        // programCounter++; // Tingkatkan nomor urut
+
+        var kegiatanCell = document.createElement("td");
+        kegiatanCell.textContent = newProgram;
+
+        var anggaranCell = document.createElement("td");
+        anggaranCell.textContent = newAnggaran;
 
     jlhAnggaran = newAnggaran;
     jlhRealisasi = newRealisasi;
-
-
-    // var numCols = table.rows[0].cells.length;
-    // var additionalTd = document.createElement("td");
-    // additionalTd.textContent = "Data Tambahan";
-    // additionalTd.setAttribute("colspan", numCols.toString());
+        var jlhRealisasiCell = document.createElement("td");
+        jlhRealisasiCell.textContent = newRealisasi;
 
     newRow.appendChild(programCell);
     newRow.appendChild(kegiatanCell);
@@ -620,30 +751,41 @@ btnTambahProgram.addEventListener("click", function() {
         }
     }
 
-    // Sisipkan baris baru di bawah baris yang sesuai
-    if (insertRowIndex !== -1) {
-        if (insertRowIndex < tableBody.rows.length) {
-            tableBody.insertBefore(newRow, tableBody.rows[insertRowIndex]);
-        } else {
-            // Jika baris terakhir ruang lingkup, tambahkan di akhir tabel
-            tableBody.appendChild(newRow);
-        }
-    } else {
-        // Jika tidak ada baris yang sesuai, cek baris lain dengan ruang lingkup yang lebih besar
-        var insertAfterIndex = -1;
+        // Cari indeks baris yang sesuai dengan ruang lingkup yang dipilih
+        var insertRowIndex = -1;
         for (var i = 0; i < tableBody.rows.length; i++) {
             var kegiatanCellText = tableBody.rows[i].cells[1].textContent;
-            if (kegiatanCellText > selectedKegiatan) {
-                insertAfterIndex = i - 1;
+            if (kegiatanCellText === selectedKegiatan) {
+                insertRowIndex = i + 1; // Baris setelah ruang lingkup yang dipilih
                 break;
             }
         }
 
-        if (insertAfterIndex !== -1) {
-            tableBody.insertBefore(newRow, tableBody.rows[insertAfterIndex].nextSibling);
+        // Sisipkan baris baru di bawah baris yang sesuai
+        if (insertRowIndex !== -1) {
+            if (insertRowIndex < tableBody.rows.length) {
+                tableBody.insertBefore(newRow, tableBody.rows[insertRowIndex]);
+            } else {
+                // Jika baris terakhir ruang lingkup, tambahkan di akhir tabel
+                tableBody.appendChild(newRow);
+            }
         } else {
-            // Jika tidak ada baris dengan ruang lingkup yang lebih besar, tambahkan di akhir tabel
-            tableBody.appendChild(newRow);
+            // Jika tidak ada baris yang sesuai, cek baris lain dengan ruang lingkup yang lebih besar
+            var insertAfterIndex = -1;
+            for (var i = 0; i < tableBody.rows.length; i++) {
+                var kegiatanCellText = tableBody.rows[i].cells[1].textContent;
+                if (kegiatanCellText > selectedKegiatan) {
+                    insertAfterIndex = i - 1;
+                    break;
+                }
+            }
+
+            if (insertAfterIndex !== -1) {
+                tableBody.insertBefore(newRow, tableBody.rows[insertAfterIndex].nextSibling);
+            } else {
+                // Jika tidak ada baris dengan ruang lingkup yang lebih besar, tambahkan di akhir tabel
+                tableBody.appendChild(newRow);
+            }
         }
     }
     updateTotalRow();
@@ -658,20 +800,73 @@ function updateTotalRow() {
     if (totalRow) {
         tableBody.removeChild(totalRow);
     }
+    });
 
-    // Create a new total row
-    totalRow = document.createElement("tr");
-    totalRow.id = "total-row";
+    // function updateTotalRow() {
+    //     var totalRow = document.getElementById("total-row");
 
-    var totalLabelCell = document.createElement("td");
-    totalLabelCell.textContent = "Total";
-    totalLabelCell.colSpan = 2;
+    //     // Check if the total row exists, if not, create it
+    //     if (!totalRow) {
+    //         totalRow = document.createElement("tr");
+    //         totalRow.id = "total-row";
 
-    var totalAnggaranCell = document.createElement("td");
-    totalAnggaranCell.textContent = totalAnggaran;
+    //         var totalLabelCell = document.createElement("td");
+    //         totalLabelCell.textContent = "Total";
+    //         totalLabelCell.colSpan = 2;
 
-    var totalRealisasiCell = document.createElement("td");
-    totalRealisasiCell.textContent = totalRealisasi;
+    //         var totalAnggaranCell = document.createElement("td");
+    //         totalAnggaranCell.textContent = totalAnggaran;
+
+    //         var totalRealisasiCell = document.createElement("td");
+    //         totalRealisasiCell.textContent = totalRealisasi;
+
+    //         var jlhTotalAnggaranCell = document.createElement("td");
+    //         jlhTotalAnggaranCell.textContent = totalAnggaran;
+
+    //         var jlhTotalRealisasiCell = document.createElement("td");
+    //         jlhTotalRealisasiCell.textContent = totalRealisasi;
+
+    //         totalRow.appendChild(totalLabelCell);
+    //         totalRow.appendChild(totalAnggaranCell);
+    //         totalRow.appendChild(totalRealisasiCell);
+    //         totalRow.appendChild(jlhTotalAnggaranCell);
+    //         totalRow.appendChild(jlhTotalRealisasiCell);
+
+    //         // Append the total row to the table body
+    //         tableBody.appendChild(totalRow);
+    //     } else {
+    //         var totalAnggaranCell = totalRow.querySelector("td:nth-child(2)"); // Select the second cell in the row
+    //         var totalRealisasiCell = totalRow.querySelector("td:nth-child(3)"); // Select the third cell in the row
+    //         var jlhTotalAnggaranCell = totalRow.querySelector("td:nth-child(4)"); // Select the third cell in the row
+    //         var jlhTotalRealisasiCell = totalRow.querySelector("td:nth-child(5)"); // Select the third cell in the row
+
+    //         if (totalAnggaranCell && totalRealisasiCell && jlhTotalAnggaranCell && jlhTotalRealisasiCell) {
+    //             totalAnggaranCell.textContent = totalAnggaran;
+    //             totalRealisasiCell.textContent = totalRealisasi; 
+    //             jlhTotalAnggaranCell.textContent = totalAnggaran; 
+    //             jlhTotalRealisasiCell.textContent = totalRealisasi; 
+    //             // Update the total realisasi cell
+    //         } else {
+    //             console.error("Total cells not found.");
+    //         }
+    //     }
+    // }
+
+    function updateTotalRow() {
+        var totalRow = document.getElementById("total-row");
+
+        // If the total row exists, remove it
+        if (totalRow) {
+            tableBody.removeChild(totalRow);
+        }
+
+        // Create a new total row
+        totalRow = document.createElement("tr");
+        totalRow.id = "total-row";
+
+        var totalLabelCell = document.createElement("td");
+        totalLabelCell.textContent = "Total";
+        totalLabelCell.colSpan = 2;
 
     var totalAnggaranCell1 = document.createElement("td");
     totalAnggaranCell1.textContent = totalAnggaran1;
@@ -705,37 +900,36 @@ function updateTotalRow() {
     }
     totalRow.appendChild(jlhTotalAnggaranCell);
     totalRow.appendChild(jlhTotalRealisasiCell);
+        var jlhTotalRealisasiCell = document.createElement("td");
+        jlhTotalRealisasiCell.textContent = totalRealisasi;
 
-    // Append the new total row to the table body
-    tableBody.appendChild(totalRow);
-}
+        totalRow.appendChild(totalLabelCell);
+        totalRow.appendChild(totalAnggaranCell);
+        totalRow.appendChild(totalRealisasiCell);
+        totalRow.appendChild(jlhTotalAnggaranCell);
+        totalRow.appendChild(jlhTotalRealisasiCell);
+
+        // Append the new total row to the table body
+        tableBody.appendChild(totalRow);
+    }
 
 
 
 
-$(document).ready(function() {
-    tinymce.init({
-        selector: '#judul',
-        menubar: false,
-        toolbar: 'bold italic',
-        statusbar: false,
-    });
-    $('#mitra').select2({
-        width: '100%',
-        templateResult: function(data) {
-            if (data.id) {
-                var mitraText = '<div class="mitra-text">' + data.text + '</div>';
-                var jenisLokasiText = '<div class="jenis-lokasi"> Lokasi : ' + data.additional
-                    .jenis_lokasi + '</div>';
-                return $('<span>').append(mitraText, jenisLokasiText);
-            }
-            return data.text;
-        },
-        ajax: {
+    $(document).ready(function() {
+        tinymce.init({
+            selector: '#judul',
+            menubar: false,
+            toolbar: 'bold italic',
+            statusbar: false,
+        });
+
+        // Permintaan AJAX untuk mendapatkan data
+        $.ajax({
             url: '<?php echo base_url("Kerja_sama/getmitra"); ?>',
             dataType: 'json',
             delay: 250,
-            processResults: function(data) {
+            success: function(data) {
                 var mitraArray = data.map(function(item) {
                     return {
                         id: item.id_mitra,
@@ -745,21 +939,23 @@ $(document).ready(function() {
                         }
                     };
                 });
-
-                return {
-                    results: mitraArray
-                };
+                $('#mitra').select2({
+                    width: '100%',
+                    data: mitraArray
+                });
             },
             cache: true
-        }
-    }).on('change', function() {
-        var selectedMitra = $(this).select2('data')[0];
-        if (selectedMitra && selectedMitra.additional) {
-            $('#lokasi_kerjasama').val(selectedMitra.additional.jenis_lokasi);
-        } else {
-            $('#lokasi_kerjasama').val('');
-        }
-    });
+        });
+
+        // Menggunakan event 'change' pada Select2
+        $('#mitra').on('change', function() {
+            var selectedMitra = $(this).select2('data')[0];
+            if (selectedMitra && selectedMitra.additional) {
+                $('#lokasi_kerjasama').val(selectedMitra.additional.jenis_lokasi);
+            } else {
+                $('#lokasi_kerjasama').val('');
+            }
+        });
 
 
 
@@ -769,16 +965,18 @@ $(document).ready(function() {
 
 
 
-    // $("#mitra").select2({
-    //   width: '100%'
-    // });
 
-    var index = 1;
-    var no = 2;
-    $("#addDokumenRKT").click(function(event) {
-        var newRow = $("<tr>");
-        var cols = "";
-        cols += `<td>` + no + `.</td>
+
+        // $("#mitra").select2({
+        //   width: '100%'
+        // });
+
+        var index = 1;
+        var no = 2;
+        $("#addDokumenRKT").click(function(event) {
+            var newRow = $("<tr>");
+            var cols = "";
+            cols += `<td>` + no + `.</td>
               <td>
                 <div class="form-group">
                   <input class="form-control" type="text" name="nama_rkt[]" id="nama_rkt` + index + `" placeholder="Periode RKT">
@@ -799,44 +997,47 @@ $(document).ready(function() {
                   <input class="form-control" type="text" name="realisasi_rkt[]" id="realisasi_rkt` + index + `" placeholder="Realisasi RKT">
                 </div>
               </td>`;
-        cols += `<td>
+            cols += `<td>
                   <button type="button" class="btn btn-sm btn-danger" id="delDokumen"><i class="fa fa-trash"></i></button>
               </td>`;
-        console.log(cols);
-        newRow.append(cols);
-        $("table.dokumenRKT").append(newRow);
-        index++;
-        no++;
-    });
-    $("table.dokumenRKT").on("click", "#delDokumen", function(event) {
-        $(this).closest("tr").remove();
-        no--;
-    });
-
-    $("#btnSimpan").click(function() {
-        // Collect table data
-        console.log("Button clicked"); // Log that the button was clicked
-        var tableData = [];
-        var rows = document.querySelectorAll("#tbl_ruanglingkup tbody tr");
-        rows.forEach(function(row) {
-            var rowData = [];
-            row.querySelectorAll("td").forEach(function(cell) {
-                rowData.push(cell.textContent);
-            });
-            tableData.push(rowData);
+            console.log(cols);
+            newRow.append(cols);
+            $("table.dokumenRKT").append(newRow);
+            index++;
+            no++;
+        });
+        $("table.dokumenRKT").on("click", "#delDokumen", function(event) {
+            $(this).closest("tr").remove();
+            no--;
         });
 
-        // Set table data in a hidden input
-        $("#table_data").val(JSON.stringify(tableData));
+        $("#btnSimpan").click(function() {
+            // Collect table data
+            console.log("Button clicked"); // Log that the button was clicked
+            var tableData = [];
+            var rows = document.querySelectorAll("#tbl_ruanglingkup tbody tr");
+            rows.forEach(function(row) {
+                var rowData = [];
+                row.querySelectorAll("td").forEach(function(cell) {
+                    rowData.push(cell.textContent);
+                });
+                tableData.push(rowData);
+            });
+
+            // Set table data in a hidden input
+            $("#table_data").val(JSON.stringify(tableData));
+
+            console.log("Table data:", tableData); // Log the collected table data
+            console.log("Serialized data:", JSON.stringify(tableData));
 
         console.log("Table data:", tableData); // Log the collected table data
         console.log("Serialized data:", JSON.stringify(tableData));
 
 
-        // Submit the form
-        $("form").submit();
+            // Submit the form
+            $("form").submit();
+        });
     });
-});
 </script>
 
 
@@ -862,10 +1063,10 @@ document.getElementById('btnTambahRow').addEventListener('click', function() {
 });
 
 
-document.getElementById("btnTambahRuangLingkup").addEventListener("click", function() {
-    var ruangLingkupContainer = document.getElementById("ruangLingkupContainer");
-    ruangLingkupContainer.style.display = "block";
-});
+    document.getElementById("btnTambahRuangLingkup").addEventListener("click", function() {
+        var ruangLingkupContainer = document.getElementById("ruangLingkupContainer");
+        ruangLingkupContainer.style.display = "block";
+    });
 </script>
 
 <<?= $this->endSection() ?>

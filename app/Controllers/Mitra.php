@@ -27,9 +27,6 @@ class Mitra extends BaseController
         } else {
             $data['penguatan_fungsi'] = $model->penguatan_fungsi(3, 'penguatan_fungsi');
             $data['pager'] = $model->pager;
-            // echo "<pre>";
-            // print_r($data['penguatan_fungsi']);
-            // echo "</pre>";
         }
         return view('mitra/penguatan_fungsi', $data);
     }
@@ -37,6 +34,7 @@ class Mitra extends BaseController
     public function pembangunan_strategis()
     {
         $model = new M_pembangunan_strategis_skw();
+        $model2 = new M_penguatan_fungsi_skw();
         $startDate = $this->request->getPost('startDate');
         $endDate = $this->request->getPost('endDate');
 
@@ -45,13 +43,13 @@ class Mitra extends BaseController
             $data['startDate'] = $startDate;
             $data['endDate'] = $endDate;
             $data['pembangunan_strategis'] = $model->pembangunan_strategis_filter($startDate, $endDate);
+            $data['penguatan_fungsi'] = $model2->penguatan_fungsi_filter($startDate, $endDate);
         } else {
             $data['pembangunan_strategis'] = $model->pembangunan_strategis(3, 'pembangunan_strategis');
+            $data['penguatan_fungsi'] = $model2->penguatan_fungsi(3, 'penguatan_fungsi');
             $data['pager'] = $model->pager;
-            // echo "<pre>";
-            // print_r($data['pembangunan_strategis']);
-            // echo "</pre>";
         }
+        $data['combined_data'] = array_merge($data['pembangunan_strategis'], $data['penguatan_fungsi']);
         return view('mitra/pembangunan_strategis', $data);
     }
 
