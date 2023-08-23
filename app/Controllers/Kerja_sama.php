@@ -455,20 +455,204 @@ class Kerja_sama extends BaseController
     public function pembangunan_strategis_process_add()
     {
         $tableDataJSON = $this->request->getPost('table_data');
-        var_dump($tableDataJSON); // Tampilkan data JSON sebelum dekode
+        // var_dump($tableDataJSON); // Tampilkan data JSON sebelum dekode
     
         $tableDataArray = json_decode($tableDataJSON, true);
     
-        var_dump($tableDataArray); // Tampilkan array hasil dekode
+        // var_dump($tableDataArray); // Tampilkan array hasil dekode
      // Ini akan menampilkan array dari data tabel yang dikirim
-    
+     $newData = [];
+     $currentValue = "";
+     
+     foreach ($tableDataArray as $row) {
+         if (!empty($row[0])) {
+             $currentValue = $row[1];
+         }
+         
+         $newRow = [$currentValue];
+         for ($i = 1; $i < count($row); $i++) {
+             $newRow[] = $row[$i];
+         }
+         
+         $newData[] = $newRow;
+     }
+    //  $ruangLingkup = ""; // Inisialisasi nilai awal
 
-    // Decode the JSON data
+    // var_dump($newData);exit;
+
+        foreach ($newData as $row) {
+            if (count($row) === 6) {
+                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+                
+                $program = $row[1]; // Ambil nilai program dari baris saat ini
+                $anggaran = $row[2];
+                $realisasi = $row[3];
+                $jlhanggaran = $row[4];
+                $jlhrealisasi = $row[5];
+
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+                // Contoh:
+                $dataRuangLingkupDetail = [
+                    'ruang_lingkup' => $ruangLingkup,
+                    'program' => $program,
+                    'anggaran' => $anggaran,
+                    'realisasi' => $realisasi,
+                    'jlhanggaran' => $jlhanggaran,
+                    'jlhrealisasi' => $jlhrealisasi
+                ];
+                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+
+                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+                $ruangLingkupIdSama = $idSamaValue;
+                $tahun = date("Y");
+                // Ganti dengan tahun yang sesuai
+        
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+                // Contoh:
+                $dataRuangLingkup = [
+                    'id_sama' => $ruangLingkupIdSama,
+                    'ruang_lingkup' => $ruangLingkup,
+                    'tahun' => $tahun
+                ];
+
+                $existingData = $this->db->table('ruang_lingkup')
+                    ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+                    ->getRow();
+
+                if ($existingData) {
+                    // Data already exists, handle accordingly
+                    // ...
+                } else {
+                    // Data doesn't exist, proceed with insertion
+                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                    // ...
+                }
+
+
+            } else if(count($row) === 8) {
+                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+                
+                $program = $row[1]; // Ambil nilai program dari baris saat ini
+                $anggaran = $row[2];
+                $realisasi = $row[3];
+                $anggaran1 = $row[4];
+                $realisasi1 = $row[5];
+                $jlhanggaran = $row[6];
+                $jlhrealisasi = $row[7];
+
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+                // Contoh:
+                $dataRuangLingkupDetail = [
+                    'ruang_lingkup' => $ruangLingkup,
+                    'program' => $program,
+                    'anggaran' => $anggaran,
+                    'realisasi' => $realisasi,
+                    'anggaran1' => $anggaran1,
+                    'realisasi1' => $realisasi1,
+                    'jlhanggaran' => $jlhanggaran,
+                    'jlhrealisasi' => $jlhrealisasi
+                ];
+                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+
+                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+                $ruangLingkupIdSama = $idSamaValue;
+                $tahun = date("Y");
+                $tahun1 = date("Y") + 1;
+                // Ganti dengan tahun yang sesuai
+        
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+                // Contoh:
+                $dataRuangLingkup = [
+                    'id_sama' => $ruangLingkupIdSama,
+                    'ruang_lingkup' => $ruangLingkup,
+                    'tahun' => $tahun,
+                    'tahun1' => $tahun1
+                ];
+
+                $existingData = $this->db->table('ruang_lingkup')
+                ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+                ->getRow();
+
+                if ($existingData) {
+                    // Data already exists, handle accordingly
+                    // ...
+                } else {
+                    // Data doesn't exist, proceed with insertion
+                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                    // ...
+                }
+            
+            } else if(count($row) === 10)  {
+                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+                
+                $program = $row[1]; // Ambil nilai program dari baris saat ini
+                $anggaran = $row[2];
+                $realisasi = $row[3];
+                $anggaran1 = $row[4];
+                $realisasi1 = $row[5];
+                $anggaran2 = $row[6];
+                $realisasi2 = $row[7];
+                $jlhanggaran = $row[8];
+                $jlhrealisasi = $row[9];
+
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+                // Contoh:
+                $dataRuangLingkupDetail = [
+                    'ruang_lingkup' => $ruangLingkup,
+                    'program' => $program,
+                    'anggaran' => $anggaran,
+                    'realisasi' => $realisasi,
+                    'anggaran1' => $anggaran1,
+                    'realisasi1' => $realisasi1,
+                    'anggaran2' => $anggaran2,
+                    'realisasi2' => $realisasi2,
+                    'jlhanggaran' => $jlhanggaran,
+                    'jlhrealisasi' => $jlhrealisasi
+                ];
+                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+
+                
+                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+                $ruangLingkupIdSama = $idSamaValue;
+                $tahun = date("Y");
+                $tahun1 = date("Y") + 1;
+                $tahun2 = date("Y") + 2;
+                // Ganti dengan tahun yang sesuai
+        
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+                // Contoh:
+                $dataRuangLingkup = [
+                    'id_sama' => $ruangLingkupIdSama,
+                    'ruang_lingkup' => $ruangLingkup,
+                    'tahun' => $tahun,
+                    'tahun1' => $tahun1,
+                    'tahun2' => $tahun2
+                ];
+                
+                $existingData = $this->db->table('ruang_lingkup')
+                    ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+                    ->getRow();
+
+                if ($existingData) {
+                    // Data already exists, handle accordingly
+                    // ...
+                } else {
+                    // Data doesn't exist, proceed with insertion
+                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+                    // ...
+                }
+            }
+        }
+     
+   
         $tableData = json_decode($tableDataJSON);
 
         $judul = $this->request->getPost('judul');
 
-        var_dump($judul);exit;
+        // var_dump($judul);exit;
 
         $tgl_awal = $this->request->getPost('tgl_awal');
         $tgl_akhir = $this->request->getPost('tgl_akhir');
