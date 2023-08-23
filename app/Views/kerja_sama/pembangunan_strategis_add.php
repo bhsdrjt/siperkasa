@@ -27,6 +27,11 @@
 .center-table thead tr td {
     vertical-align: middle;
 }
+
+.disabled-button {
+    pointer-events: none;
+    opacity: 0.4s;
+}
 </style>
 
 <!-- page title area end -->
@@ -119,7 +124,7 @@
                                 <a class="btn btn-primary ml-2" id="btnRuangLingkup">Tambah Ruang Lingkup</a>
                             </div>
 
-                            <div class="form-group col-8 d-flex align-items-center">
+                            <div class="form-group col-16 d-flex align-items-center" id="input_program">
                                 <select class="form-control" name="select_lingkup" id="select_lingkup">
 
                                 </select>
@@ -320,6 +325,7 @@
 
 <script type="text/javascript">
 // Ambil elemen tombol dan elemen tabel
+var btnTambahKolom = document.getElementById("btnTambahKolom");
 var btnTambahRuangLingkup = document.getElementById("btnRuangLingkup");
 var table = document.querySelector("#tbl_ruanglingkup");
 var tableBody = table.querySelector("tbody");
@@ -330,13 +336,89 @@ var ruangLingkupData = []; // Array untuk menyimpan data ruang lingkup
 var selectLingkup = document.getElementById("select_lingkup");
 var btnTambahProgram = document.getElementById("btnProgram");
 
+const inputProgramDiv = document.getElementById('input_program');
+let addedYears = 0; // Variable to keep track of added years
+
+btnTambahKolom.addEventListener("click", function() {
+    const table = document.getElementById('tbl_ruanglingkup');
+    const currentColspan = table.rows[0].cells[2].colSpan;
+
+    if (addedYears < 2) { // Check if less than 2 years have been added
+        console.log(table.rows[0].cells[2]);
+        table.rows[0].cells[2].colSpan = currentColspan + 2;
+
+        for (let i = 1; i < table.rows.length; i++) {
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear() + addedYears; // Incremented by addedYears
+            const newDataCell = document.createElement('td');
+
+            if (i === 1) {
+                let iter = 0;
+                iter++;
+                newDataCell.setAttribute('colspan', '2');
+                newDataCell.textContent = currentYear + (iter - 1) + '-' + (currentYear + iter);
+                table.rows[i].appendChild(newDataCell);
+            } else if (i === 2) {
+                const newBudgetCell = document.createElement('td');
+                newBudgetCell.textContent = 'Anggaran';
+                newBudgetCell.contentEditable = true;
+                table.rows[i].appendChild(newBudgetCell);
+
+                const newRealisasiCell = document.createElement('td');
+                newRealisasiCell.textContent = 'Realisasi';
+                newRealisasiCell.contentEditable = true;
+                table.rows[i].appendChild(newRealisasiCell);
+
+                const anggaranInput = document.createElement('input');
+                anggaranInput.className = 'form-control';
+                anggaranInput.type = 'text';
+                anggaranInput.name = 'anggaran' + (addedYears + 1);
+                anggaranInput.id = 'anggaran' + (addedYears + 1);
+                anggaranInput.placeholder = 'Anggaran' + (addedYears + 1);
+                inputProgramDiv.insertBefore(anggaranInput, btnProgram); // Insert before the button
+
+                const realisasiInput = document.createElement('input');
+                realisasiInput.className = 'form-control';
+                realisasiInput.type = 'text';
+                realisasiInput.name = 'realisasi' + (addedYears + 1);
+                realisasiInput.id = 'realisasi' + (addedYears + 1);
+                realisasiInput.placeholder = 'Realisasi' + (addedYears + 1);
+                inputProgramDiv.insertBefore(realisasiInput, btnProgram); // Insert before the button
+            }
+        }
+
+        addedYears++; // Increment addedYears
+    } else {
+        alert("Anda sudah menambah 2 tahun kedepan");
+    }
+});
+
+
+
+
+
+
+
+
 btnTambahRuangLingkup.addEventListener("click", function() {
     var ruangLingkupInput = document.getElementById("ruang_lingkup");
+
+    var table = document.querySelector("#tbl_ruanglingkup");
     var newKegiatan = ruangLingkupInput.value;
 
     if (!newKegiatan) {
         alert("Harap masukkan ruang lingkup kegiatan.");
         return;
+    }
+
+    btnTambahKolom.removeEventListener("click", handleClick);
+    btnTambahKolom.classList.add("disabled-button");
+    btnTambahKolom.disabled = true; // Disable the "Tambah Kolom" button
+    btnTambahKolom.style.opacity = 0.5; // Dim the appearance
+
+
+    function handleClick(event) {
+        alert("Tidak bisa menambahkan tahun karena sudah menambah ruang lingkup");
     }
 
     var newRow = document.createElement("tr");
@@ -347,7 +429,7 @@ btnTambahRuangLingkup.addEventListener("click", function() {
     var kegiatanCell = document.createElement("td");
     kegiatanCell.textContent = newKegiatan;
 
-    var numCols = table.rows[0].cells.length; // Menghitung jumlah kolom pada baris pertama
+    var numCols = table.rows[2].cells.length + 2;
     var additionalTd = document.createElement("td");
     additionalTd.textContent = "";
     additionalTd.setAttribute("colspan", numCols.toString()); // Atur atribut colspan
@@ -390,19 +472,28 @@ function populateSelectOptions() {
 var programCounter = 1; // Menyimpan nomor urut program
 var totalAnggaran = 0;
 var totalRealisasi = 0;
+var totalAnggaran1 = 0;
+var totalRealisasi1 = 0;
+var totalAnggaran2 = 0;
+var totalRealisasi2 = 0;
 
 btnTambahProgram.addEventListener("click", function() {
     var programInput = document.getElementById("program");
     var anggaranInput = document.getElementById("anggaran");
     var realisasiInput = document.getElementById("realisasi");
+
     var newProgram = programInput.value;
     var newAnggaran = parseFloat(anggaranInput.value); // Convert to a floating-point number
     var newRealisasi = parseFloat(realisasiInput.value); // Convert to a floating-point number
 
     totalAnggaran += newAnggaran;
     totalRealisasi += newRealisasi;
-    console.log(totalAnggaran);
-    console.log(totalRealisasi);
+    // console.log(totalAnggaran);
+    // console.log(totalRealisasi);
+
+
+    var jlhAnggaran = 0;
+    var jlhRealisasi = 0;
 
     if (!newProgram) {
         alert("Harap masukkan nama program.");
@@ -441,11 +532,8 @@ btnTambahProgram.addEventListener("click", function() {
     var realisasiCell = document.createElement("td");
     realisasiCell.textContent = newRealisasi;
 
-    var jlhAnggaranCell = document.createElement("td");
-    jlhAnggaranCell.textContent = newAnggaran;
-
-    var jlhRealisasiCell = document.createElement("td");
-    jlhRealisasiCell.textContent = newRealisasi;
+    jlhAnggaran = newAnggaran;
+    jlhRealisasi = newRealisasi;
 
 
     // var numCols = table.rows[0].cells.length;
@@ -457,8 +545,70 @@ btnTambahProgram.addEventListener("click", function() {
     newRow.appendChild(kegiatanCell);
     newRow.appendChild(anggaranCell);
     newRow.appendChild(realisasiCell);
+
+    if (document.getElementById("anggaran1")) {
+        var anggaranInput1 = document.getElementById("anggaran1");
+        var newAnggaran1 = parseFloat(anggaranInput1.value); // Convert to a floating-point number
+
+        jlhAnggaran = newAnggaran + newAnggaran1;
+
+        anggaranInput1.value = "";
+        totalAnggaran1 += newAnggaran1;
+        var anggaranCell1 = document.createElement("td");
+        anggaranCell1.textContent = newAnggaran1;
+        newRow.appendChild(anggaranCell1);
+    }
+
+    if (document.getElementById("realisasi1")) {
+        var realisasiInput1 = document.getElementById("realisasi1");
+        var newRealisasi1 = parseFloat(realisasiInput1.value); // Convert to a floating-point number
+
+        jlhRealisasi = newRealisasi + newRealisasi1;
+
+        realisasiInput1.value = "";
+        totalRealisasi1 += newRealisasi1;
+        var realisasiCell1 = document.createElement("td");
+        realisasiCell1.textContent = newRealisasi1;
+        newRow.appendChild(realisasiCell1);
+    }
+
+    if (document.getElementById("anggaran2")) {
+        var anggaranInput2 = document.getElementById("anggaran2");
+        var newAnggaran2 = parseFloat(anggaranInput2.value); // Convert to a floating-point number
+
+        jlhAnggaran = newAnggaran + newAnggaran1 + newAnggaran2;
+
+        anggaranInput2.value = "";
+        totalAnggaran2 += newAnggaran2;
+        var anggaranCell2 = document.createElement("td");
+        anggaranCell2.textContent = newAnggaran2;
+        newRow.appendChild(anggaranCell2);
+    }
+
+
+    if (document.getElementById("realisasi2")) {
+        var realisasiInput2 = document.getElementById("realisasi2");
+        var newRealisasi2 = parseFloat(realisasiInput2.value); // Convert to a floating-point number
+
+        jlhRealisasi = newRealisasi + newRealisasi1 + newRealisasi2;
+
+        realisasiInput2.value = "";
+        totalRealisasi2 += newRealisasi2;
+        var realisasiCell2 = document.createElement("td");
+        realisasiCell2.textContent = newRealisasi2;
+        newRow.appendChild(realisasiCell2);
+    }
+
+    var jlhAnggaranCell = document.createElement("td");
+    jlhAnggaranCell.textContent = jlhAnggaran;
+
+    var jlhRealisasiCell = document.createElement("td");
+    jlhRealisasiCell.textContent = jlhRealisasi;
+
+
     newRow.appendChild(jlhAnggaranCell);
     newRow.appendChild(jlhRealisasiCell);
+
 
     // Cari indeks baris yang sesuai dengan ruang lingkup yang dipilih
     var insertRowIndex = -1;
@@ -500,55 +650,6 @@ btnTambahProgram.addEventListener("click", function() {
 
 });
 
-// function updateTotalRow() {
-//     var totalRow = document.getElementById("total-row");
-
-//     // Check if the total row exists, if not, create it
-//     if (!totalRow) {
-//         totalRow = document.createElement("tr");
-//         totalRow.id = "total-row";
-
-//         var totalLabelCell = document.createElement("td");
-//         totalLabelCell.textContent = "Total";
-//         totalLabelCell.colSpan = 2;
-
-//         var totalAnggaranCell = document.createElement("td");
-//         totalAnggaranCell.textContent = totalAnggaran;
-
-//         var totalRealisasiCell = document.createElement("td");
-//         totalRealisasiCell.textContent = totalRealisasi;
-
-//         var jlhTotalAnggaranCell = document.createElement("td");
-//         jlhTotalAnggaranCell.textContent = totalAnggaran;
-
-//         var jlhTotalRealisasiCell = document.createElement("td");
-//         jlhTotalRealisasiCell.textContent = totalRealisasi;
-
-//         totalRow.appendChild(totalLabelCell);
-//         totalRow.appendChild(totalAnggaranCell);
-//         totalRow.appendChild(totalRealisasiCell);
-//         totalRow.appendChild(jlhTotalAnggaranCell);
-//         totalRow.appendChild(jlhTotalRealisasiCell);
-
-//         // Append the total row to the table body
-//         tableBody.appendChild(totalRow);
-//     } else {
-//         var totalAnggaranCell = totalRow.querySelector("td:nth-child(2)"); // Select the second cell in the row
-//         var totalRealisasiCell = totalRow.querySelector("td:nth-child(3)"); // Select the third cell in the row
-//         var jlhTotalAnggaranCell = totalRow.querySelector("td:nth-child(4)"); // Select the third cell in the row
-//         var jlhTotalRealisasiCell = totalRow.querySelector("td:nth-child(5)"); // Select the third cell in the row
-
-//         if (totalAnggaranCell && totalRealisasiCell && jlhTotalAnggaranCell && jlhTotalRealisasiCell) {
-//             totalAnggaranCell.textContent = totalAnggaran;
-//             totalRealisasiCell.textContent = totalRealisasi; 
-//             jlhTotalAnggaranCell.textContent = totalAnggaran; 
-//             jlhTotalRealisasiCell.textContent = totalRealisasi; 
-//             // Update the total realisasi cell
-//         } else {
-//             console.error("Total cells not found.");
-//         }
-//     }
-// }
 
 function updateTotalRow() {
     var totalRow = document.getElementById("total-row");
@@ -572,15 +673,36 @@ function updateTotalRow() {
     var totalRealisasiCell = document.createElement("td");
     totalRealisasiCell.textContent = totalRealisasi;
 
+    var totalAnggaranCell1 = document.createElement("td");
+    totalAnggaranCell1.textContent = totalAnggaran1;
+
+    var totalRealisasiCell1 = document.createElement("td");
+    totalRealisasiCell1.textContent = totalRealisasi1;
+
+    var totalAnggaranCell2 = document.createElement("td");
+    totalAnggaranCell2.textContent = totalAnggaran2;
+
+    var totalRealisasiCell2 = document.createElement("td");
+    totalRealisasiCell2.textContent = totalRealisasi2;
+
     var jlhTotalAnggaranCell = document.createElement("td");
-    jlhTotalAnggaranCell.textContent = totalAnggaran;
+    jlhTotalAnggaranCell.textContent = totalAnggaran + totalAnggaran1 + totalAnggaran2;
 
     var jlhTotalRealisasiCell = document.createElement("td");
-    jlhTotalRealisasiCell.textContent = totalRealisasi;
+    jlhTotalRealisasiCell.textContent = totalRealisasi + totalRealisasi1 + totalRealisasi2;
 
     totalRow.appendChild(totalLabelCell);
     totalRow.appendChild(totalAnggaranCell);
     totalRow.appendChild(totalRealisasiCell);
+    if (totalAnggaran1 != 0) {
+        totalRow.appendChild(totalAnggaranCell1);
+        totalRow.appendChild(totalRealisasiCell1);
+    }
+
+    if (totalAnggaran2 != 0){
+        totalRow.appendChild(totalAnggaranCell2);
+        totalRow.appendChild(totalRealisasiCell2);
+    }
     totalRow.appendChild(jlhTotalAnggaranCell);
     totalRow.appendChild(jlhTotalRealisasiCell);
 
@@ -709,7 +831,7 @@ $(document).ready(function() {
 
         console.log("Table data:", tableData); // Log the collected table data
         console.log("Serialized data:", JSON.stringify(tableData));
-        
+
 
         // Submit the form
         $("form").submit();
@@ -739,97 +861,6 @@ document.getElementById('btnTambahRow').addEventListener('click', function() {
     addNewRow();
 });
 
-document.getElementById('btnTambahKolom').addEventListener('click', function() {
-    // Get the table element
-    const table = document.getElementById('tbl_ruanglingkup');
-
-    // Get the current colspan of the "Jadwal Tahun Berjalan" header cell
-    const currentColspan = table.rows[0].cells[2].colSpan;
-
-    //     console.log(table.rows[0].cells[2]);
-    //     console.log(table.rows[0].cells[2].colSpan);
-    // console.log(currentColspan);
-    // Increase the colspan by 1
-    table.rows[0].cells[2].colSpan = currentColspan + 2;
-    let iter = 0;
-
-    // console.log(table.rows.length);
-
-    for (let i = 1; i < table.rows.length; i++) {
-        // console.log(table.rows[i].cells.length);
-        // console.log(currentColspan + 2);
-        // Check if the new data cell already exists
-        const currentDate = new Date();
-        const currentYear = currentDate.getFullYear();
-        if (table.rows[i].cells.length === currentColspan + 6) {
-            // If the new data cell already exists, update its content
-            if (i === 1) {
-                // Increment iter only when adding the new header cell
-                // iter++;
-                // table.rows[i].cells[currentColspan + 2].textContent = currentYear + iter - 1 + '-' + (
-                //     currentYear + iter);
-            } else {
-                console.log(i);
-                const newBudgetCell = document.createElement('td');
-                newBudgetCell.textContent = 'Anggaran 1';
-                newBudgetCell.contentEditable = true; // Set the contenteditable attribute
-                table.rows[i].insertBefore(newBudgetCell, table.rows[i].cells[currentColspan + 2]);
-
-                const newRealisasiCell = document.createElement('td');
-                newRealisasiCell.textContent = 'Realisasi 1';
-                newRealisasiCell.contentEditable = true; // Set the contenteditable attribute
-                table.rows[i].insertBefore(newRealisasiCell, table.rows[i].cells[currentColspan + 3]);
-
-                // const newVolCell = document.createElement('td');
-                // newVolCell.textContent = 'Vol 1';
-                // newVolCell.contentEditable = true; // Set the contenteditable attribute
-                // table.rows[i].appendChild(newVolCell);
-
-                // const newSatCell = document.createElement('td');
-                // newSatCell.textContent = 'Sat 1';
-                // newSatCell.contentEditable = true; // Set the contenteditable attribute
-                // table.rows[i].appendChild(newSatCell);
-
-            }
-        } else {
-            // If the new data cell does not exist, create and add it
-            const newDataCell = document.createElement('td');
-
-            if (i === 1) {
-                //     // Increment iter only when adding the new header cell
-                iter++;
-                newDataCell.setAttribute('colspan', '2');
-                newDataCell.textContent = currentYear + (iter - 1) + '-' + (currentYear + iter);
-                table.rows[i].appendChild(newDataCell);
-            } else if (i === 2) {
-                const newBudgetCell = document.createElement('td');
-                newBudgetCell.textContent = 'Anggaran';
-                newBudgetCell.contentEditable = true; // Set the contenteditable attribute
-                table.rows[i].appendChild(newBudgetCell);
-
-                const newRealisasiCell = document.createElement('td');
-                newRealisasiCell.textContent = 'Realisasi';
-                newRealisasiCell.contentEditable = true; // Set the contenteditable attribute
-                table.rows[i].appendChild(newRealisasiCell);
-
-                // const newVolCell = document.createElement('td');
-                // newVolCell.textContent = 'Vol';
-                // newVolCell.contentEditable = true; // Set the contenteditable attribute
-                // table.rows[i].appendChild(newVolCell);
-
-                // const newSatCell = document.createElement('td');
-                // newSatCell.textContent = 'Sat';
-                // newSatCell.contentEditable = true; // Set the contenteditable attribute
-                // table.rows[i].appendChild(newSatCell);
-
-
-            }
-
-
-
-        }
-    }
-});
 
 document.getElementById("btnTambahRuangLingkup").addEventListener("click", function() {
     var ruangLingkupContainer = document.getElementById("ruangLingkupContainer");

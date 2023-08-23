@@ -501,45 +501,121 @@ class Kerja_sama extends BaseController
                     'jlhrealisasi' => $jlhrealisasi
                 ];
                 $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+
+                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+                $ruangLingkupIdSama = $idSamaValue;
+                $tahun = date("Y");
+                // Ganti dengan tahun yang sesuai
+        
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+                // Contoh:
+                $dataRuangLingkup = [
+                    'id_sama' => $ruangLingkupIdSama,
+                    'ruang_lingkup' => $ruangLingkup,
+                    'tahun' => $tahun
+                ];
+                $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+
+
+            } else if(count($row) === 8) {
+                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+                
+                $program = $row[1]; // Ambil nilai program dari baris saat ini
+                $anggaran = $row[2];
+                $realisasi = $row[3];
+                $anggaran1 = $row[4];
+                $realisasi1 = $row[5];
+                $jlhanggaran = $row[6];
+                $jlhrealisasi = $row[7];
+
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+                // Contoh:
+                $dataRuangLingkupDetail = [
+                    'ruang_lingkup' => $ruangLingkup,
+                    'program' => $program,
+                    'anggaran' => $anggaran,
+                    'realisasi' => $realisasi,
+                    'anggaran1' => $anggaran1,
+                    'realisasi1' => $realisasi1,
+                    'jlhanggaran' => $jlhanggaran,
+                    'jlhrealisasi' => $jlhrealisasi
+                ];
+                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+
+                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+                $ruangLingkupIdSama = $idSamaValue;
+                $tahun = date("Y");
+                $tahun1 = date("Y") + 1;
+                // Ganti dengan tahun yang sesuai
+        
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+                // Contoh:
+                $dataRuangLingkup = [
+                    'id_sama' => $ruangLingkupIdSama,
+                    'ruang_lingkup' => $ruangLingkup,
+                    'tahun' => $tahun,
+                    'tahun1' => $tahun1
+                ];
+                $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+            } else if(count($row) === 10)  {
+                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+                
+                $program = $row[1]; // Ambil nilai program dari baris saat ini
+                $anggaran = $row[2];
+                $realisasi = $row[3];
+                $anggaran1 = $row[4];
+                $realisasi1 = $row[5];
+                $anggaran2 = $row[6];
+                $realisasi2 = $row[7];
+                $jlhanggaran = $row[8];
+                $jlhrealisasi = $row[9];
+
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+                // Contoh:
+                $dataRuangLingkupDetail = [
+                    'ruang_lingkup' => $ruangLingkup,
+                    'program' => $program,
+                    'anggaran' => $anggaran,
+                    'realisasi' => $realisasi,
+                    'anggaran1' => $anggaran1,
+                    'realisasi1' => $realisasi1,
+                    'anggaran2' => $anggaran2,
+                    'realisasi2' => $realisasi2,
+                    'jlhanggaran' => $jlhanggaran,
+                    'jlhrealisasi' => $jlhrealisasi
+                ];
+                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+
+                
+                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+                $ruangLingkupIdSama = $idSamaValue;
+                $tahun = date("Y");
+                $tahun1 = date("Y") + 1;
+                $tahun2 = date("Y") + 2;
+                // Ganti dengan tahun yang sesuai
+        
+                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+                // Contoh:
+                $dataRuangLingkup = [
+                    'id_sama' => $ruangLingkupIdSama,
+                    'ruang_lingkup' => $ruangLingkup,
+                    'tahun' => $tahun,
+                    'tahun1' => $tahun1,
+                    'tahun2' => $tahun2
+                ];
+                $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
             }
         }
      
-        // var_dump($newData);
-
-            // Di dalam controller CodeIgniter
-            $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
-            $ruangLingkup = ""; // Inisialisasi nilai awal
-            
-            foreach ($newData as $row) {
-                if (count($row) === 3) {
-                    $ruangLingkup = $row[1]; // Ambil nilai dari kolom kedua
-                    $ruangLingkupIdSama = $idSamaValue;
-                    $tahun = 2023; // Ganti dengan tahun yang sesuai
-            
-                    // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
-                    // Contoh:
-                    $dataRuangLingkup = [
-                        'id_sama' => $ruangLingkupIdSama,
-                        'ruang_lingkup' => $ruangLingkup,
-                        'tahun' => $tahun
-                    ];
-                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
-                }
-            }
-            
-
-
-        // Di dalam controller CodeIgniter
-        
-
-
-
-    // Decode the JSON data
+   
         $tableData = json_decode($tableDataJSON);
 
         $judul = $this->request->getPost('judul');
 
-        var_dump($judul);exit;
+        // var_dump($judul);exit;
 
         $tgl_awal = $this->request->getPost('tgl_awal');
         $tgl_akhir = $this->request->getPost('tgl_akhir');
