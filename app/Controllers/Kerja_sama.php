@@ -52,7 +52,7 @@ class Kerja_sama extends BaseController
 
         $lokasi_kerjasama = $this->request->getPost('lokasi_kerjasama');
         $mitra = intval($this->request->getPost('mitra'));
-        
+
         $data = [
             'judul' => $judul,
             'mitra' => $mitra,
@@ -454,201 +454,175 @@ class Kerja_sama extends BaseController
 
     public function pembangunan_strategis_process_add()
     {
-        $tableDataJSON = $this->request->getPost('table_data');
-        // var_dump($tableDataJSON); // Tampilkan data JSON sebelum dekode
-    
-        $tableDataArray = json_decode($tableDataJSON, true);
-    
-        // var_dump($tableDataArray); // Tampilkan array hasil dekode
-     // Ini akan menampilkan array dari data tabel yang dikirim
-     $newData = [];
-     $currentValue = "";
-     
-     foreach ($tableDataArray as $row) {
-         if (!empty($row[0])) {
-             $currentValue = $row[1];
-         }
-         
-         $newRow = [$currentValue];
-         for ($i = 1; $i < count($row); $i++) {
-             $newRow[] = $row[$i];
-         }
-         
-         $newData[] = $newRow;
-     }
-    //  $ruangLingkup = ""; // Inisialisasi nilai awal
 
-    // var_dump($newData);exit;
+        // foreach ($newData as $row) {
+        //     if (count($row) === 6) {
+        //         $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
 
-        foreach ($newData as $row) {
-            if (count($row) === 6) {
-                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
-                
-                $program = $row[1]; // Ambil nilai program dari baris saat ini
-                $anggaran = $row[2];
-                $realisasi = $row[3];
-                $jlhanggaran = $row[4];
-                $jlhrealisasi = $row[5];
+        //         $program = $row[1]; // Ambil nilai program dari baris saat ini
+        //         $anggaran = $row[2];
+        //         $realisasi = $row[3];
+        //         $jlhanggaran = $row[4];
+        //         $jlhrealisasi = $row[5];
 
-                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
-                // Contoh:
-                $dataRuangLingkupDetail = [
-                    'ruang_lingkup' => $ruangLingkup,
-                    'program' => $program,
-                    'anggaran' => $anggaran,
-                    'realisasi' => $realisasi,
-                    'jlhanggaran' => $jlhanggaran,
-                    'jlhrealisasi' => $jlhrealisasi
-                ];
-                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+        //         // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+        //         // Contoh:
+        //         $dataRuangLingkupDetail = [
+        //             'ruang_lingkup' => $ruangLingkup,
+        //             'program' => $program,
+        //             'anggaran' => $anggaran,
+        //             'realisasi' => $realisasi,
+        //             'jlhanggaran' => $jlhanggaran,
+        //             'jlhrealisasi' => $jlhrealisasi
+        //         ];
 
-                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
-                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
-                $ruangLingkupIdSama = $idSamaValue;
-                $tahun = date("Y");
-                // Ganti dengan tahun yang sesuai
-        
-                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
-                // Contoh:
-                $dataRuangLingkup = [
-                    'id_sama' => $ruangLingkupIdSama,
-                    'ruang_lingkup' => $ruangLingkup,
-                    'tahun' => $tahun
-                ];
+        //         // dd($dataRuangLingkupDetail);exit;
+        //         $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
 
-                $existingData = $this->db->table('ruang_lingkup')
-                    ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
-                    ->getRow();
+        //         $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+        //         $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+        //         $ruangLingkupIdSama = $idSamaValue;
+        //         $tahun = date("Y");
+        //         // Ganti dengan tahun yang sesuai
 
-                if ($existingData) {
-                    // Data already exists, handle accordingly
-                    // ...
-                } else {
-                    // Data doesn't exist, proceed with insertion
-                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
-                    // ...
-                }
+        //         // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+        //         // Contoh:
+        //         $dataRuangLingkup = [
+        //             'id_sama' => $ruangLingkupIdSama,
+        //             'ruang_lingkup' => $ruangLingkup,
+        //             'tahun' => $tahun
+        //         ];
+
+        //         $existingData = $this->db->table('ruang_lingkup')
+        //             ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+        //             ->getRow();
+
+        //         if ($existingData) {
+        //             // Data already exists, handle accordingly
+        //             // ...
+        //         } else {
+        //             // Data doesn't exist, proceed with insertion
+        //             $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+        //             // ...
+        //         }
+        //     } else if (count($row) === 8) {
+        //         $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+
+        //         $program = $row[1]; // Ambil nilai program dari baris saat ini
+        //         $anggaran = $row[2];
+        //         $realisasi = $row[3];
+        //         $anggaran1 = $row[4];
+        //         $realisasi1 = $row[5];
+        //         $jlhanggaran = $row[6];
+        //         $jlhrealisasi = $row[7];
+
+        //         // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+        //         // Contoh:
+        //         $dataRuangLingkupDetail = [
+        //             'ruang_lingkup' => $ruangLingkup,
+        //             'program' => $program,
+        //             'anggaran' => $anggaran,
+        //             'realisasi' => $realisasi,
+        //             'anggaran1' => $anggaran1,
+        //             'realisasi1' => $realisasi1,
+        //             'jlhanggaran' => $jlhanggaran,
+        //             'jlhrealisasi' => $jlhrealisasi
+        //         ];
+        //         $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+
+        //         $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+        //         $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+        //         $ruangLingkupIdSama = $idSamaValue;
+        //         $tahun = date("Y");
+        //         $tahun1 = date("Y") + 1;
+        //         // Ganti dengan tahun yang sesuai
+
+        //         // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+        //         // Contoh:
+        //         $dataRuangLingkup = [
+        //             'id_sama' => $ruangLingkupIdSama,
+        //             'ruang_lingkup' => $ruangLingkup,
+        //             'tahun' => $tahun,
+        //             'tahun1' => $tahun1
+        //         ];
+
+        //         $existingData = $this->db->table('ruang_lingkup')
+        //             ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+        //             ->getRow();
+
+        //         if ($existingData) {
+        //             // Data already exists, handle accordingly
+        //             // ...
+        //         } else {
+        //             // Data doesn't exist, proceed with insertion
+        //             $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+        //             // ...
+        //         }
+        //     } else if (count($row) === 10) {
+        //         $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
+
+        //         $program = $row[1]; // Ambil nilai program dari baris saat ini
+        //         $anggaran = $row[2];
+        //         $realisasi = $row[3];
+        //         $anggaran1 = $row[4];
+        //         $realisasi1 = $row[5];
+        //         $anggaran2 = $row[6];
+        //         $realisasi2 = $row[7];
+        //         $jlhanggaran = $row[8];
+        //         $jlhrealisasi = $row[9];
+
+        //         // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
+        //         // Contoh:
+        //         $dataRuangLingkupDetail = [
+        //             'ruang_lingkup' => $ruangLingkup,
+        //             'program' => $program,
+        //             'anggaran' => $anggaran,
+        //             'realisasi' => $realisasi,
+        //             'anggaran1' => $anggaran1,
+        //             'realisasi1' => $realisasi1,
+        //             'anggaran2' => $anggaran2,
+        //             'realisasi2' => $realisasi2,
+        //             'jlhanggaran' => $jlhanggaran,
+        //             'jlhrealisasi' => $jlhrealisasi
+        //         ];
+        //         $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
 
 
-            } else if(count($row) === 8) {
-                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
-                
-                $program = $row[1]; // Ambil nilai program dari baris saat ini
-                $anggaran = $row[2];
-                $realisasi = $row[3];
-                $anggaran1 = $row[4];
-                $realisasi1 = $row[5];
-                $jlhanggaran = $row[6];
-                $jlhrealisasi = $row[7];
+        //         $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
+        //         $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
+        //         $ruangLingkupIdSama = $idSamaValue;
+        //         $tahun = date("Y");
+        //         $tahun1 = date("Y") + 1;
+        //         $tahun2 = date("Y") + 2;
+        //         // Ganti dengan tahun yang sesuai
 
-                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
-                // Contoh:
-                $dataRuangLingkupDetail = [
-                    'ruang_lingkup' => $ruangLingkup,
-                    'program' => $program,
-                    'anggaran' => $anggaran,
-                    'realisasi' => $realisasi,
-                    'anggaran1' => $anggaran1,
-                    'realisasi1' => $realisasi1,
-                    'jlhanggaran' => $jlhanggaran,
-                    'jlhrealisasi' => $jlhrealisasi
-                ];
-                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
+        //         // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
+        //         // Contoh:
+        //         $dataRuangLingkup = [
+        //             'id_sama' => $ruangLingkupIdSama,
+        //             'ruang_lingkup' => $ruangLingkup,
+        //             'tahun' => $tahun,
+        //             'tahun1' => $tahun1,
+        //             'tahun2' => $tahun2
+        //         ];
 
-                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
-                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
-                $ruangLingkupIdSama = $idSamaValue;
-                $tahun = date("Y");
-                $tahun1 = date("Y") + 1;
-                // Ganti dengan tahun yang sesuai
-        
-                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
-                // Contoh:
-                $dataRuangLingkup = [
-                    'id_sama' => $ruangLingkupIdSama,
-                    'ruang_lingkup' => $ruangLingkup,
-                    'tahun' => $tahun,
-                    'tahun1' => $tahun1
-                ];
+        //         $existingData = $this->db->table('ruang_lingkup')
+        //             ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
+        //             ->getRow();
 
-                $existingData = $this->db->table('ruang_lingkup')
-                ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
-                ->getRow();
+        //         if ($existingData) {
+        //             // Data already exists, handle accordingly
+        //             // ...
+        //         } else {
+        //             // Data doesn't exist, proceed with insertion
+        //             $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
+        //             // ...
+        //         }
+        //     }
+        // }
 
-                if ($existingData) {
-                    // Data already exists, handle accordingly
-                    // ...
-                } else {
-                    // Data doesn't exist, proceed with insertion
-                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
-                    // ...
-                }
-            
-            } else if(count($row) === 10)  {
-                $ruangLingkup = $row[0]; // Ambil nilai ruang lingkup dari baris utama
-                
-                $program = $row[1]; // Ambil nilai program dari baris saat ini
-                $anggaran = $row[2];
-                $realisasi = $row[3];
-                $anggaran1 = $row[4];
-                $realisasi1 = $row[5];
-                $anggaran2 = $row[6];
-                $realisasi2 = $row[7];
-                $jlhanggaran = $row[8];
-                $jlhrealisasi = $row[9];
 
-                // Lakukan proses penyimpanan ke tabel ruang_lingkup_detail di sini
-                // Contoh:
-                $dataRuangLingkupDetail = [
-                    'ruang_lingkup' => $ruangLingkup,
-                    'program' => $program,
-                    'anggaran' => $anggaran,
-                    'realisasi' => $realisasi,
-                    'anggaran1' => $anggaran1,
-                    'realisasi1' => $realisasi1,
-                    'anggaran2' => $anggaran2,
-                    'realisasi2' => $realisasi2,
-                    'jlhanggaran' => $jlhanggaran,
-                    'jlhrealisasi' => $jlhrealisasi
-                ];
-                $this->db->table('ruang_lingkup_detail')->insert($dataRuangLingkupDetail);
-
-                
-                $idSamaValue = date('YmdHi'); // Format: YYYYMMDDHHmm
-                $ruangLingkup = $ruangLingkup; // Ambil nilai dari kolom kedua
-                $ruangLingkupIdSama = $idSamaValue;
-                $tahun = date("Y");
-                $tahun1 = date("Y") + 1;
-                $tahun2 = date("Y") + 2;
-                // Ganti dengan tahun yang sesuai
-        
-                // Lakukan proses penyimpanan ke tabel ruang_lingkup di sini
-                // Contoh:
-                $dataRuangLingkup = [
-                    'id_sama' => $ruangLingkupIdSama,
-                    'ruang_lingkup' => $ruangLingkup,
-                    'tahun' => $tahun,
-                    'tahun1' => $tahun1,
-                    'tahun2' => $tahun2
-                ];
-                
-                $existingData = $this->db->table('ruang_lingkup')
-                    ->getWhere(['id_sama' => $dataRuangLingkup['id_sama'], 'ruang_lingkup' => $dataRuangLingkup['ruang_lingkup']])
-                    ->getRow();
-
-                if ($existingData) {
-                    // Data already exists, handle accordingly
-                    // ...
-                } else {
-                    // Data doesn't exist, proceed with insertion
-                    $this->db->table('ruang_lingkup')->insert($dataRuangLingkup);
-                    // ...
-                }
-            }
-        }
-     
-   
-        $tableData = json_decode($tableDataJSON);
+        // $tableData = json_decode($tableDataJSON);
 
         $judul = $this->request->getPost('judul');
 
@@ -695,6 +669,126 @@ class Kerja_sama extends BaseController
         // dd($data);exit;
         $this->db->table('pembangunan_strategis')->insert($data);
         $lastID = $this->db->insertID();
+
+
+        $tableDataJSON = $this->request->getPost('table_data');
+        $tableDataArray = json_decode($tableDataJSON, true);
+        // dd($tableDataArray);
+        $newData = [];
+        $currentValue = "";
+
+        foreach ($tableDataArray as $row) {
+            if (!empty($row[0])) {
+                $currentValue = $row[1];
+            }
+
+            if ($row[0] == 'Total') {
+                $newRow = ['Total'];
+                for ($i = 1; $i < count($row); $i++) {
+                    $newRow[] = $row[$i];
+                }
+            } else {
+                $newRow = [$currentValue];
+                for ($i = 1; $i < count($row); $i++) {
+                    $newRow[] = $row[$i];
+                }
+            }
+            $newData[] = $newRow;
+        };
+
+
+        $dataRuangLingkup = [];
+        $dataProgram = [];
+        $dataTotal = [];
+        $dataAnggaran = [];
+        $periode = $this->request->getPost('periode');
+        foreach ($newData as $data) {
+            if (count($data) === 3) {
+                // $dataRuangLingkup[] = $data[1];
+                $dataRuangLingkup[] = [
+                    'id_kerjasama' => $lastID ,
+                    'nama' => $data[1],
+                    'tipe_kerjasama' => 'Pembangunan Strategis'
+                ];
+            } else if ($data[0] != 'Total') {
+                $dataProgram[] = [
+                    'ruang_lingkup' => $data[0],
+                    'nama' => $data[1]
+                ];
+
+                $pairs = [];
+
+                for ($i = 2; $i < count($data); $i += 2) {
+                    $pair = [];
+                    $pair['anggaran'] = [$data[$i]];
+                    $pair['jenis'] = 'anggaran';
+
+                    $periodeIndex = ($i - 2) / 2;
+                    if ($periodeIndex <= count($periode)) {
+                        $pair['periode'] = isset($periode[$periodeIndex]) ? $periode[$periodeIndex] : '';
+                    }
+                    if ($i + 1 < count($data)) {
+                        $pair['anggaran'][] = $data[$i + 1];
+                    }
+                    $pairs[] = $pair;
+                }
+
+                if (!empty($pairs)) {
+                    $lastIndex = count($pairs) - 1;
+                    $pairs[$lastIndex]['jenis'] = 'total';
+                }
+
+                $dataAnggaran[] = [
+                    'kegiatan' =>  $data[1],
+                    'anggaranbesar' => $pairs
+                ];
+            } else {
+                $dataTotal[] = [$data];
+            }
+        }
+
+        // dd($dataAnggaran);
+        // exit;
+
+        foreach ($dataRuangLingkup as $dt){
+            $this->db->table('tb_ruang_lingkup')->insert($dt);
+            $id_ruanglingkup = $this->db->insertID();
+            // var_dump($dt['nama']);
+            foreach ($dataProgram as $dt2){
+                // var_dump($dt2['ruang_lingkup']);
+                if($dt2['ruang_lingkup'] == $dt['nama']){
+                    $parInsert = [
+                        'id_ruang_lingkup' => $id_ruanglingkup,
+                        'nama' => $dt2['nama']
+                    ];
+                    $this->db->table('tb_kegiatan')->insert($parInsert);
+                    $id_kegiatan = $this->db->insertID();
+                    foreach ($dataAnggaran as $dt3){
+                        if($dt3['kegiatan'] == $dt2['nama']){
+                            foreach($dt3['anggaranbesar'] as $dt4){
+                                // var_dump($dt4['anggaran'][]);
+                                $parInsert2 = [
+                                    'anggaran' => $dt4['anggaran'][0],
+                                    'realisasi' => $dt4['anggaran'][1],
+                                    'id_kegiatan' => $id_kegiatan,
+                                    'jenis' => $dt4['jenis'],
+                                    'periode' => $dt4['periode']
+                                ];
+                                $this->db->table('tb_anggaran')->insert($parInsert2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // dd($parInsert);
+        // exit;
+
+
+
+
+
+
 
         // // ***** Proses simpan cover  *****
         // $cover = $this->request->getFile('cover');
@@ -1079,15 +1173,21 @@ class Kerja_sama extends BaseController
         return view('kerja_sama_skw/penguatan_fungsi_add', $data);
     }
 
-    public function getmitra()
+    public function getmitra($skw = null)
     {
-        $searchTerm = $this->request->getGet('q');
-        if ($searchTerm) {
-            $list = $this->db->table('mitra')->like('nama_mitra', $searchTerm)->get()->getResult();
-        } else {
-            $list = $this->db->table('mitra')->get()->getResult();
+        if($skw){
+            $list = $this->db->table('mitra')->getWhere(['jenis_lokasi' => session('level')])->getResult();
+            echo json_encode($list);
+        }else{
+            $searchTerm = $this->request->getGet('q');
+            if ($searchTerm) {
+                $list = $this->db->table('mitra')->like('nama_mitra', $searchTerm)->get()->getResult();
+            } else {
+                $list = $this->db->table('mitra')->get()->getResult();
+            }
+            echo json_encode($list);
+
         }
-        echo json_encode($list);
     }
 
     public function penguatan_fungsi_skw_process_add()
@@ -1310,14 +1410,24 @@ class Kerja_sama extends BaseController
     {
         $data['title'] = 'Kerja Sama';
         $data['mitra'] = $this->db->table('mitra')->getWhere(['jenis_lokasi' => session('level')])->getResult();
+        // dd($data['mitra']);
         return view('kerja_sama_skw/pembangunan_strategis_add', $data);
     }
 
-    public function getrkt(){
-        $idMitra = intval($this->request->getPost('mitra'));
+    public function getRuangLingkup()
+    {
+        $idMitra = $this->request->getGet('id_mitra');
         $model = new M_kerja_sama();
-        $rktData = $model->getrkt($idMitra);
-        return $this->response->setJSON($rktData);
+        $ruangLingkup = $model->getRuangLingkupByMitra($idMitra);
+        // dd($ruangLingkup);
+        return $this->response->setJSON($ruangLingkup);
+    }
+    public function getKegiatan()
+    {
+        $idRuling = $this->request->getGet('id_ruling');
+        $model = new M_kerja_sama();
+        $kegiatan = $model->getKegiatanByRuangLingkup($idRuling);
+        return $this->response->setJSON($kegiatan);
     }
 
     public function pembangunan_strategis_skw_process_add()

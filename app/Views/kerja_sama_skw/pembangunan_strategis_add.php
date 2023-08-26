@@ -4,107 +4,105 @@
 <!-- page title area end -->
 <!-- <div class="main-content-inner">
   <div class="container"> -->
-    <div class="row">
-      <!-- Primary table start -->
-      <div class="col-12 mt-3">
-        <div class="card">
-          <div class="card-header bg-dark text-white">
-            <div class="row">
-              <div class="col-7">
-                <h4>Kerja Sama Pembangunan Strategis SKW</h4>
-              </div>
-              <div class="col-5">
-                <span class="float-right">
-                </span>
-              </div>
-            </div>
+<div class="row">
+  <div class="col-12 mt-3">
+    <div class="card">
+      <div class="card-header bg-dark text-white">
+        <div class="row">
+          <div class="col-7">
+            <h4>Kerja Sama Pembangunan Strategis SKW</h4>
           </div>
-          <div class="card-body">
+          <div class="col-5">
+            <span class="float-right">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
 
-            <?php if (session()->getFlashdata('error')) {
-              echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?php if (session()->getFlashdata('error')) {
+          echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                   ' . session()->getFlashdata('error') . '
                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                        <span class="fa fa-times"></span>
                    </button>
                </div>';
-            } ?>
+        } ?>
 
-            <?= form_open('kerja_sama/pembangunan_strategis_skw/process/add', 'enctype="multipart/form-data"') ?>
-            <div class="row">
-              <div class="form-group col-4">
-                <label for="mitra" class="col-form-label"><b>Perusahaan/Mitra</b></label>
-                <select class="form-control" name="mitra" id="mitra" required>
-                  <option value="">-Pilih-</option>
-                  <?php if (isset($mitra)) {
-                    foreach ($mitra as $mit) { ?>
-                      <option value="<?= $mit->id_mitra ?>"><?= $mit->nama_mitra ?></option>
-                  <?php }
-                  } ?>
-                </select>
-              </div>
-              <div class="form-group col-4">
-                <label for="rkt" class="col-form-label"><b>RKT</b></label>
-                <select class="form-control" name="rkt" id="rkt" required>
-                  <option value=""> - Pilih RKT - </option>
-                </select>
-              </div>
-              <div class="form-group col-12">
-                <label for="judul" class="col-form-label"><b>Judul Laporan</b></label>
-                <input class="form-control" type="text" name="judul" id="judul" placeholder="Judul">
-              </div>
+        <?= form_open('kerja_sama/pembangunan_strategis_skw/process/add', 'enctype="multipart/form-data"') ?>
+        <div class="row">
+          <div class="form-group col-4">
+            <label for="mitra" class="col-form-label"><b>Perusahaan/Mitra</b></label>
+            <select class="form-control" name="mitra" id="mitra" required>
+              <option value="" disabled selected> Pilih Mitra</option>
+              <!-- Contoh data mitra -->
 
-
-              <div class="form-group col-4">
-                <label for="file_laporan" class="col-form-label"><b>Laporan Kerja Sama</b> <sup style="color: darkblue;">(Pdf)</sup></label>
-                <div class="input-group mb-3">
-                  <input type="file" class="form-control" name="file_laporan" id="file_laporan" value="">
-                </div>
-              </div>
-              <div class="form-group col-4">
-                <label for="file_spt" class="col-form-label"><b>File SPT</b> <sup style="color: darkblue;">(Pdf)</sup></label>
-                <div class="input-group mb-3">
-                  <input type="file" class="form-control" name="file_spt" id="file_spt" value="">
-                </div>
-              </div>
-
-              <div class="form-group mt-3 col-12">
-                <b style="font-size: large;">Dokumentasi</b>
-                &nbsp; &nbsp; &nbsp; &nbsp;
-                <button type="button" class="btn btn-xs btn-info" id="addDokumentasi"><i class="fa fa-plus"></i> Add</button>
-
-                <table class="table table-borderless mt-2 dokumentasi" style="width: 100%;">
-                  <thead>
-                    <th>No</th>
-                    <th>File Dokumentasi <sup style="color: darkblue;">(image[jpg,png,jpeg])</sup></th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td style="padding-left: 0px;">
-                        <div class="input-group mb-3">
-                          <input type="file" class="form-control" name="file_dokumentasi[]" id="file_dokumentasi0" value="">
-                        </div>
-                      </td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="form-group col-12 text-center">
-                <button type="submit" class="btn btn-primary" name="simpan" style="width: 200px;">Simpan</button>
-              </div>
+            </select>
+          </div>
+          <div class="form-group col-4">
+            <label for="ruang_lingkup" class="col-form-label"><b>Ruang Lingkup</b></label>
+            <select class="form-control" name="ruang_lingkup" id="ruang_lingkup" required>
+              <option value="" disabled selected> Pilih Ruang Lingkup </option>
+            </select>
+          </div>
+          <div class="form-group col-4">
+            <label for="kegiatan" class="col-form-label"><b>Kegiatan</b></label>
+            <select class="form-control" name="kegiatan" id="kegiatan" required>
+              <option value="" disabled selected> Pilih Kegiatan </option>
+            </select>
+          </div>
+          <div class="form-group col-12">
+            <label for="judul" class="col-form-label"><b>Judul Laporan</b></label>
+            <input class="form-control" type="text" name="judul" id="judul" placeholder="Judul">
+          </div>
+          <div class="form-group col-4">
+            <label for="file_laporan" class="col-form-label"><b>Laporan Kerja Sama</b> <sup style="color: darkblue;">(Pdf)</sup></label>
+            <div class="input-group mb-3">
+              <input type="file" class="form-control" name="file_laporan" id="file_laporan" value="">
             </div>
-            <?= form_close() ?>
+          </div>
+          <div class="form-group col-4">
+            <label for="file_spt" class="col-form-label"><b>File SPT</b> <sup style="color: darkblue;">(Pdf)</sup></label>
+            <div class="input-group mb-3">
+              <input type="file" class="form-control" name="file_spt" id="file_spt" value="">
+            </div>
+          </div>
 
+          <div class="form-group mt-3 col-12">
+            <b style="font-size: large;">Dokumentasi</b>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <button type="button" class="btn btn-xs btn-info" id="addDokumentasi"><i class="fa fa-plus"></i> Add</button>
 
+            <table class="table table-borderless mt-2 dokumentasi" style="width: 100%;">
+              <thead>
+                <th>No</th>
+                <th>File Dokumentasi <sup style="color: darkblue;">(image[jpg,png,jpeg])</sup></th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td style="padding-left: 0px;">
+                    <div class="input-group mb-3">
+                      <input type="file" class="form-control" name="file_dokumentasi[]" id="file_dokumentasi0" value="">
+                    </div>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="form-group col-12 text-center">
+            <button type="submit" class="btn btn-primary" name="simpan" style="width: 200px;">Simpan</button>
           </div>
         </div>
+        <?= form_close() ?>
       </div>
-      <!-- Primary table end -->
     </div>
-  <!-- </div>
+  </div>
+  <!-- Primary table end -->
+</div>
+<!-- </div>
 </div> -->
 <!-- main content area end -->
 
@@ -116,50 +114,86 @@
       selector: '#judul'
     });
 
-    $("#mitra").select2({
-      width: '100%'
-    }).on('change', function() {
-      var selectedMitra = $(this).val();
+    $.ajax({
+      url: '<?php echo base_url("Kerja_sama/getmitra/true"); ?>',
+      dataType: 'json',
+      // delay: 250,
+      success: function(data) {
+        var mitraArray = data.map(function(item) {
+          return {
+            id: item.id_mitra,
+            text: item.nama_mitra,
+            additional: {
+              jenis_lokasi: item.jenis_lokasi
+            }
+          };
+        });
 
-      console.log('Mitra yang dipilih:', selectedMitra);
+        $('#mitra').select2({
+          width: '100%',
+          data: mitraArray // Menggabungkan opsi "Mitra Dulu" dengan data dari permintaan AJAX
+        });
+      },
+      cache: true
+    });
 
-      // Lakukan Ajax request untuk mengambil data RKT berdasarkan mitra yang dipilih
+    $('#mitra').on('change', function() {
+      // alert('oy')
+      var selectedMitra = $(this).select2('data')[0];
+      // console.log(selectedMitra.id)
       $.ajax({
-        url: '<?php echo base_url("Kerja_sama/getrkt"); ?>',
-        type: 'POST',
+        url: '<?php echo base_url("Kerja_sama/getRuangLingkup"); ?>',
         dataType: 'json',
+        // delay: 250,
         data: {
-          mitra: selectedMitra
-        },
-        success: function(response) {
-          console.log(response)
-          // Menghapus semua pilihan pada #rkt
-          $("#rkt").empty();
-
-          // Menambahkan pilihan baru berdasarkan data yang dikembalikan
-          if (response.length > 0) {
-            $.each(response, function(index, item) {
-              $("#rkt").append('<option value="" disabled selected> - Pilih RKT - </option>');
-              $("#rkt").append('<option value="' + item.id + '">' + item.nama_rkt + '</option>');
-            });
-          } else {
-            $("#rkt").append('<option value="" disabled selected>Tidak ada RKT tersedia</option>');
-          }
-
-          // Memperbarui tampilan pilihan pada #rkt
-          $("#rkt").select2({
-            width: '100%'
+          id_mitra: selectedMitra.id
+        }, // Perhatikan penulisan objek data dengan tanda kurung kurawal {}
+        success: function(data) {
+          var RuangLingkup = data.map(function(item) {
+            return {
+              id: item.id,
+              text: item.nama
+            };
+          });
+          $('#ruang_lingkup').select2({
+            width: '100%',
+            data: RuangLingkup // Menggabungkan opsi "Mitra Dulu" dengan data dari permintaan AJAX
           });
         },
-        error: function() {
-          console.log('Terjadi kesalahan dalam mengambil data RKT.');
-        }
+        cache: true
       });
     });
 
-    $("#rkt").select2({
-      width: '100%'
+
+
+    $('#ruang_lingkup').on('change', function() {
+      // alert('oy')
+      var selectedRuling = $(this).select2('data')[0];
+      // console.log(selectedRuling.id)
+      $.ajax({
+        url: '<?php echo base_url("Kerja_sama/getKegiatan"); ?>',
+        dataType: 'json',
+        // delay: 250,
+        data: {
+          id_ruling: selectedRuling.id
+        }, // Perhatikan penulisan objek data dengan tanda kurung kurawal {}
+        success: function(data) {
+          var kegiatan = data.map(function(item) {
+            return {
+              id: item.id,
+              text: item.nama
+            };
+          });
+          $('#kegiatan').select2({
+            width: '100%',
+            data: kegiatan // Menggabungkan opsi "Mitra Dulu" dengan data dari permintaan AJAX
+          });
+        },
+        cache: true
+      });
     });
+    
+
 
 
     var index = 1;

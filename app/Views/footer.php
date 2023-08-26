@@ -60,8 +60,8 @@
 	<!-- Data table -->
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/datatables/datatables.css">
 	<!-- Imported styles on this page -->
-	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/select2/select2-bootstrap.css">
-	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/select2/select2.css">
+	<!-- <link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/select2/select2-bootstrap.css">
+	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/select2/select2.css"> -->
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/selectboxit/jquery.selectBoxIt.css">
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/daterangepicker/daterangepicker-bs3.css">
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/bksda/js/icheck/skins/minimal/_all.css">
@@ -92,14 +92,14 @@
 	<script src="<?= base_url() ?>/assets/bksda/js/bootstrap-colorpicker.min.js"></script>
 	<script src="<?= base_url() ?>/assets/bksda/js/moment.min.js"></script>
 	<script src="<?= base_url() ?>/assets/bksda/js/daterangepicker/daterangepicker.js"></script>
-	<script src="<?= base_url() ?>/assets/bksda/js/jquery.multi-select.js"></script>
+	<!-- <script src="<?= base_url() ?>/assets/bksda/js/jquery.multi-select.js"></script> -->
 	<script src="<?= base_url() ?>/assets/bksda/js/icheck/icheck.min.js"></script>
 	<script src="<?= base_url() ?>/assets/bksda/js/neon-chat.js"></script>
-	<script src="<?= base_url() ?>/assets/bksda/js/jquery.validate.min.js"></script>
+	<!-- <script src="<?= base_url() ?>/assets/bksda/js/jquery.validate.min.js"></script> -->
 	<script src="<?= base_url() ?>/assets/bksda/js/fileinput.js"></script>
 	<script src="<?= base_url() ?>/assets/bksda/js/dropzone/dropzone.js"></script>
-	<script src="<?= base_url() ?>/assets/bksda/js/confirm/jquery-confirm.min.js"></script>
-	<!-- JavaScripts initializations and stuff -->
+	<!-- <script src="<?= base_url() ?>/assets/bksda/js/confirm/jquery-confirm.min.js"></script> -->
+	JavaScripts initializations and stuff
 	<!-- Demo Settings -->
 	<script src="<?= base_url() ?>/assets/bksda/js/neon-demo.js"></script>
 	<script src="<?= base_url() ?>/assets/bksda/js/neon-custom.js"></script>

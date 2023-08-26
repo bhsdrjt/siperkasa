@@ -111,4 +111,24 @@ class M_kerja_sama extends Model
         $result = $query->getResultArray();
         return $result;
     }
+
+
+    public function getRuangLingkupByMitra($mitraId)
+    {
+        return $this->db->table('pembangunan_strategis ps')
+            ->select('trl.nama, trl.id')
+            ->join('tb_ruang_lingkup trl', 'trl.id_kerjasama = ps.id', 'left')
+            ->where('ps.mitra', $mitraId)
+            ->where('trl.tipe_kerjasama', 'Pembangunan Strategis')
+            ->get()
+            ->getResult();
+    }
+    public function getKegiatanByRuangLingkup($ruangLingkupId)
+    {
+        return $this->db->table('tb_kegiatan tk')
+            ->select('tk.id, tk.nama')
+            ->where('tk.id_ruang_lingkup', $ruangLingkupId)
+            ->get()
+            ->getResult();
+    }
 }
