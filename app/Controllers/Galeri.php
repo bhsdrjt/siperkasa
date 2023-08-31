@@ -89,7 +89,7 @@ class Galeri extends BaseController
         }
         // $data['dok_pembangunanStrategis'] = $this->db->table('dokumentasi_pembangunan_strategis')->getWhere(['id_pembangunan_strategis' => $id])->getResult();
         $data['dok_pembangunanStrategis'] = $dok_pembangunanStrategisSKW;
-        //dd($data);
+        // dd($data);exit;
         return view('galeri/pembangunan_strategis_info', $data);
     }
 }
