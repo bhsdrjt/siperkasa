@@ -706,7 +706,7 @@ class Kerja_sama extends BaseController
             if (count($data) === 3) {
                 // $dataRuangLingkup[] = $data[1];
                 $dataRuangLingkup[] = [
-                    'id_kerjasama' => $lastID ,
+                    'id_kerjasama' => $lastID,
                     'nama' => $data[1],
                     'tipe_kerjasama' => 'Pembangunan Strategis'
                 ];
@@ -718,20 +718,27 @@ class Kerja_sama extends BaseController
 
                 $pairs = [];
 
-                for ($i = 2; $i < count($data); $i += 2) {
+                for ($i = 2; $i < count($data); $i += 3) {
                     $pair = [];
                     $pair['anggaran'] = [$data[$i]];
                     $pair['jenis'] = 'anggaran';
 
-                    $periodeIndex = ($i - 2) / 2;
+                    $periodeIndex = ($i - 2) / 3; // Menggunakan pembagian 3 karena sekarang kita ingin pair
                     if ($periodeIndex <= count($periode)) {
                         $pair['periode'] = isset($periode[$periodeIndex]) ? $periode[$periodeIndex] : '';
                     }
+
                     if ($i + 1 < count($data)) {
                         $pair['anggaran'][] = $data[$i + 1];
                     }
+
+                    if ($i + 2 < count($data)) {
+                        $pair['anggaran'][] = $data[$i + 2];
+                    }
+
                     $pairs[] = $pair;
                 }
+
 
                 if (!empty($pairs)) {
                     $lastIndex = count($pairs) - 1;
@@ -750,46 +757,51 @@ class Kerja_sama extends BaseController
         // dd($dataAnggaran);
         // exit;
 
-        foreach ($dataRuangLingkup as $dt){
-            $this->db->table('tb_ruang_lingkup')->insert($dt);
-            $id_ruanglingkup = $this->db->insertID();
-            // var_dump($dt['nama']);
-            foreach ($dataProgram as $dt2){
-                // var_dump($dt2['ruang_lingkup']);
-                if($dt2['ruang_lingkup'] == $dt['nama']){
-                    $parInsert = [
-                        'id_ruang_lingkup' => $id_ruanglingkup,
-                        'nama' => $dt2['nama']
-                    ];
-                    $this->db->table('tb_kegiatan')->insert($parInsert);
-                    $id_kegiatan = $this->db->insertID();
-                    foreach ($dataAnggaran as $dt3){
-                        if($dt3['kegiatan'] == $dt2['nama']){
-                            foreach($dt3['anggaranbesar'] as $dt4){
-                                // var_dump($dt4['anggaran'][]);
-                                $parInsert2 = [
-                                    'anggaran' => $dt4['anggaran'][0],
-                                    'realisasi' => $dt4['anggaran'][1],
-                                    'id_kegiatan' => $id_kegiatan,
-                                    'jenis' => $dt4['jenis'],
-                                    'periode' => $dt4['periode']
-                                ];
-                                $this->db->table('tb_anggaran')->insert($parInsert2);
-                            }
-                        }
-                    }
-                }
-            }
+        // foreach ($dataRuangLingkup as $dt) {
+        //     $this->db->table('tb_ruang_lingkup')->insert($dt);
+        //     $id_ruanglingkup = $this->db->insertID();
+        //     // var_dump($dt['nama']);
+        //     foreach ($dataProgram as $dt2) {
+        //         // var_dump($dt2['ruang_lingkup']);
+        //         if ($dt2['ruang_lingkup'] == $dt['nama']) {
+        //             $parInsert = [
+        //                 'id_ruang_lingkup' => $id_ruanglingkup,
+        //                 'nama' => trim($dt2['nama'])
+        //             ];
+        //             $this->db->table('tb_kegiatan')->insert($parInsert);
+        //             $id_kegiatan = $this->db->insertID();
+        //             foreach ($dataAnggaran as $dt3) {
+        //                 if ($dt3['kegiatan'] == $dt2['nama']) {
+        //                     foreach ($dt3['anggaranbesar'] as $dt4) {
+        //                         // var_dump($dt4['anggaran'][]);
+        //                         $parInsert2 = [
+        //                             'anggaran' => $dt4['anggaran'][0],
+        //                             'realisasi' => $dt4['anggaran'][1],
+        //                             'vol' => $dt4['anggaran'][2],
+        //                             'id_kegiatan' => $id_kegiatan,
+        //                             'jenis' => $dt4['jenis'],
+        //                             'periode' => $dt4['periode']
+        //                         ];
+        //                         $this->db->table('tb_anggaran')->insert($parInsert2);
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        $model = new M_kerja_sama();
+        try {
+            $model->insertKerjasama($dataRuangLingkup, $dataProgram, $dataAnggaran);
+            // Handle jika penyimpanan berhasil
+        } catch (Exception $e) {
+            // Handle kesalahan jika ada
+            echo 'Terjadi kesalahan: ' . $e->getMessage();
         }
+
+
+
         // dd($parInsert);
         // exit;
-
-
-
-
-
-
-
         // // ***** Proses simpan cover  *****
         // $cover = $this->request->getFile('cover');
         // if ($cover != "") {
@@ -861,6 +873,7 @@ class Kerja_sama extends BaseController
                         'file_rkt' => $namaFile,
                         'komitmen_rkt' => $this->request->getPost('komitmen_rkt')[$index],
                         'realisasi_rkt' => $this->request->getPost('realisasi_rkt')[$index],
+                        'periode' => $this->request->getPost('periode')[$index],
                     ];
                     $this->db->table('rkt_pembangunan_strategis')->insert($data);
                 }
@@ -928,11 +941,16 @@ class Kerja_sama extends BaseController
     {
         // $data['surat'] = $this->db->table('pembangunan_strategis')->getWhere(['id' => $id])->getRow();
         $model = new M_kerja_sama();
+        $data['ruanglingkup'] = $model->pembangunan_strategis_rulingID($id);
         $data['surat'] = $model->pembangunan_strategis_byID($id);
-        // var_dump($data['surat']);exit;
+        // var_dump($data['ruanglingkup']);
+        // dd($data['surat']);
+        // exit;
         $data['mitra'] = $this->db->table('mitra')->get()->getResult();
-        // $data['foto_dokumentasi'] = $this->db->table('dokumentasi_pembangunan_strategis')->getWhere(['id_pembangunan_strategis' => $id])->getResult();
         $data['fileRKT'] = $this->db->table('rkt_pembangunan_strategis')->getWhere(['id_pembangunan_strategis' => $id])->getResult();
+        $data['jumlahPeriode'] = count($data['fileRKT']);
+        // var_dump($data['fileRKT'][0]->periode);
+        // var_dump($data['fileRKT']->periode);
         return view('kerja_sama/pembangunan_strategis_edit', $data);
     }
 
@@ -1175,10 +1193,10 @@ class Kerja_sama extends BaseController
 
     public function getmitra($skw = null)
     {
-        if($skw){
+        if ($skw) {
             $list = $this->db->table('mitra')->getWhere(['jenis_lokasi' => session('level')])->getResult();
             echo json_encode($list);
-        }else{
+        } else {
             $searchTerm = $this->request->getGet('q');
             if ($searchTerm) {
                 $list = $this->db->table('mitra')->like('nama_mitra', $searchTerm)->get()->getResult();
@@ -1186,7 +1204,6 @@ class Kerja_sama extends BaseController
                 $list = $this->db->table('mitra')->get()->getResult();
             }
             echo json_encode($list);
-
         }
     }
 
@@ -1428,6 +1445,16 @@ class Kerja_sama extends BaseController
         $model = new M_kerja_sama();
         $kegiatan = $model->getKegiatanByRuangLingkup($idRuling);
         return $this->response->setJSON($kegiatan);
+    }
+
+
+    public function getrkt()
+    {
+        $idMitra = intval($this->request->getGet('mitra'));
+        $model = new M_kerja_sama();
+        $rktData = $model->getrkt($idMitra);
+        // var_dump($rktData);exit;
+        return $this->response->setJSON($rktData);
     }
 
     public function pembangunan_strategis_skw_process_add()

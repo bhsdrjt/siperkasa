@@ -1,6 +1,13 @@
 <?= $this->extend('layout'); ?>
 <?= $this->section('content') ?>
 
+<style>
+  select.form-control:not([size]):not([multiple]) {
+    height: fit-content;
+    /* height: calc(2.25rem + 2px); */
+  }
+</style>
+
 <!-- page title area end -->
 <!-- <div class="main-content-inner">
   <div class="container"> -->
@@ -49,6 +56,12 @@
             <label for="kegiatan" class="col-form-label"><b>Kegiatan</b></label>
             <select class="form-control" name="kegiatan" id="kegiatan" required>
               <option value="" disabled selected> Pilih Kegiatan </option>
+            </select>
+          </div>
+          <div class="form-group col-4">
+            <label for="rkt" class="col-form-label"><b>Periode</b></label>
+            <select class="form-control" name="periode" id="periode" required>
+              <option value="" disabled selected> Pilih Periode </option>
             </select>
           </div>
           <div class="form-group col-12">
@@ -165,6 +178,34 @@
     });
 
 
+    $('#mitra').on('change', function() {
+      // alert('oy')
+      var selectedMitra = $(this).select2('data')[0];
+      console.log(selectedMitra.id)
+      $.ajax({
+        url: '<?php echo base_url("Kerja_sama/getrkt"); ?>',
+        dataType: 'json',
+        // delay: 250,
+        data: {
+          mitra: selectedMitra.id
+        }, // Perhatikan penulisan objek data dengan tanda kurung kurawal {}
+        success: function(data) {
+          var RuangLingkup = data.map(function(item) {
+            return {
+              id: item.id,
+              text: item.periode
+            };
+          });
+          $('#periode').select2({
+            width: '100%',
+            data: RuangLingkup // Menggabungkan opsi "Mitra Dulu" dengan data dari permintaan AJAX
+          });
+        },
+        cache: true
+      });
+    });
+
+
 
     $('#ruang_lingkup').on('change', function() {
       // alert('oy')
@@ -192,7 +233,7 @@
         cache: true
       });
     });
-    
+
 
 
 
