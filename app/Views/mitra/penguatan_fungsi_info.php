@@ -1,4 +1,4 @@
-<?= $this->extend('layout'); ?>
+<?= $this->extend('mitra/layout'); ?>
 
 <?= $this->section('content') ?>
 <style>
@@ -170,7 +170,7 @@
 
         <!-- main content area end -->
 
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
         <script type="text/javascript">

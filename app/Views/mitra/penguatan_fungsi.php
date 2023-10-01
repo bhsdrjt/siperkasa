@@ -1,4 +1,4 @@
-<?= $this->extend('layout'); ?>
+<?= $this->extend('mitra/layout'); ?>
 <?= $this->section('content') ?>
 
 <!-- page title area end -->
@@ -69,7 +69,7 @@
   </div>
   <!-- main content area end -->
 
-  
+
 
   <script>
     $(document).ready(function() {

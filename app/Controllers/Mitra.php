@@ -13,6 +13,17 @@ class Mitra extends BaseController
         helper(['form']);
     }
 
+    public function dashboard_mitra()
+    {
+        helper('tanggal');
+        $modelPenguatanFungsi = new M_penguatan_fungsi_skw();
+        $data['penguatanFungsi'] = $modelPenguatanFungsi->penguatan_fungsi_filter();
+
+        $modelPembangunanStrategis = new M_pembangunan_strategis_skw();
+        $data['pembangunanStrategis'] = $modelPembangunanStrategis->pembangunan_strategis_filter();
+        return view('mitra/dashboard', $data);
+    }
+
     public function penguatan_fungsi()
     {
         $model = new M_penguatan_fungsi_skw();

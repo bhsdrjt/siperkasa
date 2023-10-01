@@ -111,6 +111,7 @@ $routes->group('auth_mitra', function ($routes) {
 });
 
 $routes->group('mitra', ["filter" => "authfilter"], function ($routes) {
+    $routes->get('dashboard', 'Mitra::dashboard_mitra');
     $routes->get('galeri/penguatan_fungsi', 'Mitra::penguatan_fungsi');
     $routes->get('galeri/pembangunan_strategis', 'Mitra::pembangunan_strategis');
     $routes->post('galeri/penguatan_fungsi/filter', 'Mitra::penguatan_fungsi');

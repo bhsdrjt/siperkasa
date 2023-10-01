@@ -16,7 +16,7 @@ class M_pembangunan_strategis_skw extends Model
         $builder->select('pss.id,file_pks,tgl_awal,tgl_akhir,judul_laporan,nama_mitra,pss.lokasi');
         $builder->join('mitra', 'mitra.id_mitra=pss.id_mitra');
         $builder->join('rkt_pembangunan_strategis rps', 'rps.id=pss.id_rkt');
-        $builder->join('pembangunan_strategis ps', 'ps.id=rps.id_penguatan_fungsi');
+        $builder->join('pembangunan_strategis ps', 'ps.id=rps.id_pembangunan_strategis');
         if ($startDate != '' && $endDate != '') {
             $builder->where(['pss.id_mitra' => session('id_mitra'), 'ps.tgl_awal >=' => $startDate, 'ps.tgl_awal <=' => $endDate]);
         }
